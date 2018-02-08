@@ -1,4 +1,4 @@
-# swagger_client.ScanTemplateApi
+# rapid7vmconsole.ScanTemplateApi
 
 All URIs are relative to *https://localhost:3780*
 
@@ -22,13 +22,13 @@ Creates a new scan template.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanTemplateApi()
-param0 = swagger_client.ScanTemplate() # ScanTemplate | The details of the scan template. (optional)
+api_instance = rapid7vmconsole.ScanTemplateApi()
+param0 = rapid7vmconsole.ScanTemplate() # ScanTemplate | The details of the scan template. (optional)
 
 try:
     # Scan Templates
@@ -70,12 +70,12 @@ Deletes a scan template.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanTemplateApi()
+api_instance = rapid7vmconsole.ScanTemplateApi()
 id = 'id_example' # str | The identifier of the scan template
 
 try:
@@ -118,12 +118,12 @@ Returns a scan template.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanTemplateApi()
+api_instance = rapid7vmconsole.ScanTemplateApi()
 id = 'id_example' # str | The identifier of the scan template
 
 try:
@@ -166,12 +166,12 @@ Returns all scan templates.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanTemplateApi()
+api_instance = rapid7vmconsole.ScanTemplateApi()
 
 try:
     # Scan Templates
@@ -210,14 +210,14 @@ Updates a scan template.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanTemplateApi()
+api_instance = rapid7vmconsole.ScanTemplateApi()
 id = 'id_example' # str | The identifier of the scan template
-param1 = swagger_client.ScanTemplate() # ScanTemplate | The details of the scan template. (optional)
+param1 = rapid7vmconsole.ScanTemplate() # ScanTemplate | The details of the scan template. (optional)
 
 try:
     # Scan Template

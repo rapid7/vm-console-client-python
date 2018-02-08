@@ -1,4 +1,4 @@
-# swagger_client.AssetDiscoveryApi
+# rapid7vmconsole.AssetDiscoveryApi
 
 All URIs are relative to *https://localhost:3780*
 
@@ -27,13 +27,13 @@ Creates a sonar query.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetDiscoveryApi()
-param0 = swagger_client.SonarQuery() # SonarQuery | param0
+api_instance = rapid7vmconsole.AssetDiscoveryApi()
+param0 = rapid7vmconsole.SonarQuery() # SonarQuery | param0
 
 try:
     # Sonar Queries
@@ -75,12 +75,12 @@ Removes a sonar query.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetDiscoveryApi()
+api_instance = rapid7vmconsole.AssetDiscoveryApi()
 id = 789 # int | The identifier of the Sonar query.
 
 try:
@@ -123,12 +123,12 @@ Returns a discovery connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetDiscoveryApi()
+api_instance = rapid7vmconsole.AssetDiscoveryApi()
 id = 789 # int | The identifier of the discovery connection.
 
 try:
@@ -171,12 +171,12 @@ Returns all discovery connections.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetDiscoveryApi()
+api_instance = rapid7vmconsole.AssetDiscoveryApi()
 page = 0 # int | The index of the page (zero-based) to retrieve. (optional) (default to 0)
 size = 10 # int | The number of records per page to retrieve. (optional) (default to 10)
 sort = ['sort_example'] # list[str] | The criteria to sort the records by, in the format: `property[,ASC|DESC]`. The default sort order is ascending. Multiple sort criteria can be specified using multiple sort query parameters. (optional)
@@ -223,12 +223,12 @@ Returns all sonar queries.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetDiscoveryApi()
+api_instance = rapid7vmconsole.AssetDiscoveryApi()
 
 try:
     # Sonar Queries
@@ -267,12 +267,12 @@ Returns a sonar query.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetDiscoveryApi()
+api_instance = rapid7vmconsole.AssetDiscoveryApi()
 id = 789 # int | The identifier of the Sonar query.
 
 try:
@@ -315,12 +315,12 @@ Returns the assets that are discovered by a Sonar query.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetDiscoveryApi()
+api_instance = rapid7vmconsole.AssetDiscoveryApi()
 id = 789 # int | The identifier of the Sonar query.
 
 try:
@@ -363,12 +363,12 @@ Attempts to reconnect the discovery connection.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetDiscoveryApi()
+api_instance = rapid7vmconsole.AssetDiscoveryApi()
 id = 789 # int | The identifier of the discovery connection.
 
 try:
@@ -410,13 +410,13 @@ Executes a Sonar query to discover assets with the given search criteria.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetDiscoveryApi()
-param0 = swagger_client.SonarCriteria() # SonarCriteria | param0
+api_instance = rapid7vmconsole.AssetDiscoveryApi()
+param0 = rapid7vmconsole.SonarCriteria() # SonarCriteria | param0
 
 try:
     # Sonar Query Search
@@ -458,14 +458,14 @@ Updates a sonar query.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetDiscoveryApi()
+api_instance = rapid7vmconsole.AssetDiscoveryApi()
 id = 789 # int | The identifier of the Sonar query.
-param1 = swagger_client.SonarQuery() # SonarQuery | param1
+param1 = rapid7vmconsole.SonarQuery() # SonarQuery | param1
 
 try:
     # Sonar Query

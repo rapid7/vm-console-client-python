@@ -1,4 +1,4 @@
-# swagger_client.UserApi
+# rapid7vmconsole.UserApi
 
 All URIs are relative to *https://localhost:3780*
 
@@ -48,12 +48,12 @@ Grants the user access to the asset group. Individual asset group access cannot 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
 asset_group_id = 56 # int | The identifier of the asset group.
 
@@ -98,12 +98,12 @@ Grants the user access to the site. Individual site access cannot be granted to 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
 site_id = 56 # int | The identifier of the site.
 
@@ -148,13 +148,13 @@ Creates a new user. <span class=\"authorization\">Global Administrator</span>
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
-param0 = swagger_client.User() # User | The details of the user. (optional)
+api_instance = rapid7vmconsole.UserApi()
+param0 = rapid7vmconsole.User() # User | The details of the user. (optional)
 
 try:
     # Users
@@ -196,12 +196,12 @@ Removes a role with the specified identifier. The role must not be built-in and 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 'id_example' # str | The identifier of the role.
 
 try:
@@ -244,12 +244,12 @@ Returns the details for an authentication source.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the authentication source.
 
 try:
@@ -292,12 +292,12 @@ Returns hypermedia links for the user accounts that use the authentication sourc
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the authentication source.
 
 try:
@@ -340,12 +340,12 @@ Returns all available sources of authentication for users.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 
 try:
     # Authentication Sources
@@ -384,12 +384,12 @@ Returns the details for a privilege.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 'id_example' # str | The identifier of the privilege.
 
 try:
@@ -432,12 +432,12 @@ Returns all privileges that may be granted to a role.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 
 try:
     # Privileges
@@ -476,12 +476,12 @@ Retrieves the details of a role.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 'id_example' # str | The identifier of the role.
 
 try:
@@ -524,12 +524,12 @@ Returns hypermedia links for the the users currently assigned a role.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 'id_example' # str | The identifier of the role.
 
 try:
@@ -572,12 +572,12 @@ Returns all roles for which users may be assigned.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 
 try:
     # Roles
@@ -616,12 +616,12 @@ Retrieves the current authentication token seed (key) for the user, if configure
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
 
 try:
@@ -664,12 +664,12 @@ Returns the details for a user.<span class=\"authorization\">Global Administrato
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
 
 try:
@@ -712,12 +712,12 @@ Returns the asset groups to which the user has access.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
 
 try:
@@ -760,12 +760,12 @@ Returns the privileges granted to the user by their role. <span class=\"authoriz
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
 
 try:
@@ -808,12 +808,12 @@ Returns the sites to which the user has access.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
 
 try:
@@ -856,12 +856,12 @@ Returns all defined users. <span class=\"authorization\">Global Administrator</s
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 page = 0 # int | The index of the page (zero-based) to retrieve. (optional) (default to 0)
 size = 10 # int | The number of records per page to retrieve. (optional) (default to 10)
 sort = ['sort_example'] # list[str] | The criteria to sort the records by, in the format: `property[,ASC|DESC]`. The default sort order is ascending. Multiple sort criteria can be specified using multiple sort query parameters. (optional)
@@ -908,12 +908,12 @@ Returns hypermedia links for all users granted the specified privilege by their 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 'id_example' # str | The identifier of the privilege.
 
 try:
@@ -956,12 +956,12 @@ Regenerates a new authentication token seed (key) and updates it for the user. T
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
 
 try:
@@ -1004,12 +1004,12 @@ Revokes access to all asset groups from the user.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
 
 try:
@@ -1052,12 +1052,12 @@ Revokes access to all sites from the user.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
 
 try:
@@ -1100,12 +1100,12 @@ Grants the user access to the asset group. Individual asset group access cannot 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
 asset_group_id = 56 # int | The identifier of the asset group.
 
@@ -1150,12 +1150,12 @@ Grants the user access to the site. Individual site access cannot be granted to 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
 site_id = 56 # int | The identifier of the site.
 
@@ -1200,12 +1200,12 @@ Changes the password for the user. Users may only change their own password.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
 param1 = 'param1_example' # str | The new password to set. (optional)
 
@@ -1250,12 +1250,12 @@ Sets the authentication token seed (key) for the user. This key may be then be u
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
 param1 = 'param1_example' # str | The authentication token seed (key) to use for the user. (optional)
 
@@ -1300,14 +1300,14 @@ Updates the asset groups to which the user has access. Individual asset group ac
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
-param1 = [swagger_client.list[int]()] # list[int] | The identifiers of the asset groups to grant the user access to. Ignored if user has access to `allAssetGroups`. (optional)
+param1 = [rapid7vmconsole.list[int]()] # list[int] | The identifiers of the asset groups to grant the user access to. Ignored if user has access to `allAssetGroups`. (optional)
 
 try:
     # Asset Groups Access
@@ -1350,14 +1350,14 @@ Updates the sites to which the user has access. Individual site access cannot be
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
-param1 = [swagger_client.list[int]()] # list[int] | The identifiers of the sites to grant the user access to. Ignored if the user has access to `allSites`. (optional)
+param1 = [rapid7vmconsole.list[int]()] # list[int] | The identifiers of the sites to grant the user access to. Ignored if the user has access to `allSites`. (optional)
 
 try:
     # Sites Access
@@ -1400,12 +1400,12 @@ Unlocks a locked user account that has too many failed authentication attempts. 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
 
 try:
@@ -1448,14 +1448,14 @@ Updates the details of a role.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 'id_example' # str | The identifier of the role.
-param0 = swagger_client.Role() # Role | The details of the role. (optional)
+param0 = rapid7vmconsole.Role() # Role | The details of the role. (optional)
 
 try:
     # Role
@@ -1498,14 +1498,14 @@ Updates the details of a user. <span class=\"authorization\">Global Administrato
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.UserApi()
+api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
-param1 = swagger_client.User() # User | The details of the user. (optional)
+param1 = rapid7vmconsole.User() # User | The details of the user. (optional)
 
 try:
     # User

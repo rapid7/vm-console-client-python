@@ -1,4 +1,4 @@
-# swagger_client.ScanApi
+# rapid7vmconsole.ScanApi
 
 All URIs are relative to *https://localhost:3780*
 
@@ -22,12 +22,12 @@ Returns the specified scan.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanApi()
+api_instance = rapid7vmconsole.ScanApi()
 id = 789 # int | The identifier of the scan.
 
 try:
@@ -70,12 +70,12 @@ Returns all scans.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanApi()
+api_instance = rapid7vmconsole.ScanApi()
 active = false # bool | Return running scans or past scans (true/false value). (optional) (default to false)
 page = 0 # int | The index of the page (zero-based) to retrieve. (optional) (default to 0)
 size = 10 # int | The number of records per page to retrieve. (optional) (default to 10)
@@ -124,12 +124,12 @@ Returns the scans for the specified site.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanApi()
+api_instance = rapid7vmconsole.ScanApi()
 id = 56 # int | The identifier of the site.
 active = false # bool | Return running scans or past scans (true/false value). (optional) (default to false)
 page = 0 # int | The index of the page (zero-based) to retrieve. (optional) (default to 0)
@@ -180,12 +180,12 @@ Updates the scan status. Can pause, resume, and stop scans using this resource. 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanApi()
+api_instance = rapid7vmconsole.ScanApi()
 id = 789 # int | The identifier of the scan.
 status = 'status_example' # str | The status of the scan.
 
@@ -230,14 +230,14 @@ Starts a scan for the specified site.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanApi()
+api_instance = rapid7vmconsole.ScanApi()
 id = 56 # int | The identifier of the site.
-param1 = swagger_client.AdhocScan() # AdhocScan | The details for the scan. (optional)
+param1 = rapid7vmconsole.AdhocScan() # AdhocScan | The details for the scan. (optional)
 
 try:
     # Site Scans

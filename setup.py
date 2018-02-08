@@ -13,8 +13,8 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "swagger-client"
-VERSION = "1.0.0"
+NAME = "rapid7_vm_console"
+VERSION = "0.0.1-6.5.4"
 # To install the library, run the following
 #
 # python setup.py install
@@ -29,7 +29,7 @@ setup(
     version=VERSION,
     description="InsightVM API",
     author_email="support@rapid7.com",
-    url="",
+    url="https://github.com/rapid7/vm-console-client-python",
     keywords=["Swagger", "InsightVM API"],
     install_requires=REQUIRES,
     packages=find_packages(),

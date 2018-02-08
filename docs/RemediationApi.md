@@ -1,4 +1,4 @@
-# swagger_client.RemediationApi
+# rapid7vmconsole.RemediationApi
 
 All URIs are relative to *https://localhost:3780*
 
@@ -18,12 +18,12 @@ Returns the highest-superceding rollup solutions for a vulnerability on an asset
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.RemediationApi()
+api_instance = rapid7vmconsole.RemediationApi()
 id = 789 # int | The identifier of the asset.
 vulnerability_id = 'vulnerability_id_example' # str | The identifier of the vulnerability.
 

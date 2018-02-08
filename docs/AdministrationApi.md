@@ -1,4 +1,4 @@
-# swagger_client.AdministrationApi
+# rapid7vmconsole.AdministrationApi
 
 All URIs are relative to *https://localhost:3780*
 
@@ -23,12 +23,12 @@ Licenses the product with an activation key or a provided license file. If both 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AdministrationApi()
+api_instance = rapid7vmconsole.AdministrationApi()
 license = '/path/to/file.txt' # file | The contents of a license (.lic) file. (optional)
 key = 'key_example' # str | A license activation key. (optional)
 
@@ -73,12 +73,12 @@ Executes a console command against the Security Console. <span class=\"authoriza
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AdministrationApi()
+api_instance = rapid7vmconsole.AdministrationApi()
 param0 = 'param0_example' # str | The console command to execute. (optional)
 
 try:
@@ -121,12 +121,12 @@ Returns system details, including host and version information.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AdministrationApi()
+api_instance = rapid7vmconsole.AdministrationApi()
 
 try:
     # Information
@@ -165,12 +165,12 @@ Returns the enabled features and limits of the current license. <span class=\"au
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AdministrationApi()
+api_instance = rapid7vmconsole.AdministrationApi()
 
 try:
     # License
@@ -209,12 +209,12 @@ Returns system details, including host and version information.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AdministrationApi()
+api_instance = rapid7vmconsole.AdministrationApi()
 
 try:
     # Properties
@@ -253,12 +253,12 @@ Returns the current administration settings. <span class=\"authorization\">Globa
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AdministrationApi()
+api_instance = rapid7vmconsole.AdministrationApi()
 
 try:
     # Settings

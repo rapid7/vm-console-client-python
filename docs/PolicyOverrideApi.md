@@ -1,4 +1,4 @@
-# swagger_client.PolicyOverrideApi
+# rapid7vmconsole.PolicyOverrideApi
 
 All URIs are relative to *https://localhost:3780*
 
@@ -25,13 +25,13 @@ Submit a policy override. The policy override can be submitted or it can be subm
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PolicyOverrideApi()
-param0 = swagger_client.PolicyOverride() # PolicyOverride | The specification of a policy override. Allows users to override the compliance result of a policy rule. (optional)
+api_instance = rapid7vmconsole.PolicyOverrideApi()
+param0 = rapid7vmconsole.PolicyOverride() # PolicyOverride | The specification of a policy override. Allows users to override the compliance result of a policy rule. (optional)
 
 try:
     # Policy Overrides
@@ -73,12 +73,12 @@ Removes a policy override created for a policy rule.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PolicyOverrideApi()
+api_instance = rapid7vmconsole.PolicyOverrideApi()
 id = 789 # int | The identifier of the policy override.
 
 try:
@@ -121,12 +121,12 @@ Retrieves policy overrides defined on policy rules for the specified asset.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PolicyOverrideApi()
+api_instance = rapid7vmconsole.PolicyOverrideApi()
 id = 789 # int | The identifier of the asset.
 
 try:
@@ -169,12 +169,12 @@ Retrieve the specified policy override.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PolicyOverrideApi()
+api_instance = rapid7vmconsole.PolicyOverrideApi()
 id = 789 # int | The identifier of the policy override.
 
 try:
@@ -217,12 +217,12 @@ Get the expiration date for a policy override.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PolicyOverrideApi()
+api_instance = rapid7vmconsole.PolicyOverrideApi()
 id = 789 # int | The identifier of the policy override.
 
 try:
@@ -265,12 +265,12 @@ Retrieves policy overrides defined on policy rules.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PolicyOverrideApi()
+api_instance = rapid7vmconsole.PolicyOverrideApi()
 page = 0 # int | The index of the page (zero-based) to retrieve. (optional) (default to 0)
 size = 10 # int | The number of records per page to retrieve. (optional) (default to 10)
 sort = ['sort_example'] # list[str] | The criteria to sort the records by, in the format: `property[,ASC|DESC]`. The default sort order is ascending. Multiple sort criteria can be specified using multiple sort query parameters. (optional)
@@ -317,12 +317,12 @@ Set the expiration date for a policy override. This must be a valid date in the 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PolicyOverrideApi()
+api_instance = rapid7vmconsole.PolicyOverrideApi()
 id = 789 # int | The identifier of the policy override.
 param1 = 'param1_example' # str | The date the policy override is set to expire. Date is represented in ISO 8601 format. (optional)
 
@@ -367,12 +367,12 @@ Update the status of the specified policy override. The status can be one of the
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.PolicyOverrideApi()
+api_instance = rapid7vmconsole.PolicyOverrideApi()
 id = 789 # int | The identifier of the policy override.
 status = 'status_example' # str | Policy Override Status
 param2 = 'param2_example' # str | A comment describing the change of the policy override status. (optional)

@@ -1,4 +1,4 @@
-# swagger_client.CredentialApi
+# rapid7vmconsole.CredentialApi
 
 All URIs are relative to *https://localhost:3780*
 
@@ -23,13 +23,13 @@ Creates a new shared credential.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CredentialApi()
-param0 = swagger_client.SharedCredential() # SharedCredential | The specification of a shared credential. (optional)
+api_instance = rapid7vmconsole.CredentialApi()
+param0 = rapid7vmconsole.SharedCredential() # SharedCredential | The specification of a shared credential. (optional)
 
 try:
     # Shared Credentials
@@ -71,12 +71,12 @@ Deletes all shared credentials.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CredentialApi()
+api_instance = rapid7vmconsole.CredentialApi()
 
 try:
     # Shared Credentials
@@ -115,12 +115,12 @@ Deletes the specified shared scan credential.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CredentialApi()
+api_instance = rapid7vmconsole.CredentialApi()
 id = 56 # int | The identifier of the credential.
 
 try:
@@ -163,12 +163,12 @@ Retrieves the specified shared credential.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CredentialApi()
+api_instance = rapid7vmconsole.CredentialApi()
 id = 56 # int | The identifier of the credential.
 
 try:
@@ -211,12 +211,12 @@ Retrieves all defined shared credential resources.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CredentialApi()
+api_instance = rapid7vmconsole.CredentialApi()
 
 try:
     # Shared Credentials
@@ -255,14 +255,14 @@ Updates the specified shared credential.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CredentialApi()
+api_instance = rapid7vmconsole.CredentialApi()
 id = 56 # int | The identifier of the credential.
-param1 = swagger_client.SharedCredential() # SharedCredential | The specification of the shared credential to update. (optional)
+param1 = rapid7vmconsole.SharedCredential() # SharedCredential | The specification of the shared credential to update. (optional)
 
 try:
     # Shared Credential

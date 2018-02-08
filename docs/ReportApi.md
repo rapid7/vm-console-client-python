@@ -1,4 +1,4 @@
-# swagger_client.ReportApi
+# rapid7vmconsole.ReportApi
 
 All URIs are relative to *https://localhost:3780*
 
@@ -30,13 +30,13 @@ Configures a new report for generation. Report types are controlled through eith
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportApi()
-param0 = swagger_client.Report() # Report | The specification of a report configuration. (optional)
+api_instance = rapid7vmconsole.ReportApi()
+param0 = rapid7vmconsole.Report() # Report | The specification of a report configuration. (optional)
 
 try:
     # Reports
@@ -78,12 +78,12 @@ Deletes the configuration of a report.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportApi()
+api_instance = rapid7vmconsole.ReportApi()
 id = 56 # int | The identifier of the report.
 
 try:
@@ -126,12 +126,12 @@ Returns the details for a generation of the report.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportApi()
+api_instance = rapid7vmconsole.ReportApi()
 id = 56 # int | The identifier of the report.
 instance = 'instance_example' # str | The identifier of the report instance.
 
@@ -176,12 +176,12 @@ Returns the contents of a generated report. The report content is usually return
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportApi()
+api_instance = rapid7vmconsole.ReportApi()
 id = 56 # int | The identifier of the report.
 instance = 'instance_example' # str | The identifier of the report instance.
 
@@ -226,12 +226,12 @@ Generates a configured report and returns the instance identifier of the report.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportApi()
+api_instance = rapid7vmconsole.ReportApi()
 id = 56 # int | The identifier of the report.
 
 try:
@@ -274,12 +274,12 @@ Returns the configuration details of a report.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportApi()
+api_instance = rapid7vmconsole.ReportApi()
 id = 56 # int | The identifier of the report.
 
 try:
@@ -322,12 +322,12 @@ Returns all available report formats. A report format indicates an output file f
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportApi()
+api_instance = rapid7vmconsole.ReportApi()
 
 try:
     # Report Formats
@@ -366,12 +366,12 @@ Returns the details for a generation of the report.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportApi()
+api_instance = rapid7vmconsole.ReportApi()
 id = 56 # int | The identifier of the report.
 instance = 'instance_example' # str | The identifier of the report instance.
 
@@ -416,12 +416,12 @@ Returns all historical details for generation of the report over time.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportApi()
+api_instance = rapid7vmconsole.ReportApi()
 id = 56 # int | The identifier of the report.
 
 try:
@@ -464,12 +464,12 @@ Returns the details of a report template. Report templates govern the contents g
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportApi()
+api_instance = rapid7vmconsole.ReportApi()
 id = 'id_example' # str | The identifier of the report template;
 
 try:
@@ -512,12 +512,12 @@ Returns all available report templates.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportApi()
+api_instance = rapid7vmconsole.ReportApi()
 
 try:
     # Report Templates
@@ -556,12 +556,12 @@ Returns all defined report configurations.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportApi()
+api_instance = rapid7vmconsole.ReportApi()
 page = 0 # int | The index of the page (zero-based) to retrieve. (optional) (default to 0)
 size = 10 # int | The number of records per page to retrieve. (optional) (default to 10)
 sort = ['sort_example'] # list[str] | The criteria to sort the records by, in the format: `property[,ASC|DESC]`. The default sort order is ascending. Multiple sort criteria can be specified using multiple sort query parameters. (optional)
@@ -608,14 +608,14 @@ Updates the configuration details of a report.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ReportApi()
+api_instance = rapid7vmconsole.ReportApi()
 id = 56 # int | The identifier of the report.
-param1 = swagger_client.Report() # Report | The specification of a report configuration. (optional)
+param1 = rapid7vmconsole.Report() # Report | The specification of a report configuration. (optional)
 
 try:
     # Report

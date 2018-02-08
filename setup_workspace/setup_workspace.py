@@ -10,7 +10,6 @@
 #
 
 import os
-import shutil
 import ssl
 import urllib.request
 
@@ -48,13 +47,6 @@ ctx.verify_mode = ssl.CERT_NONE
 
 with urllib.request.urlopen(console_swagger_path, context=ctx) as u, open(swagger_file, 'wb') as f:
     f.write(u.read())
-
-# Remove previous directories from generation
-# dirs = ['lib', 'docs', 'spec']
-#
-# for directory in dirs:
-#     if os.path.exists(directory):
-#         shutil.rmtree(directory)
 
 # Generate library
 codegen_jar = "setup_workspace/%s-%s.jar" % (codegen_jar_name, codegen_jar_version)

@@ -1,4 +1,4 @@
-# swagger_client.ScanEngineApi
+# rapid7vmconsole.ScanEngineApi
 
 All URIs are relative to *https://localhost:3780*
 
@@ -35,12 +35,12 @@ Add an engine to the engine pool.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
+api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the engine pool.
 engine_id = 56 # int | The identifier of the scan engine.
 
@@ -85,13 +85,13 @@ Creates a new scan engine.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
-param0 = swagger_client.ScanEngine() # ScanEngine | The specification of a scan engine. (optional)
+api_instance = rapid7vmconsole.ScanEngineApi()
+param0 = rapid7vmconsole.ScanEngine() # ScanEngine | The specification of a scan engine. (optional)
 
 try:
     # Scan Engines
@@ -133,13 +133,13 @@ Creates a new engine pool.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
-param0 = swagger_client.EnginePool() # EnginePool | The details for the scan engine to update. (optional)
+api_instance = rapid7vmconsole.ScanEngineApi()
+param0 = rapid7vmconsole.EnginePool() # EnginePool | The details for the scan engine to update. (optional)
 
 try:
     # Engine Pools
@@ -181,12 +181,12 @@ Deletes the specified scan engine.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
+api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the scan engine.
 
 try:
@@ -229,12 +229,12 @@ Retrieves the list of engine pools the scan engine is currently assigned to.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
+api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the scan engine.
 
 try:
@@ -277,12 +277,12 @@ Retrieves the details for an engine pool.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
+api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the engine pool.
 
 try:
@@ -325,12 +325,12 @@ Retrieves the details for a scan engine.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
+api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the scan engine.
 
 try:
@@ -373,12 +373,12 @@ Get the engines in the engine pool.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
+api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the engine pool.
 
 try:
@@ -421,12 +421,12 @@ Returns links to the sites associated with this engine pool.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
+api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the engine pool.
 
 try:
@@ -469,12 +469,12 @@ Returns engine pools available to use for scanning.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
+api_instance = rapid7vmconsole.ScanEngineApi()
 
 try:
     # Engine Pools
@@ -513,12 +513,12 @@ Returns the scans that have been run on a scan engine.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
+api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the scan engine.
 page = 0 # int | The index of the page (zero-based) to retrieve. (optional) (default to 0)
 size = 10 # int | The number of records per page to retrieve. (optional) (default to 10)
@@ -567,12 +567,12 @@ Retrieves the list of sites the specified scan engine is assigned to.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
+api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the scan engine.
 page = 0 # int | The index of the page (zero-based) to retrieve. (optional) (default to 0)
 size = 10 # int | The number of records per page to retrieve. (optional) (default to 10)
@@ -621,12 +621,12 @@ Returns scan engines available to use for scanning.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
+api_instance = rapid7vmconsole.ScanEngineApi()
 
 try:
     # Scan Engines
@@ -665,12 +665,12 @@ Deletes the specified engine pool.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
+api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the engine pool.
 
 try:
@@ -713,12 +713,12 @@ Remove the specified engine from the engine pool.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
+api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the engine pool.
 engine_id = 56 # int | The identifier of the scan engine.
 
@@ -763,14 +763,14 @@ Set the engines in the engine pool.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
+api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the engine pool.
-param1 = [swagger_client.list[int]()] # list[int] | The identifiers of the scan engines to place into the engine pool. (optional)
+param1 = [rapid7vmconsole.list[int]()] # list[int] | The identifiers of the scan engines to place into the engine pool. (optional)
 
 try:
     # Engine Pool Engines
@@ -813,14 +813,14 @@ Updates the specified scan engine.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
+api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the scan engine.
-param1 = swagger_client.ScanEngine() # ScanEngine | The specification of the scan engine to update. (optional)
+param1 = rapid7vmconsole.ScanEngine() # ScanEngine | The specification of the scan engine to update. (optional)
 
 try:
     # Scan Engine
@@ -863,14 +863,14 @@ Updates the specified engine pool.
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ScanEngineApi()
+api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the engine pool.
-param1 = swagger_client.EnginePool() # EnginePool | The details for the scan engine to update. (optional)
+param1 = rapid7vmconsole.EnginePool() # EnginePool | The details for the scan engine to update. (optional)
 
 try:
     # Engine Pool
