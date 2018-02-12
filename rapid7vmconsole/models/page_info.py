@@ -44,10 +44,6 @@ class PageInfo(object):
         'total_resources': 'totalResources'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, number=None, size=None, total_pages=None, total_resources=None):  # noqa: E501
         """PageInfo - a model defined in Swagger"""  # noqa: E501
 
@@ -55,7 +51,7 @@ class PageInfo(object):
         self._size = None
         self._total_pages = None
         self._total_resources = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if number is not None:
             self.number = number
@@ -157,11 +153,6 @@ class PageInfo(object):
         """
 
         self._total_resources = total_resources
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

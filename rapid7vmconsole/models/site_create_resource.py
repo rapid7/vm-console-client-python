@@ -53,10 +53,6 @@ class SiteCreateResource(object):
         'scan_template_id': 'scanTemplateId'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, description=None, engine_id=None, importance=None, links=None, name=None, scan=None, scan_template_id=None):  # noqa: E501
         """SiteCreateResource - a model defined in Swagger"""  # noqa: E501
 
@@ -67,7 +63,7 @@ class SiteCreateResource(object):
         self._name = None
         self._scan = None
         self._scan_template_id = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if description is not None:
             self.description = description
@@ -249,11 +245,6 @@ class SiteCreateResource(object):
         """
 
         self._scan_template_id = scan_template_id
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

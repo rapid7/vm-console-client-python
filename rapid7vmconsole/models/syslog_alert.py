@@ -58,10 +58,6 @@ class SyslogAlert(object):
         'server': 'server'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, enabled=None, enabled_scan_events=None, enabled_vulnerability_events=None, id=None, links=None, maximum_alerts=None, name=None, notification=None, server=None):  # noqa: E501
         """SyslogAlert - a model defined in Swagger"""  # noqa: E501
 
@@ -74,7 +70,7 @@ class SyslogAlert(object):
         self._name = None
         self._notification = None
         self._server = None
-        self.discriminator = ''
+        self.discriminator = None
 
         self.enabled = enabled
         if enabled_scan_events is not None:
@@ -311,11 +307,6 @@ class SyslogAlert(object):
             raise ValueError("Invalid value for `server`, must not be `None`")  # noqa: E501
 
         self._server = server
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

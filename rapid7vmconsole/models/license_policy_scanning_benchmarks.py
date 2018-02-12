@@ -46,10 +46,6 @@ class LicensePolicyScanningBenchmarks(object):
         'usgcb': 'usgcb'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, cis=None, custom=None, disa=None, fdcc=None, usgcb=None):  # noqa: E501
         """LicensePolicyScanningBenchmarks - a model defined in Swagger"""  # noqa: E501
 
@@ -58,7 +54,7 @@ class LicensePolicyScanningBenchmarks(object):
         self._disa = None
         self._fdcc = None
         self._usgcb = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if cis is not None:
             self.cis = cis
@@ -185,11 +181,6 @@ class LicensePolicyScanningBenchmarks(object):
         """
 
         self._usgcb = usgcb
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

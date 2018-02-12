@@ -46,10 +46,6 @@ class RiskModifierSettings(object):
         'very_low': 'veryLow'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, high=None, low=None, medium=None, very_high=None, very_low=None):  # noqa: E501
         """RiskModifierSettings - a model defined in Swagger"""  # noqa: E501
 
@@ -58,7 +54,7 @@ class RiskModifierSettings(object):
         self._medium = None
         self._very_high = None
         self._very_low = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if high is not None:
             self.high = high
@@ -185,11 +181,6 @@ class RiskModifierSettings(object):
         """
 
         self._very_low = very_low
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

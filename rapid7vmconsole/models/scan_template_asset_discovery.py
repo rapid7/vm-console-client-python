@@ -54,10 +54,6 @@ class ScanTemplateAssetDiscovery(object):
         'udp_ports': 'udpPorts'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, collect_whois_information=None, fingerprint_minimum_certainty=None, fingerprint_retries=None, ip_fingerprinting_enabled=None, send_arp_pings=None, send_icmp_pings=None, tcp_ports=None, treat_tcp_reset_as_asset=None, udp_ports=None):  # noqa: E501
         """ScanTemplateAssetDiscovery - a model defined in Swagger"""  # noqa: E501
 
@@ -70,7 +66,7 @@ class ScanTemplateAssetDiscovery(object):
         self._tcp_ports = None
         self._treat_tcp_reset_as_asset = None
         self._udp_ports = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if collect_whois_information is not None:
             self.collect_whois_information = collect_whois_information
@@ -305,11 +301,6 @@ class ScanTemplateAssetDiscovery(object):
         """
 
         self._udp_ports = udp_ports
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

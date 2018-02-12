@@ -42,17 +42,13 @@ class IMetaData(object):
         'type': 'type'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, field_name=None, supported_operators=None, type=None):  # noqa: E501
         """IMetaData - a model defined in Swagger"""  # noqa: E501
 
         self._field_name = None
         self._supported_operators = None
         self._type = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if field_name is not None:
             self.field_name = field_name
@@ -136,11 +132,6 @@ class IMetaData(object):
             )
 
         self._type = type
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

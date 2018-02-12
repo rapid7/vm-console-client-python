@@ -50,10 +50,6 @@ class ExceptionScope(object):
         'vulnerability': 'vulnerability'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, id=None, key=None, links=None, port=None, type=None, vulnerability=None):  # noqa: E501
         """ExceptionScope - a model defined in Swagger"""  # noqa: E501
 
@@ -63,7 +59,7 @@ class ExceptionScope(object):
         self._port = None
         self._type = None
         self._vulnerability = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if id is not None:
             self.id = id
@@ -213,11 +209,6 @@ class ExceptionScope(object):
         """
 
         self._vulnerability = vulnerability
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

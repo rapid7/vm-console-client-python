@@ -48,10 +48,6 @@ class ScanSettings(object):
         'status_threads': 'statusThreads'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, connection_timeout=None, incremental=None, maximum_threads=None, read_timeout=None, status_idle_timeout=None, status_threads=None):  # noqa: E501
         """ScanSettings - a model defined in Swagger"""  # noqa: E501
 
@@ -61,7 +57,7 @@ class ScanSettings(object):
         self._read_timeout = None
         self._status_idle_timeout = None
         self._status_threads = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if connection_timeout is not None:
             self.connection_timeout = connection_timeout
@@ -213,11 +209,6 @@ class ScanSettings(object):
         """
 
         self._status_threads = status_threads
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

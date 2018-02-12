@@ -42,16 +42,12 @@ class ExcludedAssetGroups(object):
         'links': 'links'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, asset_group_i_ds=None, links=None):  # noqa: E501
         """ExcludedAssetGroups - a model defined in Swagger"""  # noqa: E501
 
         self._asset_group_i_ds = None
         self._links = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if asset_group_i_ds is not None:
             self.asset_group_i_ds = asset_group_i_ds
@@ -101,11 +97,6 @@ class ExcludedAssetGroups(object):
         """
 
         self._links = links
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

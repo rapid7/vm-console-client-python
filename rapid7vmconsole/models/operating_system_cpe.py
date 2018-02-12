@@ -62,10 +62,6 @@ class OperatingSystemCpe(object):
         'version': 'version'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, edition=None, language=None, other=None, part=None, product=None, sw_edition=None, target_hw=None, target_sw=None, update=None, v2_2=None, v2_3=None, vendor=None, version=None):  # noqa: E501
         """OperatingSystemCpe - a model defined in Swagger"""  # noqa: E501
 
@@ -82,7 +78,7 @@ class OperatingSystemCpe(object):
         self._v2_3 = None
         self._vendor = None
         self._version = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if edition is not None:
             self.edition = edition
@@ -416,11 +412,6 @@ class OperatingSystemCpe(object):
         """
 
         self._version = version
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

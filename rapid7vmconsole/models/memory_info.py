@@ -43,16 +43,12 @@ class MemoryInfo(object):
         'total': 'total'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, free=None, total=None):  # noqa: E501
         """MemoryInfo - a model defined in Swagger"""  # noqa: E501
 
         self._free = None
         self._total = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if free is not None:
             self.free = free
@@ -104,11 +100,6 @@ class MemoryInfo(object):
         """
 
         self._total = total
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

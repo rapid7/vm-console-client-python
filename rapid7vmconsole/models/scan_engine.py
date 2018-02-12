@@ -60,10 +60,6 @@ class ScanEngine(object):
         'sites': 'sites'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, address=None, content_version=None, engine_pools=None, id=None, last_refreshed_date=None, last_updated_date=None, links=None, name=None, port=None, product_version=None, sites=None):  # noqa: E501
         """ScanEngine - a model defined in Swagger"""  # noqa: E501
 
@@ -78,7 +74,7 @@ class ScanEngine(object):
         self._port = None
         self._product_version = None
         self._sites = None
-        self.discriminator = ''
+        self.discriminator = None
 
         self.address = address
         if content_version is not None:
@@ -359,11 +355,6 @@ class ScanEngine(object):
         """
 
         self._sites = sites
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

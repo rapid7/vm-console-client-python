@@ -78,10 +78,6 @@ class SharedCredentialAccount(object):
         'username': 'username'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, authentication_type=None, community_name=None, database=None, domain=None, enumerate_sids=None, notes_id_password=None, ntlm_hash=None, oracle_listener_password=None, password=None, pem_key=None, permission_elevation=None, permission_elevation_password=None, permission_elevation_user_name=None, privacy_password=None, privacy_type=None, private_key_password=None, realm=None, service=None, sid=None, use_windows_authentication=None, username=None):  # noqa: E501
         """SharedCredentialAccount - a model defined in Swagger"""  # noqa: E501
 
@@ -106,7 +102,7 @@ class SharedCredentialAccount(object):
         self._sid = None
         self._use_windows_authentication = None
         self._username = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if authentication_type is not None:
             self.authentication_type = authentication_type
@@ -591,11 +587,6 @@ class SharedCredentialAccount(object):
         """
 
         self._username = username
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

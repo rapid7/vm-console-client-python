@@ -50,10 +50,6 @@ class AssetHistory(object):
         'vulnerability_exception_id': 'vulnerabilityExceptionId'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, date=None, description=None, scan_id=None, type=None, user=None, version=None, vulnerability_exception_id=None):  # noqa: E501
         """AssetHistory - a model defined in Swagger"""  # noqa: E501
 
@@ -64,7 +60,7 @@ class AssetHistory(object):
         self._user = None
         self._version = None
         self._vulnerability_exception_id = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if date is not None:
             self.date = date
@@ -241,11 +237,6 @@ class AssetHistory(object):
         """
 
         self._vulnerability_exception_id = vulnerability_exception_id
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

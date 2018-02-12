@@ -42,17 +42,13 @@ class ScanTemplateWebSpiderPaths(object):
         'honor_robot_directives': 'honorRobotDirectives'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, boostrap=None, excluded=None, honor_robot_directives=None):  # noqa: E501
         """ScanTemplateWebSpiderPaths - a model defined in Swagger"""  # noqa: E501
 
         self._boostrap = None
         self._excluded = None
         self._honor_robot_directives = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if boostrap is not None:
             self.boostrap = boostrap
@@ -129,11 +125,6 @@ class ScanTemplateWebSpiderPaths(object):
         """
 
         self._honor_robot_directives = honor_robot_directives
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -56,10 +56,6 @@ class Alert(object):
         'notification': 'notification'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, enabled=None, enabled_scan_events=None, enabled_vulnerability_events=None, id=None, links=None, maximum_alerts=None, name=None, notification=None):  # noqa: E501
         """Alert - a model defined in Swagger"""  # noqa: E501
 
@@ -71,7 +67,7 @@ class Alert(object):
         self._maximum_alerts = None
         self._name = None
         self._notification = None
-        self.discriminator = ''
+        self.discriminator = None
 
         self.enabled = enabled
         if enabled_scan_events is not None:
@@ -284,11 +280,6 @@ class Alert(object):
             )
 
         self._notification = notification
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

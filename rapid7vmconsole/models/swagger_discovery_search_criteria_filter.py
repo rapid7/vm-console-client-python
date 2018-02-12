@@ -48,10 +48,6 @@ class SwaggerDiscoverySearchCriteriaFilter(object):
         'values': 'values'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, field=None, lower=None, operator=None, upper=None, value=None, values=None):  # noqa: E501
         """SwaggerDiscoverySearchCriteriaFilter - a model defined in Swagger"""  # noqa: E501
 
@@ -61,7 +57,7 @@ class SwaggerDiscoverySearchCriteriaFilter(object):
         self._upper = None
         self._value = None
         self._values = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if field is not None:
             self.field = field
@@ -213,11 +209,6 @@ class SwaggerDiscoverySearchCriteriaFilter(object):
         """
 
         self._values = values
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

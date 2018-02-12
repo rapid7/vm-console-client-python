@@ -52,10 +52,6 @@ class ReportTemplate(object):
         'type': 'type'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, builtin=None, description=None, id=None, links=None, name=None, sections=None, type=None):  # noqa: E501
         """ReportTemplate - a model defined in Swagger"""  # noqa: E501
 
@@ -66,7 +62,7 @@ class ReportTemplate(object):
         self._name = None
         self._sections = None
         self._type = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if builtin is not None:
             self.builtin = builtin
@@ -249,11 +245,6 @@ class ReportTemplate(object):
             )
 
         self._type = type
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

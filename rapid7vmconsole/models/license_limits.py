@@ -44,10 +44,6 @@ class LicenseLimits(object):
         'users': 'users'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, assets=None, assets_with_hosted_engine=None, scan_engines=None, users=None):  # noqa: E501
         """LicenseLimits - a model defined in Swagger"""  # noqa: E501
 
@@ -55,7 +51,7 @@ class LicenseLimits(object):
         self._assets_with_hosted_engine = None
         self._scan_engines = None
         self._users = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if assets is not None:
             self.assets = assets
@@ -157,11 +153,6 @@ class LicenseLimits(object):
         """
 
         self._users = users
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

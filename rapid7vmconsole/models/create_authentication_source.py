@@ -38,15 +38,11 @@ class CreateAuthenticationSource(object):
         'type': 'type'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, type=None):  # noqa: E501
         """CreateAuthenticationSource - a model defined in Swagger"""  # noqa: E501
 
         self._type = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if type is not None:
             self.type = type
@@ -73,11 +69,6 @@ class CreateAuthenticationSource(object):
         """
 
         self._type = type
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

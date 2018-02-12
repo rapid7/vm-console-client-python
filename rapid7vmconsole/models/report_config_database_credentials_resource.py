@@ -40,16 +40,12 @@ class ReportConfigDatabaseCredentialsResource(object):
         'username': 'username'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, password=None, username=None):  # noqa: E501
         """ReportConfigDatabaseCredentialsResource - a model defined in Swagger"""  # noqa: E501
 
         self._password = None
         self._username = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if password is not None:
             self.password = password
@@ -101,11 +97,6 @@ class ReportConfigDatabaseCredentialsResource(object):
         """
 
         self._username = username
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

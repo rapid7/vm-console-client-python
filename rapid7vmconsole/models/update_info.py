@@ -46,10 +46,6 @@ class UpdateInfo(object):
         'product': 'product'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, content=None, content_partial=None, id=None, product=None):  # noqa: E501
         """UpdateInfo - a model defined in Swagger"""  # noqa: E501
 
@@ -57,7 +53,7 @@ class UpdateInfo(object):
         self._content_partial = None
         self._id = None
         self._product = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if content is not None:
             self.content = content
@@ -159,11 +155,6 @@ class UpdateInfo(object):
         """
 
         self._product = product
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

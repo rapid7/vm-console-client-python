@@ -44,17 +44,13 @@ class UnauthorizedError(object):
         'status': 'status'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, links=None, message=None, status=None):  # noqa: E501
         """UnauthorizedError - a model defined in Swagger"""  # noqa: E501
 
         self._links = None
         self._message = None
         self._status = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if links is not None:
             self.links = links
@@ -138,11 +134,6 @@ class UnauthorizedError(object):
             )
 
         self._status = status
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

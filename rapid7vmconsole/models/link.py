@@ -40,16 +40,12 @@ class Link(object):
         'rel': 'rel'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, href=None, rel=None):  # noqa: E501
         """Link - a model defined in Swagger"""  # noqa: E501
 
         self._href = None
         self._rel = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if href is not None:
             self.href = href
@@ -101,11 +97,6 @@ class Link(object):
         """
 
         self._rel = rel
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

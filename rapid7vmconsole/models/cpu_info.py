@@ -40,16 +40,12 @@ class CPUInfo(object):
         'count': 'count'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, clock_speed=None, count=None):  # noqa: E501
         """CPUInfo - a model defined in Swagger"""  # noqa: E501
 
         self._clock_speed = None
         self._count = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if clock_speed is not None:
             self.clock_speed = clock_speed
@@ -101,11 +97,6 @@ class CPUInfo(object):
         """
 
         self._count = count
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

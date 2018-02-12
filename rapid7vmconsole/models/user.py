@@ -65,10 +65,6 @@ class User(object):
         'role': 'role'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, authentication=None, email=None, enabled=None, id=None, links=None, locale=None, locked=None, login=None, name=None, password=None, password_reset_on_login=None, role=None):  # noqa: E501
         """User - a model defined in Swagger"""  # noqa: E501
 
@@ -84,7 +80,7 @@ class User(object):
         self._password = None
         self._password_reset_on_login = None
         self._role = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if authentication is not None:
             self.authentication = authentication
@@ -390,11 +386,6 @@ class User(object):
             raise ValueError("Invalid value for `role`, must not be `None`")  # noqa: E501
 
         self._role = role
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -88,10 +88,6 @@ class Report(object):
         'version': 'version'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, bureau=None, component=None, database=None, email=None, enclave=None, filters=None, format=None, frequency=None, id=None, language=None, links=None, name=None, organization=None, owner=None, policy=None, query=None, scope=None, storage=None, template=None, timezone=None, users=None, version=None):  # noqa: E501
         """Report - a model defined in Swagger"""  # noqa: E501
 
@@ -117,7 +113,7 @@ class Report(object):
         self._timezone = None
         self._users = None
         self._version = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if bureau is not None:
             self.bureau = bureau
@@ -669,11 +665,6 @@ class Report(object):
         """
 
         self._version = version
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

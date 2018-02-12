@@ -51,10 +51,6 @@ class SolutionMatch(object):
         'type': 'type'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, check=None, confidence=None, fingerprint=None, links=None, solution=None, type=None):  # noqa: E501
         """SolutionMatch - a model defined in Swagger"""  # noqa: E501
 
@@ -64,7 +60,7 @@ class SolutionMatch(object):
         self._links = None
         self._solution = None
         self._type = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if check is not None:
             self.check = check
@@ -228,11 +224,6 @@ class SolutionMatch(object):
             )
 
         self._type = type
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

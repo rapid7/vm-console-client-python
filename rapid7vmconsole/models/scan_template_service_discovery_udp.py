@@ -46,10 +46,6 @@ class ScanTemplateServiceDiscoveryUdp(object):
         'ports': 'ports'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, additional_ports=None, excluded_ports=None, links=None, ports=None):  # noqa: E501
         """ScanTemplateServiceDiscoveryUdp - a model defined in Swagger"""  # noqa: E501
 
@@ -57,7 +53,7 @@ class ScanTemplateServiceDiscoveryUdp(object):
         self._excluded_ports = None
         self._links = None
         self._ports = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if additional_ports is not None:
             self.additional_ports = additional_ports
@@ -165,11 +161,6 @@ class ScanTemplateServiceDiscoveryUdp(object):
             )
 
         self._ports = ports
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

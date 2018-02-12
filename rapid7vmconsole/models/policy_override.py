@@ -55,10 +55,6 @@ class PolicyOverride(object):
         'submit': 'submit'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, expires=None, id=None, links=None, review=None, scope=None, state=None, submit=None):  # noqa: E501
         """PolicyOverride - a model defined in Swagger"""  # noqa: E501
 
@@ -69,7 +65,7 @@ class PolicyOverride(object):
         self._scope = None
         self._state = None
         self._submit = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if expires is not None:
             self.expires = expires
@@ -247,11 +243,6 @@ class PolicyOverride(object):
             raise ValueError("Invalid value for `submit`, must not be `None`")  # noqa: E501
 
         self._submit = submit
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

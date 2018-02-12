@@ -62,10 +62,6 @@ class SiteOrganization(object):
         'zip_code': 'zipCode'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, address=None, city=None, contact=None, country=None, email=None, job_title=None, links=None, name=None, phone=None, state=None, url=None, zip_code=None):  # noqa: E501
         """SiteOrganization - a model defined in Swagger"""  # noqa: E501
 
@@ -81,7 +77,7 @@ class SiteOrganization(object):
         self._state = None
         self._url = None
         self._zip_code = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if address is not None:
             self.address = address
@@ -383,11 +379,6 @@ class SiteOrganization(object):
         """
 
         self._zip_code = zip_code
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -54,10 +54,6 @@ class ScanTemplateWebSpiderPerformance(object):
         'threads_per_server': 'threadsPerServer'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, http_daemons_to_skip=None, maximum_directory_levels=None, maximum_foreign_hosts=None, maximum_link_depth=None, maximum_pages=None, maximum_retries=None, maximum_time=None, response_timeout=None, threads_per_server=None):  # noqa: E501
         """ScanTemplateWebSpiderPerformance - a model defined in Swagger"""  # noqa: E501
 
@@ -70,7 +66,7 @@ class ScanTemplateWebSpiderPerformance(object):
         self._maximum_time = None
         self._response_timeout = None
         self._threads_per_server = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if http_daemons_to_skip is not None:
             self.http_daemons_to_skip = http_daemons_to_skip
@@ -317,11 +313,6 @@ class ScanTemplateWebSpiderPerformance(object):
             raise ValueError("Invalid value for `threads_per_server`, must be a value greater than or equal to `0`")  # noqa: E501
 
         self._threads_per_server = threads_per_server
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

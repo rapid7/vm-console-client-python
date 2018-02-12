@@ -44,17 +44,13 @@ class LocalePreferences(object):
         'reports': 'reports'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, default=None, links=None, reports=None):  # noqa: E501
         """LocalePreferences - a model defined in Swagger"""  # noqa: E501
 
         self._default = None
         self._links = None
         self._reports = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if default is not None:
             self.default = default
@@ -129,11 +125,6 @@ class LocalePreferences(object):
         """
 
         self._reports = reports
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

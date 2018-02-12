@@ -40,16 +40,12 @@ class ScanTemplateDiscoveryPerformanceScanDelay(object):
         'minimum': 'minimum'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, maximum=None, minimum=None):  # noqa: E501
         """ScanTemplateDiscoveryPerformanceScanDelay - a model defined in Swagger"""  # noqa: E501
 
         self._maximum = None
         self._minimum = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if maximum is not None:
             self.maximum = maximum
@@ -101,11 +97,6 @@ class ScanTemplateDiscoveryPerformanceScanDelay(object):
         """
 
         self._minimum = minimum
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

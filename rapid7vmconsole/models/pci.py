@@ -46,10 +46,6 @@ class PCI(object):
         'status': 'status'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, adjusted_cvss_score=None, adjusted_severity_score=None, fail=None, special_notes=None, status=None):  # noqa: E501
         """PCI - a model defined in Swagger"""  # noqa: E501
 
@@ -58,7 +54,7 @@ class PCI(object):
         self._fail = None
         self._special_notes = None
         self._status = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if adjusted_cvss_score is not None:
             self.adjusted_cvss_score = adjusted_cvss_score
@@ -185,11 +181,6 @@ class PCI(object):
         """
 
         self._status = status
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

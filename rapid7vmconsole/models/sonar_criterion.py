@@ -46,10 +46,6 @@ class SonarCriterion(object):
         'upper': 'upper'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, days=None, lower=None, search_domain=None, type=None, upper=None):  # noqa: E501
         """SonarCriterion - a model defined in Swagger"""  # noqa: E501
 
@@ -58,7 +54,7 @@ class SonarCriterion(object):
         self._search_domain = None
         self._type = None
         self._upper = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if days is not None:
             self.days = days
@@ -191,11 +187,6 @@ class SonarCriterion(object):
         """
 
         self._upper = upper
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -51,10 +51,6 @@ class PolicyAsset(object):
         'status': 'status'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, hostname=None, id=None, ip=None, links=None, os=None, status=None):  # noqa: E501
         """PolicyAsset - a model defined in Swagger"""  # noqa: E501
 
@@ -64,7 +60,7 @@ class PolicyAsset(object):
         self._links = None
         self._os = None
         self._status = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if hostname is not None:
             self.hostname = hostname
@@ -222,11 +218,6 @@ class PolicyAsset(object):
             )
 
         self._status = status
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -52,10 +52,6 @@ class DatabaseSettings(object):
         'vendor': 'vendor'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, connection=None, host=None, maintenance_thread_pool_size=None, port=None, url=None, user=None, vendor=None):  # noqa: E501
         """DatabaseSettings - a model defined in Swagger"""  # noqa: E501
 
@@ -66,7 +62,7 @@ class DatabaseSettings(object):
         self._url = None
         self._user = None
         self._vendor = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if connection is not None:
             self.connection = connection
@@ -243,11 +239,6 @@ class DatabaseSettings(object):
         """
 
         self._vendor = vendor
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -65,10 +65,6 @@ class Features(object):
         'scanning': 'scanning'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, adaptive_security=None, agents=None, dynamic_discovery=None, early_access=None, engine_pool=None, insight_platform=None, mobile=None, multitenancy=None, policy_editor=None, policy_manager=None, remediation_analytics=None, reporting=None, scanning=None):  # noqa: E501
         """Features - a model defined in Swagger"""  # noqa: E501
 
@@ -85,7 +81,7 @@ class Features(object):
         self._remediation_analytics = None
         self._reporting = None
         self._scanning = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if adaptive_security is not None:
             self.adaptive_security = adaptive_security
@@ -412,11 +408,6 @@ class Features(object):
         """
 
         self._scanning = scanning
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

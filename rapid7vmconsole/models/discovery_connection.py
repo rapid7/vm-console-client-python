@@ -80,10 +80,6 @@ class DiscoveryConnection(object):
         'win_rm_server': 'winRMServer'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, access_key_id=None, address=None, arn=None, aws_session_name=None, connection_type=None, event_source=None, exchange_server_hostname=None, exchange_user=None, folder_path=None, id=None, ldap_server=None, links=None, name=None, port=None, protocol=None, region=None, scan_engine_is_inside_aws=None, secret_access_key=None, status=None, username=None, win_rm_server=None):  # noqa: E501
         """DiscoveryConnection - a model defined in Swagger"""  # noqa: E501
 
@@ -108,7 +104,7 @@ class DiscoveryConnection(object):
         self._status = None
         self._username = None
         self._win_rm_server = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if access_key_id is not None:
             self.access_key_id = access_key_id
@@ -635,11 +631,6 @@ class DiscoveryConnection(object):
         """
 
         self._win_rm_server = win_rm_server
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

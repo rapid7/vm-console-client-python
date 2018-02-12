@@ -40,16 +40,12 @@ class ScanTemplateWebSpiderPatterns(object):
         'sensitive_field': 'sensitiveField'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, sensitive_content=None, sensitive_field=None):  # noqa: E501
         """ScanTemplateWebSpiderPatterns - a model defined in Swagger"""  # noqa: E501
 
         self._sensitive_content = None
         self._sensitive_field = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if sensitive_content is not None:
             self.sensitive_content = sensitive_content
@@ -101,11 +97,6 @@ class ScanTemplateWebSpiderPatterns(object):
         """
 
         self._sensitive_field = sensitive_field
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -42,17 +42,13 @@ class SmtpSettings(object):
         'sender': 'sender'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, host=None, port=None, sender=None):  # noqa: E501
         """SmtpSettings - a model defined in Swagger"""  # noqa: E501
 
         self._host = None
         self._port = None
         self._sender = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if host is not None:
             self.host = host
@@ -129,11 +125,6 @@ class SmtpSettings(object):
         """
 
         self._sender = sender
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

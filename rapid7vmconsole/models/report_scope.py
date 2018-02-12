@@ -36,18 +36,9 @@ class ReportScope(object):
     attribute_map = {
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self):  # noqa: E501
         """ReportScope - a model defined in Swagger"""  # noqa: E501
-        self.discriminator = ''
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
+        self.discriminator = None
 
     def to_dict(self):
         """Returns the model properties as a dict"""

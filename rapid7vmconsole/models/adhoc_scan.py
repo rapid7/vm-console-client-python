@@ -44,10 +44,6 @@ class AdhocScan(object):
         'template_id': 'templateId'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, engine_id=None, hosts=None, name=None, template_id=None):  # noqa: E501
         """AdhocScan - a model defined in Swagger"""  # noqa: E501
 
@@ -55,7 +51,7 @@ class AdhocScan(object):
         self._hosts = None
         self._name = None
         self._template_id = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if engine_id is not None:
             self.engine_id = engine_id
@@ -157,11 +153,6 @@ class AdhocScan(object):
         """
 
         self._template_id = template_id
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

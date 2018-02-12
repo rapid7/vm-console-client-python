@@ -40,16 +40,12 @@ class ReportStorage(object):
         'path': 'path'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, location=None, path=None):  # noqa: E501
         """ReportStorage - a model defined in Swagger"""  # noqa: E501
 
         self._location = None
         self._path = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if location is not None:
             self.location = location
@@ -101,11 +97,6 @@ class ReportStorage(object):
         """
 
         self._path = path
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

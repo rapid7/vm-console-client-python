@@ -44,10 +44,6 @@ class WebSettings(object):
         'session_timeout': 'sessionTimeout'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, max_threads=None, min_threads=None, port=None, session_timeout=None):  # noqa: E501
         """WebSettings - a model defined in Swagger"""  # noqa: E501
 
@@ -55,7 +51,7 @@ class WebSettings(object):
         self._min_threads = None
         self._port = None
         self._session_timeout = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if max_threads is not None:
             self.max_threads = max_threads
@@ -157,11 +153,6 @@ class WebSettings(object):
         """
 
         self._session_timeout = session_timeout
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

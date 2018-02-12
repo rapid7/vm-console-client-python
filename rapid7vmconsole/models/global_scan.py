@@ -71,10 +71,6 @@ class GlobalScan(object):
         'vulnerabilities': 'vulnerabilities'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, assets=None, duration=None, end_time=None, engine_id=None, engine_name=None, id=None, links=None, message=None, scan_name=None, scan_type=None, site_id=None, site_name=None, start_time=None, started_by=None, status=None, vulnerabilities=None):  # noqa: E501
         """GlobalScan - a model defined in Swagger"""  # noqa: E501
 
@@ -94,7 +90,7 @@ class GlobalScan(object):
         self._started_by = None
         self._status = None
         self._vulnerabilities = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if assets is not None:
             self.assets = assets
@@ -498,11 +494,6 @@ class GlobalScan(object):
         """
 
         self._vulnerabilities = vulnerabilities
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

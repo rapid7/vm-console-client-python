@@ -56,10 +56,6 @@ class ScanTemplateWebSpider(object):
         'user_agent': 'userAgent'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, dont_scan_multi_use_devices=None, include_query_strings=None, paths=None, patterns=None, performance=None, test_common_usernames_and_passwords=None, test_xss_in_single_scan=None, user_agent=None):  # noqa: E501
         """ScanTemplateWebSpider - a model defined in Swagger"""  # noqa: E501
 
@@ -71,7 +67,7 @@ class ScanTemplateWebSpider(object):
         self._test_common_usernames_and_passwords = None
         self._test_xss_in_single_scan = None
         self._user_agent = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if dont_scan_multi_use_devices is not None:
             self.dont_scan_multi_use_devices = dont_scan_multi_use_devices
@@ -273,11 +269,6 @@ class ScanTemplateWebSpider(object):
         """
 
         self._user_agent = user_agent
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

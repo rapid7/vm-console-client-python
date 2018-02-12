@@ -44,17 +44,13 @@ class ReportConfigFiltersResource(object):
         'statuses': 'statuses'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, categories=None, severity=None, statuses=None):  # noqa: E501
         """ReportConfigFiltersResource - a model defined in Swagger"""  # noqa: E501
 
         self._categories = None
         self._severity = None
         self._statuses = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if categories is not None:
             self.categories = categories
@@ -144,11 +140,6 @@ class ReportConfigFiltersResource(object):
             )
 
         self._statuses = statuses
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

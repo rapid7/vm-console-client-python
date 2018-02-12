@@ -50,10 +50,6 @@ class PolicyRuleAssessmentResource(object):
         'unscored': 'unscored'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, links=None, total=None, total_failed=None, total_not_applicable=None, total_passed=None, unscored=None):  # noqa: E501
         """PolicyRuleAssessmentResource - a model defined in Swagger"""  # noqa: E501
 
@@ -63,7 +59,7 @@ class PolicyRuleAssessmentResource(object):
         self._total_not_applicable = None
         self._total_passed = None
         self._unscored = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if links is not None:
             self.links = links
@@ -215,11 +211,6 @@ class PolicyRuleAssessmentResource(object):
         """
 
         self._unscored = unscored
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

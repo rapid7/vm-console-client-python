@@ -40,16 +40,12 @@ class GroupAccount(object):
         'name': 'name'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, id=None, name=None):  # noqa: E501
         """GroupAccount - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
         self._name = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if id is not None:
             self.id = id
@@ -102,11 +98,6 @@ class GroupAccount(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

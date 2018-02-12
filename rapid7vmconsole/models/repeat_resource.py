@@ -46,10 +46,6 @@ class RepeatResource(object):
         'week_of_month': 'weekOfMonth'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, day_of_week=None, every=None, interval=None, last_day_of_month=None, week_of_month=None):  # noqa: E501
         """RepeatResource - a model defined in Swagger"""  # noqa: E501
 
@@ -58,7 +54,7 @@ class RepeatResource(object):
         self._interval = None
         self._last_day_of_month = None
         self._week_of_month = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if day_of_week is not None:
             self.day_of_week = day_of_week
@@ -193,11 +189,6 @@ class RepeatResource(object):
             raise ValueError("Invalid value for `week_of_month`, must be a value greater than or equal to `1`")  # noqa: E501
 
         self._week_of_month = week_of_month
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

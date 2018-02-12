@@ -40,16 +40,12 @@ class MemoryFree(object):
         'formatted': 'formatted'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, bytes=None, formatted=None):  # noqa: E501
         """MemoryFree - a model defined in Swagger"""  # noqa: E501
 
         self._bytes = None
         self._formatted = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if bytes is not None:
             self.bytes = bytes
@@ -101,11 +97,6 @@ class MemoryFree(object):
         """
 
         self._formatted = formatted
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

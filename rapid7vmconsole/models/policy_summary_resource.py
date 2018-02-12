@@ -50,10 +50,6 @@ class PolicySummaryResource(object):
         'scanned_policies': 'scannedPolicies'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, decreased_compliance=None, increased_compliance=None, links=None, number_of_policies=None, overall_compliance=None, scanned_policies=None):  # noqa: E501
         """PolicySummaryResource - a model defined in Swagger"""  # noqa: E501
 
@@ -63,7 +59,7 @@ class PolicySummaryResource(object):
         self._number_of_policies = None
         self._overall_compliance = None
         self._scanned_policies = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if decreased_compliance is not None:
             self.decreased_compliance = decreased_compliance
@@ -215,11 +211,6 @@ class PolicySummaryResource(object):
         """
 
         self._scanned_policies = scanned_policies
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

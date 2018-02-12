@@ -44,17 +44,13 @@ class DiscoveryAsset(object):
         'name': 'name'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, address=None, links=None, name=None):  # noqa: E501
         """DiscoveryAsset - a model defined in Swagger"""  # noqa: E501
 
         self._address = None
         self._links = None
         self._name = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if address is not None:
             self.address = address
@@ -131,11 +127,6 @@ class DiscoveryAsset(object):
         """
 
         self._name = name
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

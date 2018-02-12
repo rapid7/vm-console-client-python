@@ -48,10 +48,6 @@ class AssetVulnerabilities(object):
         'total': 'total'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, critical=None, exploits=None, malware_kits=None, moderate=None, severe=None, total=None):  # noqa: E501
         """AssetVulnerabilities - a model defined in Swagger"""  # noqa: E501
 
@@ -61,7 +57,7 @@ class AssetVulnerabilities(object):
         self._moderate = None
         self._severe = None
         self._total = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if critical is not None:
             self.critical = critical
@@ -213,11 +209,6 @@ class AssetVulnerabilities(object):
         """
 
         self._total = total
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

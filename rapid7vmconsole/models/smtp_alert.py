@@ -64,10 +64,6 @@ class SmtpAlert(object):
         'sender_email_address': 'senderEmailAddress'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, enabled=None, enabled_scan_events=None, enabled_vulnerability_events=None, id=None, limit_alert_text=None, links=None, maximum_alerts=None, name=None, notification=None, recipients=None, relay_server=None, sender_email_address=None):  # noqa: E501
         """SmtpAlert - a model defined in Swagger"""  # noqa: E501
 
@@ -83,7 +79,7 @@ class SmtpAlert(object):
         self._recipients = None
         self._relay_server = None
         self._sender_email_address = None
-        self.discriminator = ''
+        self.discriminator = None
 
         self.enabled = enabled
         if enabled_scan_events is not None:
@@ -396,11 +392,6 @@ class SmtpAlert(object):
         """
 
         self._sender_email_address = sender_email_address
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -56,10 +56,6 @@ class AssessmentResult(object):
         'status': 'status'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, check_id=None, exceptions=None, key=None, links=None, port=None, proof=None, protocol=None, since=None, status=None):  # noqa: E501
         """AssessmentResult - a model defined in Swagger"""  # noqa: E501
 
@@ -72,7 +68,7 @@ class AssessmentResult(object):
         self._protocol = None
         self._since = None
         self._status = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if check_id is not None:
             self.check_id = check_id
@@ -312,11 +308,6 @@ class AssessmentResult(object):
             )
 
         self._status = status
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

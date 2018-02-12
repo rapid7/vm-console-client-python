@@ -42,17 +42,13 @@ class WebPage(object):
         'response': 'response'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, link_type=None, path=None, response=None):  # noqa: E501
         """WebPage - a model defined in Swagger"""  # noqa: E501
 
         self._link_type = None
         self._path = None
         self._response = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if link_type is not None:
             self.link_type = link_type
@@ -135,11 +131,6 @@ class WebPage(object):
         """
 
         self._response = response
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

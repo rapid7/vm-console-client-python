@@ -46,10 +46,6 @@ class Fingerprint(object):
         'version': 'version'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, description=None, family=None, product=None, vendor=None, version=None):  # noqa: E501
         """Fingerprint - a model defined in Swagger"""  # noqa: E501
 
@@ -58,7 +54,7 @@ class Fingerprint(object):
         self._product = None
         self._vendor = None
         self._version = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if description is not None:
             self.description = description
@@ -185,11 +181,6 @@ class Fingerprint(object):
         """
 
         self._version = version
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

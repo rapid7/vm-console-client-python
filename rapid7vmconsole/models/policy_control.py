@@ -50,10 +50,6 @@ class PolicyControl(object):
         'published_date': 'publishedDate'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, cce_item_id=None, cce_platform=None, control_name=None, id=None, links=None, published_date=None):  # noqa: E501
         """PolicyControl - a model defined in Swagger"""  # noqa: E501
 
@@ -63,7 +59,7 @@ class PolicyControl(object):
         self._id = None
         self._links = None
         self._published_date = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if cce_item_id is not None:
             self.cce_item_id = cce_item_id
@@ -215,11 +211,6 @@ class PolicyControl(object):
         """
 
         self._published_date = published_date
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

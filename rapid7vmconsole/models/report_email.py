@@ -50,10 +50,6 @@ class ReportEmail(object):
         'smtp': 'smtp'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, access=None, additional=None, additional_recipients=None, asset_access=None, owner=None, smtp=None):  # noqa: E501
         """ReportEmail - a model defined in Swagger"""  # noqa: E501
 
@@ -63,7 +59,7 @@ class ReportEmail(object):
         self._asset_access = None
         self._owner = None
         self._smtp = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if access is not None:
             self.access = access
@@ -233,11 +229,6 @@ class ReportEmail(object):
         """
 
         self._smtp = smtp
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

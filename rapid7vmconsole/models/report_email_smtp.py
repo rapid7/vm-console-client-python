@@ -42,17 +42,13 @@ class ReportEmailSmtp(object):
         'sender': 'sender'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, _global=None, relay=None, sender=None):  # noqa: E501
         """ReportEmailSmtp - a model defined in Swagger"""  # noqa: E501
 
         self.__global = None
         self._relay = None
         self._sender = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if _global is not None:
             self._global = _global
@@ -129,11 +125,6 @@ class ReportEmailSmtp(object):
         """
 
         self._sender = sender
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

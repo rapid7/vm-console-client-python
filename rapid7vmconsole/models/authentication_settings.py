@@ -40,16 +40,12 @@ class AuthenticationSettings(object):
         'login_lock_threshold': 'loginLockThreshold'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, _2fa=None, login_lock_threshold=None):  # noqa: E501
         """AuthenticationSettings - a model defined in Swagger"""  # noqa: E501
 
         self.__2fa = None
         self._login_lock_threshold = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if _2fa is not None:
             self._2fa = _2fa
@@ -101,11 +97,6 @@ class AuthenticationSettings(object):
         """
 
         self._login_lock_threshold = login_lock_threshold
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

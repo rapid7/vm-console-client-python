@@ -50,10 +50,6 @@ class Submission(object):
         'user': 'user'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, comment=None, date=None, links=None, name=None, reason=None, user=None):  # noqa: E501
         """Submission - a model defined in Swagger"""  # noqa: E501
 
@@ -63,7 +59,7 @@ class Submission(object):
         self._name = None
         self._reason = None
         self._user = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if comment is not None:
             self.comment = comment
@@ -213,11 +209,6 @@ class Submission(object):
         """
 
         self._user = user
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

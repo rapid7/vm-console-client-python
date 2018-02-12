@@ -64,10 +64,6 @@ class PolicyRule(object):
         'title': 'title'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, assets=None, benchmark=None, description=None, id=None, is_custom=None, links=None, name=None, role=None, scope=None, status=None, surrogate_id=None, title=None):  # noqa: E501
         """PolicyRule - a model defined in Swagger"""  # noqa: E501
 
@@ -83,7 +79,7 @@ class PolicyRule(object):
         self._status = None
         self._surrogate_id = None
         self._title = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if assets is not None:
             self.assets = assets
@@ -397,11 +393,6 @@ class PolicyRule(object):
         """
 
         self._title = title
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

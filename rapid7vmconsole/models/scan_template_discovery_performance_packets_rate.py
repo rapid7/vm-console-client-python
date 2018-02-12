@@ -42,17 +42,13 @@ class ScanTemplateDiscoveryPerformancePacketsRate(object):
         'minimum': 'minimum'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, defeat_rate_limit=None, maximum=None, minimum=None):  # noqa: E501
         """ScanTemplateDiscoveryPerformancePacketsRate - a model defined in Swagger"""  # noqa: E501
 
         self._defeat_rate_limit = None
         self._maximum = None
         self._minimum = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if defeat_rate_limit is not None:
             self.defeat_rate_limit = defeat_rate_limit
@@ -137,11 +133,6 @@ class ScanTemplateDiscoveryPerformancePacketsRate(object):
             raise ValueError("Invalid value for `minimum`, must be a value greater than or equal to `0`")  # noqa: E501
 
         self._minimum = minimum
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

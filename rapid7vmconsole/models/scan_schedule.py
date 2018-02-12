@@ -64,10 +64,6 @@ class ScanSchedule(object):
         'start': 'start'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, assets=None, duration=None, enabled=None, id=None, links=None, next_runtimes=None, on_scan_repeat=None, repeat=None, scan_engine_id=None, scan_name=None, scan_template_id=None, start=None):  # noqa: E501
         """ScanSchedule - a model defined in Swagger"""  # noqa: E501
 
@@ -83,7 +79,7 @@ class ScanSchedule(object):
         self._scan_name = None
         self._scan_template_id = None
         self._start = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if assets is not None:
             self.assets = assets
@@ -386,11 +382,6 @@ class ScanSchedule(object):
             raise ValueError("Invalid value for `start`, must not be `None`")  # noqa: E501
 
         self._start = start
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

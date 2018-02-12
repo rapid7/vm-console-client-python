@@ -51,10 +51,6 @@ class ScanTemplateDiscoveryPerformance(object):
         'timeout': 'timeout'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, packet_rate=None, parallelism=None, retry_limit=None, scan_delay=None, timeout=None):  # noqa: E501
         """ScanTemplateDiscoveryPerformance - a model defined in Swagger"""  # noqa: E501
 
@@ -63,7 +59,7 @@ class ScanTemplateDiscoveryPerformance(object):
         self._retry_limit = None
         self._scan_delay = None
         self._timeout = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if packet_rate is not None:
             self.packet_rate = packet_rate
@@ -194,11 +190,6 @@ class ScanTemplateDiscoveryPerformance(object):
         """
 
         self._timeout = timeout
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

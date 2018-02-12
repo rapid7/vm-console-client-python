@@ -42,17 +42,13 @@ class UpdateSettings(object):
         'product_auto_update': 'productAutoUpdate'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, content_auto_update=None, enabled=None, product_auto_update=None):  # noqa: E501
         """UpdateSettings - a model defined in Swagger"""  # noqa: E501
 
         self._content_auto_update = None
         self._enabled = None
         self._product_auto_update = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if content_auto_update is not None:
             self.content_auto_update = content_auto_update
@@ -129,11 +125,6 @@ class UpdateSettings(object):
         """
 
         self._product_auto_update = product_auto_update
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

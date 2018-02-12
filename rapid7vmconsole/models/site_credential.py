@@ -55,10 +55,6 @@ class SiteCredential(object):
         'port_restriction': 'portRestriction'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, account=None, description=None, enabled=None, host_restriction=None, id=None, links=None, name=None, port_restriction=None):  # noqa: E501
         """SiteCredential - a model defined in Swagger"""  # noqa: E501
 
@@ -70,7 +66,7 @@ class SiteCredential(object):
         self._links = None
         self._name = None
         self._port_restriction = None
-        self.discriminator = ''
+        self.discriminator = None
 
         self.account = account
         if description is not None:
@@ -276,11 +272,6 @@ class SiteCredential(object):
             raise ValueError("Invalid value for `port_restriction`, must be a value greater than or equal to `1`")  # noqa: E501
 
         self._port_restriction = port_restriction
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

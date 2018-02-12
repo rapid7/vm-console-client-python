@@ -80,10 +80,6 @@ class AssetPolicy(object):
         'unscored_rules': 'unscoredRules'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, benchmark_name=None, benchmark_version=None, category=None, description=None, failed_assets_count=None, failed_rules_count=None, id=None, is_custom=None, links=None, not_applicable_assets_count=None, not_applicable_rules_count=None, passed_assets_count=None, passed_rules_count=None, policy_name=None, rule_compliance=None, rule_compliance_delta=None, scope=None, status=None, surrogate_id=None, title=None, unscored_rules=None):  # noqa: E501
         """AssetPolicy - a model defined in Swagger"""  # noqa: E501
 
@@ -108,7 +104,7 @@ class AssetPolicy(object):
         self._surrogate_id = None
         self._title = None
         self._unscored_rules = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if benchmark_name is not None:
             self.benchmark_name = benchmark_name
@@ -641,11 +637,6 @@ class AssetPolicy(object):
         """
 
         self._unscored_rules = unscored_rules
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

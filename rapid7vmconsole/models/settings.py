@@ -73,10 +73,6 @@ class Settings(object):
         'web': 'web'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, asset_linking=None, authentication=None, database=None, directory=None, insight_platform=None, insight_platform_region=None, links=None, risk=None, scan=None, serial_number=None, smtp=None, updates=None, uuid=None, web=None):  # noqa: E501
         """Settings - a model defined in Swagger"""  # noqa: E501
 
@@ -94,7 +90,7 @@ class Settings(object):
         self._updates = None
         self._uuid = None
         self._web = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if asset_linking is not None:
             self.asset_linking = asset_linking
@@ -446,11 +442,6 @@ class Settings(object):
         """
 
         self._web = web
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -55,10 +55,6 @@ class InstallSize(object):
         'total': 'total'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, backups=None, database=None, directory=None, reports=None, scans=None, total=None):  # noqa: E501
         """InstallSize - a model defined in Swagger"""  # noqa: E501
 
@@ -68,7 +64,7 @@ class InstallSize(object):
         self._reports = None
         self._scans = None
         self._total = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if backups is not None:
             self.backups = backups
@@ -220,11 +216,6 @@ class InstallSize(object):
         """
 
         self._total = total
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

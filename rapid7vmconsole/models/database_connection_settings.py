@@ -42,17 +42,13 @@ class DatabaseConnectionSettings(object):
         'maximum_prepared_statement_pool_size': 'maximumPreparedStatementPoolSize'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, maximum_administration_pool_size=None, maximum_pool_size=None, maximum_prepared_statement_pool_size=None):  # noqa: E501
         """DatabaseConnectionSettings - a model defined in Swagger"""  # noqa: E501
 
         self._maximum_administration_pool_size = None
         self._maximum_pool_size = None
         self._maximum_prepared_statement_pool_size = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if maximum_administration_pool_size is not None:
             self.maximum_administration_pool_size = maximum_administration_pool_size
@@ -129,11 +125,6 @@ class DatabaseConnectionSettings(object):
         """
 
         self._maximum_prepared_statement_pool_size = maximum_prepared_statement_pool_size
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

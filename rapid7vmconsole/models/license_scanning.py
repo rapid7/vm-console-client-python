@@ -48,10 +48,6 @@ class LicenseScanning(object):
         'web_application': 'webApplication'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, discovery=None, policy=None, scada=None, virtual=None, web_application=None):  # noqa: E501
         """LicenseScanning - a model defined in Swagger"""  # noqa: E501
 
@@ -60,7 +56,7 @@ class LicenseScanning(object):
         self._scada = None
         self._virtual = None
         self._web_application = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if discovery is not None:
             self.discovery = discovery
@@ -187,11 +183,6 @@ class LicenseScanning(object):
         """
 
         self._web_application = web_application
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

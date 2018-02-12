@@ -44,17 +44,13 @@ class ReportFrequency(object):
         'start': 'start'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, next_runtimes=None, repeat=None, start=None):  # noqa: E501
         """ReportFrequency - a model defined in Swagger"""  # noqa: E501
 
         self._next_runtimes = None
         self._repeat = None
         self._start = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if next_runtimes is not None:
             self.next_runtimes = next_runtimes
@@ -133,11 +129,6 @@ class ReportFrequency(object):
             raise ValueError("Invalid value for `start`, must not be `None`")  # noqa: E501
 
         self._start = start
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

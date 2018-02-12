@@ -57,10 +57,6 @@ class Tag(object):
         'type': 'type'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, color=None, created=None, id=None, links=None, name=None, risk_modifier=None, search_criteria=None, source=None, type=None):  # noqa: E501
         """Tag - a model defined in Swagger"""  # noqa: E501
 
@@ -73,7 +69,7 @@ class Tag(object):
         self._search_criteria = None
         self._source = None
         self._type = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if color is not None:
             self.color = color
@@ -304,11 +300,6 @@ class Tag(object):
             raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
 
         self._type = type
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

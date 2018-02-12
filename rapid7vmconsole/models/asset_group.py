@@ -58,10 +58,6 @@ class AssetGroup(object):
         'vulnerabilities': 'vulnerabilities'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, assets=None, description=None, id=None, links=None, name=None, risk_score=None, search_criteria=None, type=None, vulnerabilities=None):  # noqa: E501
         """AssetGroup - a model defined in Swagger"""  # noqa: E501
 
@@ -74,7 +70,7 @@ class AssetGroup(object):
         self._search_criteria = None
         self._type = None
         self._vulnerabilities = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if assets is not None:
             self.assets = assets
@@ -309,11 +305,6 @@ class AssetGroup(object):
         """
 
         self._vulnerabilities = vulnerabilities
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

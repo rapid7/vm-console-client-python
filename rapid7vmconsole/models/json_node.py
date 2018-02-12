@@ -78,10 +78,6 @@ class JsonNode(object):
         'value_node': 'valueNode'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, array=None, big_decimal=None, big_integer=None, binary=None, boolean=None, container_node=None, double=None, float=None, floating_point_number=None, int=None, integral_number=None, long=None, missing_node=None, node_type=None, null=None, number=None, object=None, pojo=None, short=None, textual=None, value_node=None):  # noqa: E501
         """JsonNode - a model defined in Swagger"""  # noqa: E501
 
@@ -106,7 +102,7 @@ class JsonNode(object):
         self._short = None
         self._textual = None
         self._value_node = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if array is not None:
             self.array = array
@@ -597,11 +593,6 @@ class JsonNode(object):
         """
 
         self._value_node = value_node
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

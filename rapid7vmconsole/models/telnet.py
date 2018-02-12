@@ -50,10 +50,6 @@ class Telnet(object):
         'questionable_login_regex': 'questionableLoginRegex'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, character_set=None, failed_login_regex=None, links=None, login_regex=None, password_prompt_regex=None, questionable_login_regex=None):  # noqa: E501
         """Telnet - a model defined in Swagger"""  # noqa: E501
 
@@ -63,7 +59,7 @@ class Telnet(object):
         self._login_regex = None
         self._password_prompt_regex = None
         self._questionable_login_regex = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if character_set is not None:
             self.character_set = character_set
@@ -215,11 +211,6 @@ class Telnet(object):
         """
 
         self._questionable_login_regex = questionable_login_regex
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

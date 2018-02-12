@@ -44,17 +44,13 @@ class DiscoverySearchCriteria(object):
         'match': 'match'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, connection_type=None, filters=None, match=None):  # noqa: E501
         """DiscoverySearchCriteria - a model defined in Swagger"""  # noqa: E501
 
         self._connection_type = None
         self._filters = None
         self._match = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if connection_type is not None:
             self.connection_type = connection_type
@@ -143,11 +139,6 @@ class DiscoverySearchCriteria(object):
             )
 
         self._match = match
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

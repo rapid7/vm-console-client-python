@@ -44,17 +44,13 @@ class TagAssetSource(object):
         'source': 'source'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, id=None, links=None, source=None):  # noqa: E501
         """TagAssetSource - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
         self._links = None
         self._source = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if id is not None:
             self.id = id
@@ -137,11 +133,6 @@ class TagAssetSource(object):
             )
 
         self._source = source
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

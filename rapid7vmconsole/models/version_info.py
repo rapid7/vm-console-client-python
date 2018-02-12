@@ -48,10 +48,6 @@ class VersionInfo(object):
         'update': 'update'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, build=None, changeset=None, platform=None, semantic=None, update=None):  # noqa: E501
         """VersionInfo - a model defined in Swagger"""  # noqa: E501
 
@@ -60,7 +56,7 @@ class VersionInfo(object):
         self._platform = None
         self._semantic = None
         self._update = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if build is not None:
             self.build = build
@@ -187,11 +183,6 @@ class VersionInfo(object):
         """
 
         self._update = update
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

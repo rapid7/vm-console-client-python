@@ -46,10 +46,6 @@ class ReportConfigScopeResource(object):
         'tags': 'tags'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, asset_groups=None, assets=None, scan=None, sites=None, tags=None):  # noqa: E501
         """ReportConfigScopeResource - a model defined in Swagger"""  # noqa: E501
 
@@ -58,7 +54,7 @@ class ReportConfigScopeResource(object):
         self._scan = None
         self._sites = None
         self._tags = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if asset_groups is not None:
             self.asset_groups = asset_groups
@@ -185,11 +181,6 @@ class ReportConfigScopeResource(object):
         """
 
         self._tags = tags
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

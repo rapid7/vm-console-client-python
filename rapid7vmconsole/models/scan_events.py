@@ -46,10 +46,6 @@ class ScanEvents(object):
         'stopped': 'stopped'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, failed=None, paused=None, resumed=None, started=None, stopped=None):  # noqa: E501
         """ScanEvents - a model defined in Swagger"""  # noqa: E501
 
@@ -58,7 +54,7 @@ class ScanEvents(object):
         self._resumed = None
         self._started = None
         self._stopped = None
-        self.discriminator = ''
+        self.discriminator = None
 
         self.failed = failed
         self.paused = paused
@@ -189,11 +185,6 @@ class ScanEvents(object):
             raise ValueError("Invalid value for `stopped`, must not be `None`")  # noqa: E501
 
         self._stopped = stopped
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

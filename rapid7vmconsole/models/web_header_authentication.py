@@ -54,10 +54,6 @@ class WebHeaderAuthentication(object):
         'service': 'service'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, base_url=None, enabled=None, headers=None, id=None, links=None, login_regular_expression=None, name=None, service=None):  # noqa: E501
         """WebHeaderAuthentication - a model defined in Swagger"""  # noqa: E501
 
@@ -69,7 +65,7 @@ class WebHeaderAuthentication(object):
         self._login_regular_expression = None
         self._name = None
         self._service = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if base_url is not None:
             self.base_url = base_url
@@ -277,11 +273,6 @@ class WebHeaderAuthentication(object):
             )
 
         self._service = service
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

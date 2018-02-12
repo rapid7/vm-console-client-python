@@ -80,10 +80,6 @@ class ScanTemplate(object):
         'web_enabled': 'webEnabled'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, checks=None, database=None, description=None, discovery=None, discovery_only=None, enable_windows_services=None, enhanced_logging=None, id=None, links=None, max_parallel_assets=None, max_scan_processes=None, name=None, policy=None, policy_enabled=None, telnet=None, vulnerability_enabled=None, web=None, web_enabled=None):  # noqa: E501
         """ScanTemplate - a model defined in Swagger"""  # noqa: E501
 
@@ -105,7 +101,7 @@ class ScanTemplate(object):
         self._vulnerability_enabled = None
         self._web = None
         self._web_enabled = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if checks is not None:
             self.checks = checks
@@ -557,11 +553,6 @@ class ScanTemplate(object):
         """
 
         self._web_enabled = web_enabled
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

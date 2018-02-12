@@ -42,17 +42,13 @@ class ScanTemplateDiscoveryPerformanceTimeout(object):
         'minimum': 'minimum'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, initial=None, maximum=None, minimum=None):  # noqa: E501
         """ScanTemplateDiscoveryPerformanceTimeout - a model defined in Swagger"""  # noqa: E501
 
         self._initial = None
         self._maximum = None
         self._minimum = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if initial is not None:
             self.initial = initial
@@ -129,11 +125,6 @@ class ScanTemplateDiscoveryPerformanceTimeout(object):
         """
 
         self._minimum = minimum
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

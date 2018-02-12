@@ -49,10 +49,6 @@ class StaticSite(object):
         'included_targets': 'includedTargets'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, excluded_asset_groups=None, excluded_targets=None, included_asset_groups=None, included_targets=None):  # noqa: E501
         """StaticSite - a model defined in Swagger"""  # noqa: E501
 
@@ -60,7 +56,7 @@ class StaticSite(object):
         self._excluded_targets = None
         self._included_asset_groups = None
         self._included_targets = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if excluded_asset_groups is not None:
             self.excluded_asset_groups = excluded_asset_groups
@@ -162,11 +158,6 @@ class StaticSite(object):
         """
 
         self._included_targets = included_targets
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""

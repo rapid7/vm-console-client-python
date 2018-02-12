@@ -44,10 +44,6 @@ class UserCreateRole(object):
         'superuser': 'superuser'
     }
 
-    discriminator_value_class_map = {
-        
-    }
-
     def __init__(self, all_asset_groups=None, all_sites=None, id=None, superuser=None):  # noqa: E501
         """UserCreateRole - a model defined in Swagger"""  # noqa: E501
 
@@ -55,7 +51,7 @@ class UserCreateRole(object):
         self._all_sites = None
         self._id = None
         self._superuser = None
-        self.discriminator = ''
+        self.discriminator = None
 
         if all_asset_groups is not None:
             self.all_asset_groups = all_asset_groups
@@ -158,11 +154,6 @@ class UserCreateRole(object):
         """
 
         self._superuser = superuser
-
-    def get_real_child_model(self, data):
-        """Returns the real base class specified by the discriminator"""
-        discriminator_value = data[self.discriminator].lower()
-        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""
