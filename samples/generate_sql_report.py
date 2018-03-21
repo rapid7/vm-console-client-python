@@ -7,7 +7,7 @@ def generate_report():
     config = rapid7vmconsole.Configuration(name='Rapid7')
     config.username = 'nxadmin'
     config.password = 'nxpassword'
-    config.host = 'https://localhost0:3780'
+    config.host = 'https://localhost:3780'
     config.verify_ssl = False
     config.assert_hostname = False
     config.proxy = None
@@ -37,7 +37,7 @@ def generate_report():
 
 def create_report_sql(client, report_name, sql):
     report_config = rapid7vmconsole.Report(name=report_name, format='sql-query', query=sql, version='2.3.0')
-    response = client.create_report(param0=report_config)
+    response = client.create_report(report=report_config)
     return response.id
 
 

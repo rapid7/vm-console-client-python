@@ -138,7 +138,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_user**
-> CreatedReferenceUserIDLink create_user(param0=param0)
+> CreatedReferenceUserIDLink create_user(user=user)
 
 Users
 
@@ -154,11 +154,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = rapid7vmconsole.UserApi()
-param0 = rapid7vmconsole.User() # User | The details of the user. (optional)
+user = rapid7vmconsole.UserEdit() # UserEdit | The details of the user. (optional)
 
 try:
     # Users
-    api_response = api_instance.create_user(param0=param0)
+    api_response = api_instance.create_user(user=user)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->create_user: %s\n" % e)
@@ -168,7 +168,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **param0** | [**User**](User.md)| The details of the user. | [optional] 
+ **user** | [**UserEdit**](UserEdit.md)| The details of the user. | [optional] 
 
 ### Return type
 
@@ -1190,7 +1190,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **reset_password**
-> Links reset_password(id, param1=param1)
+> Links reset_password(id, password=password)
 
 Password Reset
 
@@ -1207,11 +1207,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
-param1 = 'param1_example' # str | The new password to set. (optional)
+password = 'password_example' # str | The new password to set. (optional)
 
 try:
     # Password Reset
-    api_response = api_instance.reset_password(id, param1=param1)
+    api_response = api_instance.reset_password(id, password=password)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->reset_password: %s\n" % e)
@@ -1222,7 +1222,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the user. | 
- **param1** | **str**| The new password to set. | [optional] 
+ **password** | **str**| The new password to set. | [optional] 
 
 ### Return type
 
@@ -1240,7 +1240,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_two_factor_authentication**
-> Links set_two_factor_authentication(id, param1=param1)
+> Links set_two_factor_authentication(id, token=token)
 
 Two-Factor Authentication
 
@@ -1257,11 +1257,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
-param1 = 'param1_example' # str | The authentication token seed (key) to use for the user. (optional)
+token = 'token_example' # str | The authentication token seed (key) to use for the user. (optional)
 
 try:
     # Two-Factor Authentication
-    api_response = api_instance.set_two_factor_authentication(id, param1=param1)
+    api_response = api_instance.set_two_factor_authentication(id, token=token)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->set_two_factor_authentication: %s\n" % e)
@@ -1272,7 +1272,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the user. | 
- **param1** | **str**| The authentication token seed (key) to use for the user. | [optional] 
+ **token** | **str**| The authentication token seed (key) to use for the user. | [optional] 
 
 ### Return type
 
@@ -1290,7 +1290,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_user_asset_groups**
-> Links set_user_asset_groups(id, param1=param1)
+> Links set_user_asset_groups(id, asset_group_ids=asset_group_ids)
 
 Asset Groups Access
 
@@ -1307,11 +1307,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
-param1 = [rapid7vmconsole.list[int]()] # list[int] | The identifiers of the asset groups to grant the user access to. Ignored if user has access to `allAssetGroups`. (optional)
+asset_group_ids = [rapid7vmconsole.list[int]()] # list[int] | The identifiers of the asset groups to grant the user access to. Ignored if user has access to `allAssetGroups`. (optional)
 
 try:
     # Asset Groups Access
-    api_response = api_instance.set_user_asset_groups(id, param1=param1)
+    api_response = api_instance.set_user_asset_groups(id, asset_group_ids=asset_group_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->set_user_asset_groups: %s\n" % e)
@@ -1322,7 +1322,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the user. | 
- **param1** | **list[int]**| The identifiers of the asset groups to grant the user access to. Ignored if user has access to &#x60;allAssetGroups&#x60;. | [optional] 
+ **asset_group_ids** | **list[int]**| The identifiers of the asset groups to grant the user access to. Ignored if user has access to &#x60;allAssetGroups&#x60;. | [optional] 
 
 ### Return type
 
@@ -1340,7 +1340,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_user_sites**
-> Links set_user_sites(id, param1=param1)
+> Links set_user_sites(id, site_ids=site_ids)
 
 Sites Access
 
@@ -1357,11 +1357,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
-param1 = [rapid7vmconsole.list[int]()] # list[int] | The identifiers of the sites to grant the user access to. Ignored if the user has access to `allSites`. (optional)
+site_ids = [rapid7vmconsole.list[int]()] # list[int] | The identifiers of the sites to grant the user access to. Ignored if the user has access to `allSites`. (optional)
 
 try:
     # Sites Access
-    api_response = api_instance.set_user_sites(id, param1=param1)
+    api_response = api_instance.set_user_sites(id, site_ids=site_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->set_user_sites: %s\n" % e)
@@ -1372,7 +1372,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the user. | 
- **param1** | **list[int]**| The identifiers of the sites to grant the user access to. Ignored if the user has access to &#x60;allSites&#x60;. | [optional] 
+ **site_ids** | **list[int]**| The identifiers of the sites to grant the user access to. Ignored if the user has access to &#x60;allSites&#x60;. | [optional] 
 
 ### Return type
 
@@ -1438,7 +1438,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_role**
-> Links update_role(id, param0=param0)
+> Links update_role(id, role=role)
 
 Role
 
@@ -1455,11 +1455,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.UserApi()
 id = 'id_example' # str | The identifier of the role.
-param0 = rapid7vmconsole.Role() # Role | The details of the role. (optional)
+role = rapid7vmconsole.Role() # Role | The details of the role. (optional)
 
 try:
     # Role
-    api_response = api_instance.update_role(id, param0=param0)
+    api_response = api_instance.update_role(id, role=role)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->update_role: %s\n" % e)
@@ -1470,7 +1470,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The identifier of the role. | 
- **param0** | [**Role**](Role.md)| The details of the role. | [optional] 
+ **role** | [**Role**](Role.md)| The details of the role. | [optional] 
 
 ### Return type
 
@@ -1488,7 +1488,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_user**
-> Links update_user(id, param1=param1)
+> Links update_user(id, user=user)
 
 User
 
@@ -1505,11 +1505,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.UserApi()
 id = 56 # int | The identifier of the user.
-param1 = rapid7vmconsole.User() # User | The details of the user. (optional)
+user = rapid7vmconsole.UserEdit() # UserEdit | The details of the user. (optional)
 
 try:
     # User
-    api_response = api_instance.update_user(id, param1=param1)
+    api_response = api_instance.update_user(id, user=user)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->update_user: %s\n" % e)
@@ -1520,7 +1520,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the user. | 
- **param1** | [**User**](User.md)| The details of the user. | [optional] 
+ **user** | [**UserEdit**](UserEdit.md)| The details of the user. | [optional] 
 
 ### Return type
 

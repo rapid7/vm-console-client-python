@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **create_shared_credential**
-> CreatedReferenceCredentialIDLink create_shared_credential(param0=param0)
+> CreatedReferenceCredentialIDLink create_shared_credential(credential=credential)
 
 Shared Credentials
 
@@ -29,11 +29,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = rapid7vmconsole.CredentialApi()
-param0 = rapid7vmconsole.SharedCredential() # SharedCredential | The specification of a shared credential. (optional)
+credential = rapid7vmconsole.SharedCredential() # SharedCredential | The specification of a shared credential. (optional)
 
 try:
     # Shared Credentials
-    api_response = api_instance.create_shared_credential(param0=param0)
+    api_response = api_instance.create_shared_credential(credential=credential)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CredentialApi->create_shared_credential: %s\n" % e)
@@ -43,7 +43,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **param0** | [**SharedCredential**](SharedCredential.md)| The specification of a shared credential. | [optional] 
+ **credential** | [**SharedCredential**](SharedCredential.md)| The specification of a shared credential. | [optional] 
 
 ### Return type
 
@@ -245,7 +245,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_shared_credential**
-> Links update_shared_credential(id, param1=param1)
+> Links update_shared_credential(id, credential=credential)
 
 Shared Credential
 
@@ -262,11 +262,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.CredentialApi()
 id = 56 # int | The identifier of the credential.
-param1 = rapid7vmconsole.SharedCredential() # SharedCredential | The specification of the shared credential to update. (optional)
+credential = rapid7vmconsole.SharedCredential() # SharedCredential | The specification of the shared credential to update. (optional)
 
 try:
     # Shared Credential
-    api_response = api_instance.update_shared_credential(id, param1=param1)
+    api_response = api_instance.update_shared_credential(id, credential=credential)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CredentialApi->update_shared_credential: %s\n" % e)
@@ -277,7 +277,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the credential. | 
- **param1** | [**SharedCredential**](SharedCredential.md)| The specification of the shared credential to update. | [optional] 
+ **credential** | [**SharedCredential**](SharedCredential.md)| The specification of the shared credential to update. | [optional] 
 
 ### Return type
 

@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 # **create_report**
-> CreatedReferenceintLink create_report(param0=param0)
+> CreatedReferenceintLink create_report(report=report)
 
 Reports
 
@@ -36,11 +36,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = rapid7vmconsole.ReportApi()
-param0 = rapid7vmconsole.Report() # Report | The specification of a report configuration. (optional)
+report = rapid7vmconsole.Report() # Report | The specification of a report configuration. (optional)
 
 try:
     # Reports
-    api_response = api_instance.create_report(param0=param0)
+    api_response = api_instance.create_report(report=report)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReportApi->create_report: %s\n" % e)
@@ -50,7 +50,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **param0** | [**Report**](Report.md)| The specification of a report configuration. | [optional] 
+ **report** | [**Report**](Report.md)| The specification of a report configuration. | [optional] 
 
 ### Return type
 
@@ -598,7 +598,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_report**
-> Links update_report(id, param1=param1)
+> Links update_report(id, report=report)
 
 Report
 
@@ -615,11 +615,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.ReportApi()
 id = 56 # int | The identifier of the report.
-param1 = rapid7vmconsole.Report() # Report | The specification of a report configuration. (optional)
+report = rapid7vmconsole.Report() # Report | The specification of a report configuration. (optional)
 
 try:
     # Report
-    api_response = api_instance.update_report(id, param1=param1)
+    api_response = api_instance.update_report(id, report=report)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ReportApi->update_report: %s\n" % e)
@@ -630,7 +630,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the report. | 
- **param1** | [**Report**](Report.md)| The specification of a report configuration. | [optional] 
+ **report** | [**Report**](Report.md)| The specification of a report configuration. | [optional] 
 
 ### Return type
 
