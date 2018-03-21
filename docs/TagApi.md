@@ -28,7 +28,7 @@ Method | HTTP request | Description
 
 
 # **create_tag**
-> ReferenceWithTagIDLink create_tag(param0=param0)
+> ReferenceWithTagIDLink create_tag(tag=tag)
 
 Tags
 
@@ -44,11 +44,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = rapid7vmconsole.TagApi()
-param0 = rapid7vmconsole.Tag() # Tag | The details of the tag. (optional)
+tag = rapid7vmconsole.Tag() # Tag | The details of the tag. (optional)
 
 try:
     # Tags
-    api_response = api_instance.create_tag(param0=param0)
+    api_response = api_instance.create_tag(tag=tag)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TagApi->create_tag: %s\n" % e)
@@ -58,7 +58,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **param0** | [**Tag**](Tag.md)| The details of the tag. | [optional] 
+ **tag** | [**Tag**](Tag.md)| The details of the tag. | [optional] 
 
 ### Return type
 
@@ -516,7 +516,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_tagged_asset_groups**
-> Links set_tagged_asset_groups(id, param1=param1)
+> Links set_tagged_asset_groups(id, asset_group_ids=asset_group_ids)
 
 Tag Asset Groups
 
@@ -533,11 +533,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.TagApi()
 id = 56 # int | The identifier of the tag.
-param1 = [rapid7vmconsole.list[int]()] # list[int] | The asset groups to add to the tag. (optional)
+asset_group_ids = [rapid7vmconsole.list[int]()] # list[int] | The asset groups to add to the tag. (optional)
 
 try:
     # Tag Asset Groups
-    api_response = api_instance.set_tagged_asset_groups(id, param1=param1)
+    api_response = api_instance.set_tagged_asset_groups(id, asset_group_ids=asset_group_ids)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TagApi->set_tagged_asset_groups: %s\n" % e)
@@ -548,7 +548,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the tag. | 
- **param1** | **list[int]**| The asset groups to add to the tag. | [optional] 
+ **asset_group_ids** | **list[int]**| The asset groups to add to the tag. | [optional] 
 
 ### Return type
 
@@ -566,7 +566,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_tagged_sites**
-> Links set_tagged_sites(id, param1=param1)
+> Links set_tagged_sites(id, sites=sites)
 
 Tag Sites
 
@@ -583,11 +583,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.TagApi()
 id = 56 # int | The identifier of the tag.
-param1 = [rapid7vmconsole.list[int]()] # list[int] | The sites to add to the tag. (optional)
+sites = [rapid7vmconsole.list[int]()] # list[int] | The sites to add to the tag. (optional)
 
 try:
     # Tag Sites
-    api_response = api_instance.set_tagged_sites(id, param1=param1)
+    api_response = api_instance.set_tagged_sites(id, sites=sites)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TagApi->set_tagged_sites: %s\n" % e)
@@ -598,7 +598,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the tag. | 
- **param1** | **list[int]**| The sites to add to the tag. | [optional] 
+ **sites** | **list[int]**| The sites to add to the tag. | [optional] 
 
 ### Return type
 
@@ -964,7 +964,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_tag**
-> Links update_tag(id, param0=param0)
+> Links update_tag(id, tag=tag)
 
 Tag
 
@@ -981,11 +981,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.TagApi()
 id = 56 # int | The identifier of the tag.
-param0 = rapid7vmconsole.Tag() # Tag | The details of the tag. (optional)
+tag = rapid7vmconsole.Tag() # Tag | The details of the tag. (optional)
 
 try:
     # Tag
-    api_response = api_instance.update_tag(id, param0=param0)
+    api_response = api_instance.update_tag(id, tag=tag)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TagApi->update_tag: %s\n" % e)
@@ -996,7 +996,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the tag. | 
- **param0** | [**Tag**](Tag.md)| The details of the tag. | [optional] 
+ **tag** | [**Tag**](Tag.md)| The details of the tag. | [optional] 
 
 ### Return type
 
@@ -1014,7 +1014,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_tag_search_criteria**
-> Links update_tag_search_criteria(id, param1=param1)
+> Links update_tag_search_criteria(id, criterial=criterial)
 
 Tag Search Criteria
 
@@ -1031,11 +1031,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.TagApi()
 id = 56 # int | The identifier of the tag.
-param1 = rapid7vmconsole.SearchCriteria() # SearchCriteria | The details of the search criteria. (optional)
+criterial = rapid7vmconsole.SearchCriteria() # SearchCriteria | The details of the search criteria. (optional)
 
 try:
     # Tag Search Criteria
-    api_response = api_instance.update_tag_search_criteria(id, param1=param1)
+    api_response = api_instance.update_tag_search_criteria(id, criterial=criterial)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TagApi->update_tag_search_criteria: %s\n" % e)
@@ -1046,7 +1046,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the tag. | 
- **param1** | [**SearchCriteria**](SearchCriteria.md)| The details of the search criteria. | [optional] 
+ **criterial** | [**SearchCriteria**](SearchCriteria.md)| The details of the search criteria. | [optional] 
 
 ### Return type
 

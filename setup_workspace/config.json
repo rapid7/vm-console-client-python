@@ -1,6 +1,6 @@
 {
   "packageName": "rapid7vmconsole",
   "projectName": "rapid7_vm_console",
-  "packageVersion": "0.0.1-6.5.4",
+  "packageVersion": "0.0.1-6.5.10",
   "packageUrl": "https://github.com/rapid7/vm-console-client-python"
 }

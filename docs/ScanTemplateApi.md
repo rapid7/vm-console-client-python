@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **create_scan_template**
-> CreatedReferenceScanTemplateIDLink create_scan_template(param0=param0)
+> CreatedReferenceScanTemplateIDLink create_scan_template(scan_template=scan_template)
 
 Scan Templates
 
@@ -28,11 +28,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = rapid7vmconsole.ScanTemplateApi()
-param0 = rapid7vmconsole.ScanTemplate() # ScanTemplate | The details of the scan template. (optional)
+scan_template = rapid7vmconsole.ScanTemplate() # ScanTemplate | The details of the scan template. (optional)
 
 try:
     # Scan Templates
-    api_response = api_instance.create_scan_template(param0=param0)
+    api_response = api_instance.create_scan_template(scan_template=scan_template)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ScanTemplateApi->create_scan_template: %s\n" % e)
@@ -42,7 +42,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **param0** | [**ScanTemplate**](ScanTemplate.md)| The details of the scan template. | [optional] 
+ **scan_template** | [**ScanTemplate**](ScanTemplate.md)| The details of the scan template. | [optional] 
 
 ### Return type
 
@@ -200,7 +200,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_scan_template**
-> Links update_scan_template(id, param1=param1)
+> Links update_scan_template(id, scan_template=scan_template)
 
 Scan Template
 
@@ -217,11 +217,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.ScanTemplateApi()
 id = 'id_example' # str | The identifier of the scan template
-param1 = rapid7vmconsole.ScanTemplate() # ScanTemplate | The details of the scan template. (optional)
+scan_template = rapid7vmconsole.ScanTemplate() # ScanTemplate | The details of the scan template. (optional)
 
 try:
     # Scan Template
-    api_response = api_instance.update_scan_template(id, param1=param1)
+    api_response = api_instance.update_scan_template(id, scan_template=scan_template)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ScanTemplateApi->update_scan_template: %s\n" % e)
@@ -232,7 +232,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The identifier of the scan template | 
- **param1** | [**ScanTemplate**](ScanTemplate.md)| The details of the scan template. | [optional] 
+ **scan_template** | [**ScanTemplate**](ScanTemplate.md)| The details of the scan template. | [optional] 
 
 ### Return type
 

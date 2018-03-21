@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **create_sonar_query**
-> CreatedReferenceDiscoveryQueryIDLink create_sonar_query(param0)
+> CreatedReferenceDiscoveryQueryIDLink create_sonar_query(query=query)
 
 Sonar Queries
 
@@ -33,11 +33,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = rapid7vmconsole.AssetDiscoveryApi()
-param0 = rapid7vmconsole.SonarQuery() # SonarQuery | param0
+query = rapid7vmconsole.SonarQuery() # SonarQuery | The criteria for a Sonar query. (optional)
 
 try:
     # Sonar Queries
-    api_response = api_instance.create_sonar_query(param0)
+    api_response = api_instance.create_sonar_query(query=query)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssetDiscoveryApi->create_sonar_query: %s\n" % e)
@@ -47,7 +47,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **param0** | [**SonarQuery**](SonarQuery.md)| param0 | 
+ **query** | [**SonarQuery**](SonarQuery.md)| The criteria for a Sonar query. | [optional] 
 
 ### Return type
 
@@ -400,7 +400,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sonar_query_search**
-> list[DiscoveryAsset] sonar_query_search(param0)
+> list[DiscoveryAsset] sonar_query_search(query=query)
 
 Sonar Query Search
 
@@ -416,11 +416,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = rapid7vmconsole.AssetDiscoveryApi()
-param0 = rapid7vmconsole.SonarCriteria() # SonarCriteria | param0
+query = rapid7vmconsole.SonarCriteria() # SonarCriteria | The criteria for a Sonar query. (optional)
 
 try:
     # Sonar Query Search
-    api_response = api_instance.sonar_query_search(param0)
+    api_response = api_instance.sonar_query_search(query=query)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssetDiscoveryApi->sonar_query_search: %s\n" % e)
@@ -430,7 +430,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **param0** | [**SonarCriteria**](SonarCriteria.md)| param0 | 
+ **query** | [**SonarCriteria**](SonarCriteria.md)| The criteria for a Sonar query. | [optional] 
 
 ### Return type
 
@@ -448,7 +448,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_sonar_query**
-> Links update_sonar_query(id, param1)
+> Links update_sonar_query(id, query=query)
 
 Sonar Query
 
@@ -465,11 +465,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.AssetDiscoveryApi()
 id = 789 # int | The identifier of the Sonar query.
-param1 = rapid7vmconsole.SonarQuery() # SonarQuery | param1
+query = rapid7vmconsole.SonarQuery() # SonarQuery | The criteria for a Sonar query. (optional)
 
 try:
     # Sonar Query
-    api_response = api_instance.update_sonar_query(id, param1)
+    api_response = api_instance.update_sonar_query(id, query=query)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssetDiscoveryApi->update_sonar_query: %s\n" % e)
@@ -480,7 +480,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the Sonar query. | 
- **param1** | [**SonarQuery**](SonarQuery.md)| param1 | 
+ **query** | [**SonarQuery**](SonarQuery.md)| The criteria for a Sonar query. | [optional] 
 
 ### Return type
 
