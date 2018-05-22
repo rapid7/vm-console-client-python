@@ -43,7 +43,7 @@ class SharedCredentialAccount(object):
         'pem_key': 'str',
         'permission_elevation': 'str',
         'permission_elevation_password': 'str',
-        'permission_elevation_user_name': 'str',
+        'permission_elevation_username': 'str',
         'privacy_password': 'str',
         'privacy_type': 'str',
         'private_key_password': 'str',
@@ -67,7 +67,7 @@ class SharedCredentialAccount(object):
         'pem_key': 'pemKey',
         'permission_elevation': 'permissionElevation',
         'permission_elevation_password': 'permissionElevationPassword',
-        'permission_elevation_user_name': 'permissionElevationUserName',
+        'permission_elevation_username': 'permissionElevationUsername',
         'privacy_password': 'privacyPassword',
         'privacy_type': 'privacyType',
         'private_key_password': 'privateKeyPassword',
@@ -78,7 +78,7 @@ class SharedCredentialAccount(object):
         'username': 'username'
     }
 
-    def __init__(self, authentication_type=None, community_name=None, database=None, domain=None, enumerate_sids=None, notes_id_password=None, ntlm_hash=None, oracle_listener_password=None, password=None, pem_key=None, permission_elevation=None, permission_elevation_password=None, permission_elevation_user_name=None, privacy_password=None, privacy_type=None, private_key_password=None, realm=None, service=None, sid=None, use_windows_authentication=None, username=None):  # noqa: E501
+    def __init__(self, authentication_type=None, community_name=None, database=None, domain=None, enumerate_sids=None, notes_id_password=None, ntlm_hash=None, oracle_listener_password=None, password=None, pem_key=None, permission_elevation=None, permission_elevation_password=None, permission_elevation_username=None, privacy_password=None, privacy_type=None, private_key_password=None, realm=None, service=None, sid=None, use_windows_authentication=None, username=None):  # noqa: E501
         """SharedCredentialAccount - a model defined in Swagger"""  # noqa: E501
 
         self._authentication_type = None
@@ -93,7 +93,7 @@ class SharedCredentialAccount(object):
         self._pem_key = None
         self._permission_elevation = None
         self._permission_elevation_password = None
-        self._permission_elevation_user_name = None
+        self._permission_elevation_username = None
         self._privacy_password = None
         self._privacy_type = None
         self._private_key_password = None
@@ -128,8 +128,8 @@ class SharedCredentialAccount(object):
             self.permission_elevation = permission_elevation
         if permission_elevation_password is not None:
             self.permission_elevation_password = permission_elevation_password
-        if permission_elevation_user_name is not None:
-            self.permission_elevation_user_name = permission_elevation_user_name
+        if permission_elevation_username is not None:
+            self.permission_elevation_username = permission_elevation_username
         if privacy_password is not None:
             self.privacy_password = privacy_password
         if privacy_type is not None:
@@ -400,25 +400,25 @@ class SharedCredentialAccount(object):
         self._permission_elevation_password = permission_elevation_password
 
     @property
-    def permission_elevation_user_name(self):
-        """Gets the permission_elevation_user_name of this SharedCredentialAccount.  # noqa: E501
+    def permission_elevation_username(self):
+        """Gets the permission_elevation_username of this SharedCredentialAccount.  # noqa: E501
 
 
-        :return: The permission_elevation_user_name of this SharedCredentialAccount.  # noqa: E501
+        :return: The permission_elevation_username of this SharedCredentialAccount.  # noqa: E501
         :rtype: str
         """
-        return self._permission_elevation_user_name
+        return self._permission_elevation_username
 
-    @permission_elevation_user_name.setter
-    def permission_elevation_user_name(self, permission_elevation_user_name):
-        """Sets the permission_elevation_user_name of this SharedCredentialAccount.
+    @permission_elevation_username.setter
+    def permission_elevation_username(self, permission_elevation_username):
+        """Sets the permission_elevation_username of this SharedCredentialAccount.
 
 
-        :param permission_elevation_user_name: The permission_elevation_user_name of this SharedCredentialAccount.  # noqa: E501
+        :param permission_elevation_username: The permission_elevation_username of this SharedCredentialAccount.  # noqa: E501
         :type: str
         """
 
-        self._permission_elevation_user_name = permission_elevation_user_name
+        self._permission_elevation_username = permission_elevation_username
 
     @property
     def privacy_password(self):

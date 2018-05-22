@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **dynamic_discovery** | **bool** | Whether dynamic discovery sources may be used. | [optional] 
 **early_access** | **bool** | Whether early-access features are available prior to general availability. | [optional] 
 **engine_pool** | **bool** | Whether scan engine pools may be used. | [optional] 
-**insight_platform** | **bool** | Whether the usage of the Insight Platform is allowed. | [optional] 
+**insight_platform** | **bool** | Whether the usage of the Insight platform is allowed. | [optional] 
 **mobile** | **bool** | Whether mobile features are allowed. | [optional] 
 **multitenancy** | **bool** | Whether multitenancy is allowed. | [optional] 
 **policy_editor** | **bool** | Whether the editing of policies is allowed. | [optional] 

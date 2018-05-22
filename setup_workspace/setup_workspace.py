@@ -18,8 +18,6 @@ console_url = "https://localhost:3780"
 console_user = "nxadmin"
 console_pass = "nxpassword"
 
-gem_version = "0.0.1"
-
 # Download swagger codegen jar
 codegen_jar_name = "swagger-codegen-cli"
 codegen_jar_version = "2.3.0"
@@ -30,7 +28,8 @@ urllib.request.urlretrieve(url, "setup_workspace/%s-%s.jar" % (codegen_jar_name,
 # Fetch console version
 #urllib.request.urlretrieve(console_url + "/api/3/administration/info")
 
-console_version = "6.5.10"
+console_version = "6.5.19"
+lib_version = "0.0.1-%s" % console_version
 
 # Manage API release dates
 api_file_dir = 'api-files/'
@@ -49,9 +48,9 @@ with urllib.request.urlopen(console_swagger_path, context=ctx) as u, open(swagge
     f.write(u.read())
 
 # Generate library
-# codegen_jar = "setup_workspace/%s-%s.jar" % (codegen_jar_name, codegen_jar_version)
-# os.system(("java -jar %s generate -i %s -l python "
-#            "--git-user-id \"rapid7\" "
-#            "--git-repo-id \"vm-console-client-python\" "
-#            "--release-note \"Update generated gem to version: %s\" "
-#            "-o ./ -c setup_workspace/config.json") % (codegen_jar, swagger_file, gem_version))
+codegen_jar = "setup_workspace/%s-%s.jar" % (codegen_jar_name, codegen_jar_version)
+os.system(("java -jar %s generate -i %s -l python "
+           "--git-user-id \"rapid7\" "
+           "--git-repo-id \"vm-console-client-python\" "
+           "--release-note \"Update generated library to version: %s\" "
+           "-o ./ -c setup_workspace/config.json") % (codegen_jar, swagger_file, lib_version))

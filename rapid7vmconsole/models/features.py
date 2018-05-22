@@ -229,7 +229,7 @@ class Features(object):
     def insight_platform(self):
         """Gets the insight_platform of this Features.  # noqa: E501
 
-        Whether the usage of the Insight Platform is allowed.  # noqa: E501
+        Whether the usage of the Insight platform is allowed.  # noqa: E501
 
         :return: The insight_platform of this Features.  # noqa: E501
         :rtype: bool
@@ -240,7 +240,7 @@ class Features(object):
     def insight_platform(self, insight_platform):
         """Sets the insight_platform of this Features.
 
-        Whether the usage of the Insight Platform is allowed.  # noqa: E501
+        Whether the usage of the Insight platform is allowed.  # noqa: E501
 
         :param insight_platform: The insight_platform of this Features.  # noqa: E501
         :type: bool

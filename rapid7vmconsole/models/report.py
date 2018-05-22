@@ -192,7 +192,7 @@ class Report(object):
     def baseline(self):
         """Gets the baseline of this Report.  # noqa: E501
 
-        If the template is `baseline-comparison` or `executive-overview` the baseline scan to compare against. This can be the `first` scan, the `previous` scan, or a scan as of a specified date.  # noqa: E501
+        If the template is `baseline-comparison` or `executive-overview` the baseline scan to compare against. This can be the `first` scan, the `previous` scan, or a scan as of a specified date. Defaults to `previous`.  # noqa: E501
 
         :return: The baseline of this Report.  # noqa: E501
         :rtype: object
@@ -203,7 +203,7 @@ class Report(object):
     def baseline(self, baseline):
         """Sets the baseline of this Report.
 
-        If the template is `baseline-comparison` or `executive-overview` the baseline scan to compare against. This can be the `first` scan, the `previous` scan, or a scan as of a specified date.  # noqa: E501
+        If the template is `baseline-comparison` or `executive-overview` the baseline scan to compare against. This can be the `first` scan, the `previous` scan, or a scan as of a specified date. Defaults to `previous`.  # noqa: E501
 
         :param baseline: The baseline of this Report.  # noqa: E501
         :type: object

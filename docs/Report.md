@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**baseline** | **object** | If the template is &#x60;baseline-comparison&#x60; or &#x60;executive-overview&#x60; the baseline scan to compare against. This can be the &#x60;first&#x60; scan, the &#x60;previous&#x60; scan, or a scan as of a specified date. | [optional] 
+**baseline** | **object** | If the template is &#x60;baseline-comparison&#x60; or &#x60;executive-overview&#x60; the baseline scan to compare against. This can be the &#x60;first&#x60; scan, the &#x60;previous&#x60; scan, or a scan as of a specified date. Defaults to &#x60;previous&#x60;. | [optional] 
 **bureau** | **str** | The name of the bureau for a CyberScope report. Only used when the format is &#x60;\&quot;cyberscope-xml\&quot;&#x60;. | [optional] 
 **component** | **str** | The name of the component for a CyberScope report. Only used when the format is &#x60;\&quot;cyberscope-xml\&quot;&#x60;. | [optional] 
 **database** | [**ReportConfigDatabaseResource**](ReportConfigDatabaseResource.md) | Configuration for database export. Only used when the format is &#x60;\&quot;database-export\&quot;&#x60;. | [optional] 
