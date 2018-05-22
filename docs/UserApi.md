@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**add_user_site**](UserApi.md#add_user_site) | **PUT** /api/3/users/{id}/sites/{siteId} | Site Access
 [**create_user**](UserApi.md#create_user) | **POST** /api/3/users | Users
 [**delete_role**](UserApi.md#delete_role) | **DELETE** /api/3/roles/{id} | Role
+[**delete_user**](UserApi.md#delete_user) | **DELETE** /api/3/users/{id} | User
 [**get_authentication_source**](UserApi.md#get_authentication_source) | **GET** /api/3/authentication_sources/{id} | Authentication Source
 [**get_authentication_source_users**](UserApi.md#get_authentication_source_users) | **GET** /api/3/authentication_sources/{id}/users | Authentication Source Users
 [**get_authentication_sources**](UserApi.md#get_authentication_sources) | **GET** /api/3/authentication_sources | Authentication Sources
@@ -217,6 +218,54 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The identifier of the role. | 
+
+### Return type
+
+[**Links**](Links.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json;charset=UTF-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_user**
+> Links delete_user(id)
+
+User
+
+Deletes a user account.<span class=\"authorization\">Global Administrator</span>
+
+### Example
+```python
+from __future__ import print_function
+import time
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = rapid7vmconsole.UserApi()
+id = 56 # int | The identifier of the user.
+
+try:
+    # User
+    api_response = api_instance.delete_user(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UserApi->delete_user: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| The identifier of the user. | 
 
 ### Return type
 

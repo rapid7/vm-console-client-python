@@ -316,7 +316,7 @@ class ScanSchedule(object):
     def scan_name(self):
         """Gets the scan_name of this ScanSchedule.  # noqa: E501
 
-        A user-defined name for the scan launched by the schedule. If not explicitly set in the schedule, the scan name will be generated prior to the scan launching. Names must be unique.  # noqa: E501
+        A user-defined name for the scan launched by the schedule. If not explicitly set in the schedule, the scan name will be generated prior to the scan launching. Scan names must be unique within the site's scan schedules.  # noqa: E501
 
         :return: The scan_name of this ScanSchedule.  # noqa: E501
         :rtype: str
@@ -327,7 +327,7 @@ class ScanSchedule(object):
     def scan_name(self, scan_name):
         """Sets the scan_name of this ScanSchedule.
 
-        A user-defined name for the scan launched by the schedule. If not explicitly set in the schedule, the scan name will be generated prior to the scan launching. Names must be unique.  # noqa: E501
+        A user-defined name for the scan launched by the schedule. If not explicitly set in the schedule, the scan name will be generated prior to the scan launching. Scan names must be unique within the site's scan schedules.  # noqa: E501
 
         :param scan_name: The scan_name of this ScanSchedule.  # noqa: E501
         :type: str

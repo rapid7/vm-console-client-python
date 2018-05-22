@@ -56,7 +56,7 @@ class ReportStorage(object):
     def location(self):
         """Gets the location of this ReportStorage.  # noqa: E501
 
-        The location to storage an additional copy of the report. This is a sub-path post-fixed to `$(install_dir)/nsc/reports/$(user)/`.  # noqa: E501
+        The location to storage an additional copy of the report. This is a sub-path post-fixed to `$(install_dir)/nsc/reports/$(user)/`. Variables such as `$(report_name)`, `$(date)`, and `$(time)` may be used to generate the directory structure.   # noqa: E501
 
         :return: The location of this ReportStorage.  # noqa: E501
         :rtype: str
@@ -67,7 +67,7 @@ class ReportStorage(object):
     def location(self, location):
         """Sets the location of this ReportStorage.
 
-        The location to storage an additional copy of the report. This is a sub-path post-fixed to `$(install_dir)/nsc/reports/$(user)/`.  # noqa: E501
+        The location to storage an additional copy of the report. This is a sub-path post-fixed to `$(install_dir)/nsc/reports/$(user)/`. Variables such as `$(report_name)`, `$(date)`, and `$(time)` may be used to generate the directory structure.   # noqa: E501
 
         :param location: The location of this ReportStorage.  # noqa: E501
         :type: str

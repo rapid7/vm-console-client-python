@@ -78,7 +78,7 @@ class ExceptionScope(object):
     def id(self):
         """Gets the id of this ExceptionScope.  # noqa: E501
 
-        The identifier of the vulnerability to which the exception applies.  # noqa: E501
+        The identifier of the scope type to which the exception applies. For example in a site scoped vulnerability exception this is the site id, in an asset group vulnerability exception this is the asset group id.  # noqa: E501
 
         :return: The id of this ExceptionScope.  # noqa: E501
         :rtype: int
@@ -89,7 +89,7 @@ class ExceptionScope(object):
     def id(self, id):
         """Sets the id of this ExceptionScope.
 
-        The identifier of the vulnerability to which the exception applies.  # noqa: E501
+        The identifier of the scope type to which the exception applies. For example in a site scoped vulnerability exception this is the site id, in an asset group vulnerability exception this is the asset group id.  # noqa: E501
 
         :param id: The id of this ExceptionScope.  # noqa: E501
         :type: int

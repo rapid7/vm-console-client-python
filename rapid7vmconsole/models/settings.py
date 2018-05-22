@@ -217,7 +217,7 @@ class Settings(object):
     def insight_platform(self):
         """Gets the insight_platform of this Settings.  # noqa: E501
 
-        Whether the usage of the Insight Platform is enabled.  # noqa: E501
+        Whether the usage of the Insight platform is enabled.  # noqa: E501
 
         :return: The insight_platform of this Settings.  # noqa: E501
         :rtype: bool
@@ -228,7 +228,7 @@ class Settings(object):
     def insight_platform(self, insight_platform):
         """Sets the insight_platform of this Settings.
 
-        Whether the usage of the Insight Platform is enabled.  # noqa: E501
+        Whether the usage of the Insight platform is enabled.  # noqa: E501
 
         :param insight_platform: The insight_platform of this Settings.  # noqa: E501
         :type: bool
@@ -240,7 +240,7 @@ class Settings(object):
     def insight_platform_region(self):
         """Gets the insight_platform_region of this Settings.  # noqa: E501
 
-        The region used for the Insight Platform, if enabled.  # noqa: E501
+        The region used for the Insight platform, if enabled.  # noqa: E501
 
         :return: The insight_platform_region of this Settings.  # noqa: E501
         :rtype: str
@@ -251,7 +251,7 @@ class Settings(object):
     def insight_platform_region(self, insight_platform_region):
         """Sets the insight_platform_region of this Settings.
 
-        The region used for the Insight Platform, if enabled.  # noqa: E501
+        The region used for the Insight platform, if enabled.  # noqa: E501
 
         :param insight_platform_region: The insight_platform_region of this Settings.  # noqa: E501
         :type: str
