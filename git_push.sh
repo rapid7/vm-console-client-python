@@ -8,7 +8,7 @@ git_repo_id=$2
 release_note=$3
 
 if [ "$git_user_id" = "" ]; then
-    git_user_id="rapid7"
+    git_user_id="rmehilli-r7"
     echo "[INFO] No command line input provided. Set \$git_user_id to $git_user_id"
 fi
 
@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Update generated library to version: 0.0.1-6.5.19"
+    release_note="Update generated library to version: 0.0.1-6.5.26"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
