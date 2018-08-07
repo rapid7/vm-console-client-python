@@ -27,32 +27,28 @@ urllib.request.urlretrieve(url, "setup_workspace/%s-%s.jar" % (codegen_jar_name,
 
 # Fetch console version
 response = urllib.request.urlopen('http://download2.rapid7.com/download/InsightVM/Rapid7Setup-Linux64.bin.version')
+bytes_version = response.read()
 
-console_version = response.decode("utf-8").strip()
+# Decode bytes into string and remove newline chars
+console_version = bytes_version.decode("utf-8").rstrip()
 lib_version = "0.0.1-%s" % console_version
 
 # Manage API release dates
 api_file_dir = 'api-files/'
-# tracking_file = 'api_history.json'
-# previous_version = '0.0.0'
 
 # Download swagger file
-response = urllib.request.urlopen('https://help.rapid7.com/insightvm/en-us/api/api.json')
-
 swagger_file = api_file_dir + "console-swagger-%s.json" % console_version
 
-# ctx = ssl.create_default_context()
-# ctx.check_hostname = False
-# ctx.verify_mode = ssl.CERT_NONE
-
 with urllib.request.urlopen('https://help.rapid7.com/insightvm/en-us/api/api.json') as u, open(swagger_file, 'wb') as f:
-    swagger = u.decode("utf-8").replace('\n', '')
+    # Read and decode swagger file
+    bytes_swagger = u.read()
+    swagger = u.decode("utf-8").rstrip()
     f.write(swagger)
 
 # Generate library
 codegen_jar = "setup_workspace/%s-%s.jar" % (codegen_jar_name, codegen_jar_version)
 os.system(("java -jar %s generate -i %s -l python "
-           "--git-user-id \"rapid7\" "
+           "--git-user-id \"rmehilli-r7\" "
            "--git-repo-id \"vm-console-client-python\" "
            "--release-note \"Update generated library to version: %s\" "
            "-o ./ -c setup_workspace/config.json") % (codegen_jar, swagger_file, lib_version))
