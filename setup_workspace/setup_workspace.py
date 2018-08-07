@@ -26,26 +26,28 @@ url = "http://central.maven.org/maven2/io/swagger/%s/2.3.0/%s-%s.jar" % (codegen
 urllib.request.urlretrieve(url, "setup_workspace/%s-%s.jar" % (codegen_jar_name, codegen_jar_version))
 
 # Fetch console version
-#urllib.request.urlretrieve(console_url + "/api/3/administration/info")
+response = urllib.request.urlopen('http://download2.rapid7.com/download/InsightVM/Rapid7Setup-Linux64.bin.version')
 
-console_version = "6.5.19"
+console_version = response.decode("utf-8").strip()
 lib_version = "0.0.1-%s" % console_version
 
 # Manage API release dates
 api_file_dir = 'api-files/'
-tracking_file = 'api_history.json'
-previous_version = '0.0.0'
+# tracking_file = 'api_history.json'
+# previous_version = '0.0.0'
 
 # Download swagger file
-console_swagger_path = console_url + "/api/3/json"
+response = urllib.request.urlopen('https://help.rapid7.com/insightvm/en-us/api/api.json')
+
 swagger_file = api_file_dir + "console-swagger-%s.json" % console_version
 
-ctx = ssl.create_default_context()
-ctx.check_hostname = False
-ctx.verify_mode = ssl.CERT_NONE
+# ctx = ssl.create_default_context()
+# ctx.check_hostname = False
+# ctx.verify_mode = ssl.CERT_NONE
 
-with urllib.request.urlopen(console_swagger_path, context=ctx) as u, open(swagger_file, 'wb') as f:
-    f.write(u.read())
+with urllib.request.urlopen('https://help.rapid7.com/insightvm/en-us/api/api.json') as u, open(swagger_file, 'wb') as f:
+    swagger = u.decode("utf-8").replace('\n', '')
+    f.write(swagger)
 
 # Generate library
 codegen_jar = "setup_workspace/%s-%s.jar" % (codegen_jar_name, codegen_jar_version)
