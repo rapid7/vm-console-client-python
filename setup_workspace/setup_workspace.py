@@ -11,7 +11,7 @@
 
 import os
 import ssl
-import urllib.request
+from six.moves import urllib
 
 # Console connection details to pull swagger file
 console_url = "https://localhost:3780"
