@@ -10,8 +10,7 @@
 #
 
 import os
-import ssl
-import urllib.request
+import urllib2
 
 # Console connection details to pull swagger file
 console_url = "https://localhost:3780"
@@ -22,15 +21,21 @@ console_pass = "nxpassword"
 codegen_jar_name = "swagger-codegen-cli"
 codegen_jar_version = "2.3.0"
 url = "http://central.maven.org/maven2/io/swagger/%s/2.3.0/%s-%s.jar" % (codegen_jar_name, codegen_jar_name, codegen_jar_version)
+jar_path = "setup_workspace/%s-%s.jar" % (codegen_jar_name, codegen_jar_version)
 
-urllib.request.urlretrieve(url, "setup_workspace/%s-%s.jar" % (codegen_jar_name, codegen_jar_version))
+with open(jar_path) as f:
+    jar = urllib2.urlopen(url).read()
+    f.write(jar)
+    f.close()
+
+# urllib.request.urlretrieve(url, "setup_workspace/%s-%s.jar" % (codegen_jar_name, codegen_jar_version))
 
 # Fetch console version
-response = urllib.request.urlopen('http://download2.rapid7.com/download/InsightVM/Rapid7Setup-Linux64.bin.version')
-bytes_version = response.read()
+url = 'http://download2.rapid7.com/download/InsightVM/Rapid7Setup-Linux64.bin.version'
+sock = urllib2.urlopen(url)
+console_version = sock.read().rstrip()
+sock.close()
 
-# Decode bytes into string and remove newline chars
-console_version = bytes_version.decode("utf-8").rstrip()
 lib_version = "0.0.1-%s" % console_version
 
 # Manage API release dates
@@ -39,11 +44,12 @@ api_file_dir = 'api-files/'
 # Download swagger file
 swagger_file = api_file_dir + "console-swagger-%s.json" % console_version
 
-with urllib.request.urlopen('https://help.rapid7.com/insightvm/en-us/api/api.json') as u, open(swagger_file, 'wb') as f:
-    # Read and decode swagger file
-    bytes_swagger = u.read()
-    swagger = u.decode("utf-8").rstrip()
+with urllib2.urlopen('https://help.rapid7.com/insightvm/en-us/api/api.json') as u, open(swagger_file, 'wb') as f:
+    # Read swagger file
+    swagger = u.read().rstrip()
     f.write(swagger)
+    u.close()
+    f.close()
 
 # Generate library
 codegen_jar = "setup_workspace/%s-%s.jar" % (codegen_jar_name, codegen_jar_version)
