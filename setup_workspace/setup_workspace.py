@@ -23,7 +23,7 @@ codegen_jar_version = "2.3.0"
 url = "http://central.maven.org/maven2/io/swagger/%s/2.3.0/%s-%s.jar" % (codegen_jar_name, codegen_jar_name, codegen_jar_version)
 jar_path = "setup_workspace/%s-%s.jar" % (codegen_jar_name, codegen_jar_version)
 
-with open(jar_path) as f:
+with open(jar_path, 'wb') as f:
     jar = urllib2.urlopen(url).read()
     f.write(jar)
     f.close()
