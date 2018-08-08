@@ -43,8 +43,10 @@ api_file_dir = 'api-files/'
 
 # Download swagger file
 swagger_file = api_file_dir + "console-swagger-%s.json" % console_version
+swagger_url = 'https://help.rapid7.com/insightvm/en-us/api/api.json'
 
-with urllib2.urlopen('https://help.rapid7.com/insightvm/en-us/api/api.json') as u, open(swagger_file, 'wb') as f:
+with open(swagger_file, 'wb') as f:
+    u = urllib2.urlopen(swagger_url)
     # Read swagger file
     swagger = u.read().rstrip()
     f.write(swagger)
