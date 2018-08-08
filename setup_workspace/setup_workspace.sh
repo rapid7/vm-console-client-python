@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Stuffff
+git remote -v
+git branch -D client_update
+git checkout -b client_update
+
 # Download InsightVM/Nexpose Console Version and update package in config.json
 VERSION_URL="http://download2.rapid7.com/download/InsightVM/Rapid7Setup-Linux64.bin.version"
 CONSOLE_VERSION=$(curl $VERSION_URL)
@@ -45,3 +50,5 @@ else
   # No changes
   echo 'No changes were made to client'
 fi
+
+git commit -a -m "Much blah"
