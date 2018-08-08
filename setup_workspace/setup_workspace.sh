@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# Download InsightVM/Nexpose Console Version
+# Download InsightVM/Nexpose Console Version and update package in config.json
 VERSION_URL="http://download2.rapid7.com/download/InsightVM/Rapid7Setup-Linux64.bin.version"
 CONSOLE_VERSION=$(curl $VERSION_URL)
 LIB_VERSION="0.0.1-$CONSOLE_VERSION"
+sed -i -E 's/("packageVersion": "0.0.1-)([0-9]+.[0-9]+.[0-9]+)/\1'"$CONSOLE_VERSION"'/g' ./setup_workspace/config.json
 echo "Library Version: $LIB_VERSION"
 
 # Download swagger file
