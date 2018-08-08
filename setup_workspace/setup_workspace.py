@@ -48,7 +48,6 @@ with urllib2.urlopen('https://help.rapid7.com/insightvm/en-us/api/api.json') as 
     # Read swagger file
     swagger = u.read().rstrip()
     f.write(swagger)
-    u.close()
     f.close()
 
 # Generate library
