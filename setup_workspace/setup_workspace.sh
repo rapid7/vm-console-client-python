@@ -54,4 +54,5 @@ else
   echo 'No changes were made to client'
 fi
 
+git add *
 git commit -a -m "Much blah"
