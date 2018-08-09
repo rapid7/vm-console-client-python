@@ -13,7 +13,7 @@ sed -i -E 's/("packageVersion": "0.0.1-)([0-9]+.[0-9]+.[0-9]+)/\1'"$CONSOLE_VERS
 echo "Library Version: $LIB_VERSION"
 
 # Environment variable for branch name
-echo '$LIB_VERSION='$LIB_VERSION > setup_workspace/propsfile
+echo 'LIB_VERSION='$LIB_VERSION > setup_workspace/propsfile
 export LIB_VERSION=$LIB_VERSION
 
 # Download swagger file
