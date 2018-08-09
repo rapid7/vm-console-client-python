@@ -12,6 +12,9 @@ LIB_VERSION="0.0.1-$CONSOLE_VERSION"
 sed -i -E 's/("packageVersion": "0.0.1-)([0-9]+.[0-9]+.[0-9]+)/\1'"$CONSOLE_VERSION"'/g' ./setup_workspace/config.json
 echo "Library Version: $LIB_VERSION"
 
+# Environment variable for branch name
+echo $LIB_VERSION > setup_workspace/env.txt
+
 # Download swagger file
 API_FILE_DIR="api-files/"
 SWAGGER_FILE=$API_FILE_DIR"console-swagger.json"
