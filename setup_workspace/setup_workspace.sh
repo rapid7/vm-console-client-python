@@ -14,6 +14,7 @@ echo "Library Version: $LIB_VERSION"
 
 # Environment variable for branch name
 echo '$LIB_VERSION='$LIB_VERSION > setup_workspace/env.txt
+export LIB_VERSION=$LIB_VERSION
 
 # Download swagger file
 API_FILE_DIR="api-files/"
