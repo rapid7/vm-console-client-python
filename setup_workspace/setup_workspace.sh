@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Stuffff
-git remote -v
-git branch -D client_update
-git checkout -b client_update
-
 # Download InsightVM/Nexpose Console Version and update package in config.json
 VERSION_URL="http://download2.rapid7.com/download/InsightVM/Rapid7Setup-Linux64.bin.version"
 CONSOLE_VERSION=$(curl $VERSION_URL)
@@ -43,7 +38,7 @@ git status --porcelain --untracked-files=no
 # Check if changes were made - new console version | new swagger file
 if [[ `git status --porcelain --untracked-files=no` ]]; then
   # Changes
-  COMMAND="java -jar $CODEGEN_JAR generate -i $SWAGGER_FILE -l python \
+  COMMAND="java -jar $CODEGEN_JAR generate -i $SWAGGER_FILE -l $1 \
            --git-user-id \"rmehilli-r7\" \
            --git-repo-id \"vm-console-client-python\" \
            --release-note \"Update generated library to version: $LIB_VERSION\" \
