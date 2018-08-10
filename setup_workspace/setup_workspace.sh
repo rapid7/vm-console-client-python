@@ -26,8 +26,10 @@ JAR_PATH="setup_workspace/$CODEGEN_JAR_NAME-$CODEGEN_JAR_VERSION.jar"
 echo "URL: $URL and PATH: $JAR_PATH"
 
 # Download and write to file
-JAR=$(curl $URL)
-echo "$JAR" > $JAR_PATH
+# curl -H "Accept: application/zip" $URL -o $JAR_PATH
+wget $URL -O $JAR_PATH
+# JAR=$(curl $URL)
+# echo "$JAR" > $JAR_PATH
 
 # Generate Library
 CODEGEN_JAR="setup_workspace/$CODEGEN_JAR_NAME-$CODEGEN_JAR_VERSION.jar"
