@@ -26,8 +26,6 @@ API_FILE_DIR="api-files/"
 SWAGGER_FILE=$API_FILE_DIR"console-swagger.json"
 SWAGGER_URL="https://help.rapid7.com/insightvm/en-us/api/api.json"
 wget $SWAGGER_URL -O $SWAGGER_FILE
-# SWAGGER=$(curl $SWAGGER_URL)
-# echo "$SWAGGER" > $SWAGGER_FILE
 
 # Manage swagger codegen
 CODEGEN_JAR_NAME="swagger-codegen-cli"
