@@ -42,9 +42,9 @@ if [[ `git status --porcelain --untracked-files=no` ]]; then
   # Changes
   echo "Changes detected, generating Library..."
   java -jar $CODEGEN_JAR generate -i $SWAGGER_FILE -l $1 \
-       --git-user-id \"rmehilli-r7\" \
-       --git-repo-id \"vm-console-client-python\" \
-       --release-note \"Update generated library to version: $LIB_VERSION\" \
+       --git-user-id "rmehilli-r7" \
+       --git-repo-id "vm-console-client-python" \
+       --release-note "Update generated library to version: $LIB_VERSION" \
        -o ./ -c setup_workspace/config.json
 else
   # No changes
