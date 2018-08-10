@@ -38,6 +38,7 @@ git status --porcelain --untracked-files=no
 # Check if changes were made - new console version | new swagger file
 if [[ `git status --porcelain --untracked-files=no` ]]; then
   # Changes
+  echo "Changes detected, generating Library..."
   java -jar $CODEGEN_JAR generate -i $SWAGGER_FILE -l $1 \
        --git-user-id \"rmehilli-r7\" \
        --git-repo-id \"vm-console-client-python\" \
