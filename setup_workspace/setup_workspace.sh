@@ -1,4 +1,15 @@
 #!/bin/bash
+# setup_workspace.sh
+#
+# Purpose: Generation API client for the Rapid7 Nexpose and InsightVM v3 API. Current supported languages: Python, Ruby, Golang
+#
+# Requirements: Java install and on PATH
+#
+# Usage:
+#  $ ./setup_workspace.sh param1
+# * param1: Language for which to generate library (Python, Ruby, Golang)
+#
+# Output: Generation of api and models based on Rapid7 Nexpose and InsightVM Swagger file
 
 # Download InsightVM/Nexpose Console Version and update package in config.json
 VERSION_URL="http://download2.rapid7.com/download/InsightVM/Rapid7Setup-Linux64.bin.version"
@@ -13,29 +24,22 @@ echo 'LIB_VERSION='$LIB_VERSION > /var/jenkins_home/propsfile
 # Download swagger file
 API_FILE_DIR="api-files/"
 SWAGGER_FILE=$API_FILE_DIR"console-swagger.json"
-echo "SWAGGER FILE: $SWAGGER_FILE"
 SWAGGER_URL="https://help.rapid7.com/insightvm/en-us/api/api.json"
-SWAGGER=$(curl $SWAGGER_URL)
-echo "$SWAGGER" > $SWAGGER_FILE
+wget $SWAGGER_URL -O $SWAGGER_FILE
+# SWAGGER=$(curl $SWAGGER_URL)
+# echo "$SWAGGER" > $SWAGGER_FILE
 
 # Manage swagger codegen
 CODEGEN_JAR_NAME="swagger-codegen-cli"
 CODEGEN_JAR_VERSION="2.3.0"
 URL="http://central.maven.org/maven2/io/swagger/$CODEGEN_JAR_NAME/2.3.0/$CODEGEN_JAR_NAME-$CODEGEN_JAR_VERSION.jar"
 JAR_PATH="setup_workspace/$CODEGEN_JAR_NAME-$CODEGEN_JAR_VERSION.jar"
-echo "URL: $URL and PATH: $JAR_PATH"
 
-# Download and write to file
-# curl -H "Accept: application/zip" $URL -o $JAR_PATH
+# Download and save codegen jar file
 wget $URL -O $JAR_PATH
-# JAR=$(curl $URL)
-# echo "$JAR" > $JAR_PATH
 
 # Generate Library
 CODEGEN_JAR="setup_workspace/$CODEGEN_JAR_NAME-$CODEGEN_JAR_VERSION.jar"
-echo "CODEGEN_JAR: $CODEGEN_JAR"
-
-git status --porcelain --untracked-files=no
 
 # Check if changes were made - new console version | new swagger file
 if [[ `git status --porcelain --untracked-files=no` ]]; then
