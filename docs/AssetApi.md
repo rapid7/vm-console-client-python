@@ -1,6 +1,6 @@
 # rapid7vmconsole.AssetApi
 
-All URIs are relative to *https://localhost:3780*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -82,7 +82,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_asset**
-> CreatedReference create_asset(id, asset=asset)
+> CreatedReference create_asset(id, param1=param1)
 
 Assets
 
@@ -99,11 +99,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.AssetApi()
 id = 56 # int | The identifier of the site.
-asset = rapid7vmconsole.AssetCreate() # AssetCreate | The details of the asset being added or updated.  The operating system can be specified in one of three ways, with the order of precedence: `\"osFingerprint\"`, `\"os\"`, `\"cpe\"` (optional)
+param1 = rapid7vmconsole.AssetCreate() # AssetCreate | The details of the asset being added or updated.  The operating system can be specified in one of three ways, with the order of precedence: `\"osFingerprint\"`, `\"os\"`, `\"cpe\"` (optional)
 
 try:
     # Assets
-    api_response = api_instance.create_asset(id, asset=asset)
+    api_response = api_instance.create_asset(id, param1=param1)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssetApi->create_asset: %s\n" % e)
@@ -114,7 +114,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the site. | 
- **asset** | [**AssetCreate**](AssetCreate.md)| The details of the asset being added or updated.  The operating system can be specified in one of three ways, with the order of precedence: &#x60;\&quot;osFingerprint\&quot;&#x60;, &#x60;\&quot;os\&quot;&#x60;, &#x60;\&quot;cpe\&quot;&#x60; | [optional] 
+ **param1** | [**AssetCreate**](AssetCreate.md)| The details of the asset being added or updated.  The operating system can be specified in one of three ways, with the order of precedence: &#x60;\&quot;osFingerprint\&quot;&#x60;, &#x60;\&quot;os\&quot;&#x60;, &#x60;\&quot;cpe\&quot;&#x60; | [optional] 
 
 ### Return type
 

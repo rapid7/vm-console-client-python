@@ -1,6 +1,6 @@
 # rapid7vmconsole.AssetGroupApi
 
-All URIs are relative to *https://localhost:3780*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -178,7 +178,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_asset_group**
-> CreatedReferenceAssetGroupIDLink create_asset_group(asset_group=asset_group)
+> CreatedReferenceAssetGroupIDLink create_asset_group(param0=param0)
 
 Asset Groups
 
@@ -194,11 +194,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = rapid7vmconsole.AssetGroupApi()
-asset_group = rapid7vmconsole.AssetGroup() # AssetGroup | The details of the asset group. (optional)
+param0 = rapid7vmconsole.AssetGroup() # AssetGroup | The details of the asset group. (optional)
 
 try:
     # Asset Groups
-    api_response = api_instance.create_asset_group(asset_group=asset_group)
+    api_response = api_instance.create_asset_group(param0=param0)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssetGroupApi->create_asset_group: %s\n" % e)
@@ -208,7 +208,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **asset_group** | [**AssetGroup**](AssetGroup.md)| The details of the asset group. | [optional] 
+ **param0** | [**AssetGroup**](AssetGroup.md)| The details of the asset group. | [optional] 
 
 ### Return type
 
@@ -816,7 +816,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_asset_group_search_criteria**
-> Links set_asset_group_search_criteria(id, criteria=criteria)
+> Links set_asset_group_search_criteria(id, param1=param1)
 
 Asset Group Search Criteria
 
@@ -833,11 +833,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.AssetGroupApi()
 id = 56 # int | The identifier of the asset group.
-criteria = rapid7vmconsole.SearchCriteria() # SearchCriteria | The search criteria specification. (optional)
+param1 = rapid7vmconsole.SearchCriteria() # SearchCriteria | The search criteria specification. (optional)
 
 try:
     # Asset Group Search Criteria
-    api_response = api_instance.set_asset_group_search_criteria(id, criteria=criteria)
+    api_response = api_instance.set_asset_group_search_criteria(id, param1=param1)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssetGroupApi->set_asset_group_search_criteria: %s\n" % e)
@@ -848,7 +848,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the asset group. | 
- **criteria** | [**SearchCriteria**](SearchCriteria.md)| The search criteria specification. | [optional] 
+ **param1** | [**SearchCriteria**](SearchCriteria.md)| The search criteria specification. | [optional] 
 
 ### Return type
 
@@ -866,7 +866,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_asset_group_tags**
-> Links set_asset_group_tags(id, tags=tags)
+> Links set_asset_group_tags(id, param1=param1)
 
 Asset Group Tags
 
@@ -883,11 +883,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.AssetGroupApi()
 id = 56 # int | The identifier of the asset group.
-tags = [rapid7vmconsole.list[int]()] # list[int] | The tags to associate to the asset group. (optional)
+param1 = [rapid7vmconsole.list[int]()] # list[int] | The tags to associate to the asset group. (optional)
 
 try:
     # Asset Group Tags
-    api_response = api_instance.set_asset_group_tags(id, tags=tags)
+    api_response = api_instance.set_asset_group_tags(id, param1=param1)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssetGroupApi->set_asset_group_tags: %s\n" % e)
@@ -898,7 +898,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the asset group. | 
- **tags** | **list[int]**| The tags to associate to the asset group. | [optional] 
+ **param1** | **list[int]**| The tags to associate to the asset group. | [optional] 
 
 ### Return type
 
@@ -916,7 +916,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_asset_group_users**
-> Links set_asset_group_users(id, users=users)
+> Links set_asset_group_users(id, param1=param1)
 
 Asset Group Users
 
@@ -933,11 +933,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.AssetGroupApi()
 id = 56 # int | The identifier of the asset group.
-users = [rapid7vmconsole.list[int]()] # list[int] | The users to grant access to the asset group. (optional)
+param1 = [rapid7vmconsole.list[int]()] # list[int] | The users to grant access to the asset group. (optional)
 
 try:
     # Asset Group Users
-    api_response = api_instance.set_asset_group_users(id, users=users)
+    api_response = api_instance.set_asset_group_users(id, param1=param1)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssetGroupApi->set_asset_group_users: %s\n" % e)
@@ -948,7 +948,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the asset group. | 
- **users** | **list[int]**| The users to grant access to the asset group. | [optional] 
+ **param1** | **list[int]**| The users to grant access to the asset group. | [optional] 
 
 ### Return type
 
@@ -966,7 +966,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_asset_group**
-> Links update_asset_group(id, asset_group=asset_group)
+> Links update_asset_group(id, param1=param1)
 
 Asset Group
 
@@ -983,11 +983,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.AssetGroupApi()
 id = 56 # int | The identifier of the asset group.
-asset_group = rapid7vmconsole.AssetGroup() # AssetGroup | The details of the asset group. (optional)
+param1 = rapid7vmconsole.AssetGroup() # AssetGroup | The details of the asset group. (optional)
 
 try:
     # Asset Group
-    api_response = api_instance.update_asset_group(id, asset_group=asset_group)
+    api_response = api_instance.update_asset_group(id, param1=param1)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssetGroupApi->update_asset_group: %s\n" % e)
@@ -998,7 +998,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the asset group. | 
- **asset_group** | [**AssetGroup**](AssetGroup.md)| The details of the asset group. | [optional] 
+ **param1** | [**AssetGroup**](AssetGroup.md)| The details of the asset group. | [optional] 
 
 ### Return type
 
@@ -1016,7 +1016,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_asset_group_assets**
-> Links update_asset_group_assets(id, assets=assets)
+> Links update_asset_group_assets(id, param1=param1)
 
 Asset Group Assets
 
@@ -1033,11 +1033,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.AssetGroupApi()
 id = 56 # int | The identifier of the asset group.
-assets = [rapid7vmconsole.list[int]()] # list[int] | The assets to place in the asset group.  (optional)
+param1 = [rapid7vmconsole.list[int]()] # list[int] | The assets to place in the asset group.  (optional)
 
 try:
     # Asset Group Assets
-    api_response = api_instance.update_asset_group_assets(id, assets=assets)
+    api_response = api_instance.update_asset_group_assets(id, param1=param1)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AssetGroupApi->update_asset_group_assets: %s\n" % e)
@@ -1048,7 +1048,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the asset group. | 
- **assets** | **list[int]**| The assets to place in the asset group.  | [optional] 
+ **param1** | **list[int]**| The assets to place in the asset group.  | [optional] 
 
 ### Return type
 

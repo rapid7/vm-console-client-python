@@ -1,6 +1,6 @@
 # rapid7vmconsole.PolicyApi
 
-All URIs are relative to *https://localhost:3780*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

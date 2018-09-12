@@ -1,6 +1,6 @@
 # rapid7vmconsole.RemediationApi
 
-All URIs are relative to *https://localhost:3780*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

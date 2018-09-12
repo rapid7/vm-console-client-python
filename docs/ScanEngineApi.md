@@ -1,6 +1,6 @@
 # rapid7vmconsole.ScanEngineApi
 
-All URIs are relative to *https://localhost:3780*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -75,7 +75,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_scan_engine**
-> ReferenceWithEngineIDLink create_scan_engine(scan_engine=scan_engine)
+> ReferenceWithEngineIDLink create_scan_engine(param0=param0)
 
 Scan Engines
 
@@ -91,11 +91,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = rapid7vmconsole.ScanEngineApi()
-scan_engine = rapid7vmconsole.ScanEngine() # ScanEngine | The specification of a scan engine. (optional)
+param0 = rapid7vmconsole.ScanEngine() # ScanEngine | The specification of a scan engine. (optional)
 
 try:
     # Scan Engines
-    api_response = api_instance.create_scan_engine(scan_engine=scan_engine)
+    api_response = api_instance.create_scan_engine(param0=param0)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ScanEngineApi->create_scan_engine: %s\n" % e)
@@ -105,7 +105,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **scan_engine** | [**ScanEngine**](ScanEngine.md)| The specification of a scan engine. | [optional] 
+ **param0** | [**ScanEngine**](ScanEngine.md)| The specification of a scan engine. | [optional] 
 
 ### Return type
 
@@ -123,7 +123,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_scan_engine_pool**
-> CreatedReferenceEngineIDLink create_scan_engine_pool(engine_pool=engine_pool)
+> CreatedReferenceEngineIDLink create_scan_engine_pool(param0=param0)
 
 Engine Pools
 
@@ -139,11 +139,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = rapid7vmconsole.ScanEngineApi()
-engine_pool = rapid7vmconsole.EnginePool() # EnginePool | The details for the scan engine to update. (optional)
+param0 = rapid7vmconsole.EnginePool() # EnginePool | The details for the scan engine to update. (optional)
 
 try:
     # Engine Pools
-    api_response = api_instance.create_scan_engine_pool(engine_pool=engine_pool)
+    api_response = api_instance.create_scan_engine_pool(param0=param0)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ScanEngineApi->create_scan_engine_pool: %s\n" % e)
@@ -153,7 +153,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **engine_pool** | [**EnginePool**](EnginePool.md)| The details for the scan engine to update. | [optional] 
+ **param0** | [**EnginePool**](EnginePool.md)| The details for the scan engine to update. | [optional] 
 
 ### Return type
 
@@ -753,7 +753,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_scan_engine_pool_scan_engines**
-> Links set_scan_engine_pool_scan_engines(id, engines=engines)
+> Links set_scan_engine_pool_scan_engines(id, param1=param1)
 
 Engine Pool Engines
 
@@ -770,11 +770,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the engine pool.
-engines = [rapid7vmconsole.list[int]()] # list[int] | The identifiers of the scan engines to place into the engine pool. (optional)
+param1 = [rapid7vmconsole.list[int]()] # list[int] | The identifiers of the scan engines to place into the engine pool. (optional)
 
 try:
     # Engine Pool Engines
-    api_response = api_instance.set_scan_engine_pool_scan_engines(id, engines=engines)
+    api_response = api_instance.set_scan_engine_pool_scan_engines(id, param1=param1)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ScanEngineApi->set_scan_engine_pool_scan_engines: %s\n" % e)
@@ -785,7 +785,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the engine pool. | 
- **engines** | **list[int]**| The identifiers of the scan engines to place into the engine pool. | [optional] 
+ **param1** | **list[int]**| The identifiers of the scan engines to place into the engine pool. | [optional] 
 
 ### Return type
 
@@ -803,7 +803,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_scan_engine**
-> Links update_scan_engine(id, scan_engine=scan_engine)
+> Links update_scan_engine(id, param1=param1)
 
 Scan Engine
 
@@ -820,11 +820,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the scan engine.
-scan_engine = rapid7vmconsole.ScanEngine() # ScanEngine | The specification of the scan engine to update. (optional)
+param1 = rapid7vmconsole.ScanEngine() # ScanEngine | The specification of the scan engine to update. (optional)
 
 try:
     # Scan Engine
-    api_response = api_instance.update_scan_engine(id, scan_engine=scan_engine)
+    api_response = api_instance.update_scan_engine(id, param1=param1)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ScanEngineApi->update_scan_engine: %s\n" % e)
@@ -835,7 +835,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the scan engine. | 
- **scan_engine** | [**ScanEngine**](ScanEngine.md)| The specification of the scan engine to update. | [optional] 
+ **param1** | [**ScanEngine**](ScanEngine.md)| The specification of the scan engine to update. | [optional] 
 
 ### Return type
 
@@ -853,7 +853,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_scan_engine_pool**
-> Links update_scan_engine_pool(id, engine_pool=engine_pool)
+> Links update_scan_engine_pool(id, param1=param1)
 
 Engine Pool
 
@@ -870,11 +870,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.ScanEngineApi()
 id = 56 # int | The identifier of the engine pool.
-engine_pool = rapid7vmconsole.EnginePool() # EnginePool | The details for the scan engine to update. (optional)
+param1 = rapid7vmconsole.EnginePool() # EnginePool | The details for the scan engine to update. (optional)
 
 try:
     # Engine Pool
-    api_response = api_instance.update_scan_engine_pool(id, engine_pool=engine_pool)
+    api_response = api_instance.update_scan_engine_pool(id, param1=param1)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ScanEngineApi->update_scan_engine_pool: %s\n" % e)
@@ -885,7 +885,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the engine pool. | 
- **engine_pool** | [**EnginePool**](EnginePool.md)| The details for the scan engine to update. | [optional] 
+ **param1** | [**EnginePool**](EnginePool.md)| The details for the scan engine to update. | [optional] 
 
 ### Return type
 

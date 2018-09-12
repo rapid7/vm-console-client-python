@@ -1,6 +1,6 @@
 # rapid7vmconsole.AdministrationApi
 
-All URIs are relative to *https://localhost:3780*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -63,7 +63,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **execute_command**
-> ConsoleCommandOutput execute_command(command=command)
+> ConsoleCommandOutput execute_command(param0=param0)
 
 Console Commands
 
@@ -79,11 +79,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = rapid7vmconsole.AdministrationApi()
-command = 'command_example' # str | The console command to execute. (optional)
+param0 = 'param0_example' # str | The console command to execute. (optional)
 
 try:
     # Console Commands
-    api_response = api_instance.execute_command(command=command)
+    api_response = api_instance.execute_command(param0=param0)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AdministrationApi->execute_command: %s\n" % e)
@@ -93,7 +93,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **command** | **str**| The console command to execute. | [optional] 
+ **param0** | **str**| The console command to execute. | [optional] 
 
 ### Return type
 

@@ -1,6 +1,6 @@
 # rapid7vmconsole.PolicyOverrideApi
 
-All URIs are relative to *https://localhost:3780*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **create_policy_override**
-> CreatedReferencePolicyOverrideIDLink create_policy_override(policy_override=policy_override)
+> CreatedReferencePolicyOverrideIDLink create_policy_override(param0=param0)
 
 Policy Overrides
 
@@ -31,11 +31,11 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = rapid7vmconsole.PolicyOverrideApi()
-policy_override = rapid7vmconsole.PolicyOverride() # PolicyOverride | The specification of a policy override. Allows users to override the compliance result of a policy rule. (optional)
+param0 = rapid7vmconsole.PolicyOverride() # PolicyOverride | The specification of a policy override. Allows users to override the compliance result of a policy rule. (optional)
 
 try:
     # Policy Overrides
-    api_response = api_instance.create_policy_override(policy_override=policy_override)
+    api_response = api_instance.create_policy_override(param0=param0)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PolicyOverrideApi->create_policy_override: %s\n" % e)
@@ -45,7 +45,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **policy_override** | [**PolicyOverride**](PolicyOverride.md)| The specification of a policy override. Allows users to override the compliance result of a policy rule. | [optional] 
+ **param0** | [**PolicyOverride**](PolicyOverride.md)| The specification of a policy override. Allows users to override the compliance result of a policy rule. | [optional] 
 
 ### Return type
 
@@ -307,7 +307,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_policy_override_expiration**
-> Links set_policy_override_expiration(id, expiration=expiration)
+> Links set_policy_override_expiration(id, param1=param1)
 
 Policy Override Expiration
 
@@ -324,11 +324,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.PolicyOverrideApi()
 id = 789 # int | The identifier of the policy override.
-expiration = 'expiration_example' # str | The date the policy override is set to expire. Date is represented in ISO 8601 format. (optional)
+param1 = 'param1_example' # str | The date the policy override is set to expire. Date is represented in ISO 8601 format. (optional)
 
 try:
     # Policy Override Expiration
-    api_response = api_instance.set_policy_override_expiration(id, expiration=expiration)
+    api_response = api_instance.set_policy_override_expiration(id, param1=param1)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PolicyOverrideApi->set_policy_override_expiration: %s\n" % e)
@@ -339,7 +339,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the policy override. | 
- **expiration** | **str**| The date the policy override is set to expire. Date is represented in ISO 8601 format. | [optional] 
+ **param1** | **str**| The date the policy override is set to expire. Date is represented in ISO 8601 format. | [optional] 
 
 ### Return type
 
@@ -357,7 +357,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_policy_override_status**
-> set_policy_override_status(id, status, comment=comment)
+> set_policy_override_status(id, status, param2=param2)
 
 Policy Override Status
 
@@ -375,11 +375,11 @@ from pprint import pprint
 api_instance = rapid7vmconsole.PolicyOverrideApi()
 id = 789 # int | The identifier of the policy override.
 status = 'status_example' # str | Policy Override Status
-comment = 'comment_example' # str | A comment describing the change of the policy override status. (optional)
+param2 = 'param2_example' # str | A comment describing the change of the policy override status. (optional)
 
 try:
     # Policy Override Status
-    api_instance.set_policy_override_status(id, status, comment=comment)
+    api_instance.set_policy_override_status(id, status, param2=param2)
 except ApiException as e:
     print("Exception when calling PolicyOverrideApi->set_policy_override_status: %s\n" % e)
 ```
@@ -390,7 +390,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the policy override. | 
  **status** | **str**| Policy Override Status | 
- **comment** | **str**| A comment describing the change of the policy override status. | [optional] 
+ **param2** | **str**| A comment describing the change of the policy override status. | [optional] 
 
 ### Return type
 

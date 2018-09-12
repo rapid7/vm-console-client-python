@@ -1,6 +1,6 @@
 # rapid7vmconsole.ScanApi
 
-All URIs are relative to *https://localhost:3780*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -220,7 +220,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **start_scan**
-> CreatedReferenceScanIDLink start_scan(id, scan=scan)
+> CreatedReferenceScanIDLink start_scan(id, param1=param1)
 
 Site Scans
 
@@ -237,11 +237,11 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.ScanApi()
 id = 56 # int | The identifier of the site.
-scan = rapid7vmconsole.AdhocScan() # AdhocScan | The details for the scan. (optional)
+param1 = rapid7vmconsole.AdhocScan() # AdhocScan | The details for the scan. (optional)
 
 try:
     # Site Scans
-    api_response = api_instance.start_scan(id, scan=scan)
+    api_response = api_instance.start_scan(id, param1=param1)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ScanApi->start_scan: %s\n" % e)
@@ -252,7 +252,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the site. | 
- **scan** | [**AdhocScan**](AdhocScan.md)| The details for the scan. | [optional] 
+ **param1** | [**AdhocScan**](AdhocScan.md)| The details for the scan. | [optional] 
 
 ### Return type
 
