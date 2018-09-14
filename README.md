@@ -13,7 +13,7 @@ artifacts, users can begin interacting with the Rapid7 InsightVM/Nexpose API wit
 ## Auto-generating code
 The code and resulting library of this repository have been auto generated using [Swagger Codegen](https://github.com/swagger-api/swagger-codegen)
 along with the most recent Rapid7 InsightVM/Nexpose Swagger file. After each new console release, the script found
-at `setup_workspac/setup_workspace.py` is run to check if any changes have been made to the API Swagger file. If changes
+at `setup_workspac/setup_workspace.sh` is run to check if any changes have been made to the API Swagger file. If changes
 exist, the script automates the download of swagger-codegen-cli.jar, updates the version, and executes the jar generate
 process. An example command for running codegen to generate Python source is below:
 ```
