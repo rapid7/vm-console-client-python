@@ -123,7 +123,7 @@ class ReportEmail(object):
         :param additional: The additional of this ReportEmail.  # noqa: E501
         :type: str
         """
-        allowed_values = ["file", "zip", "none"]  # noqa: E501
+        allowed_values = ["file", "zip", "none", "email"]  # noqa: E501
         if additional not in allowed_values:
             raise ValueError(
                 "Invalid value for `additional` ({0}), must be one of {1}"  # noqa: E501
