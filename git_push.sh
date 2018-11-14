@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Update generated library to version: 0.0.1-6.5.19"
+    release_note="Update generated library to version: 1.0.0-6.5.41"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

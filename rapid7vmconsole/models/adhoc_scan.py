@@ -31,6 +31,7 @@ class AdhocScan(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'asset_group_ids': 'list[int]',
         'engine_id': 'int',
         'hosts': 'list[str]',
         'name': 'str',
@@ -38,21 +39,25 @@ class AdhocScan(object):
     }
 
     attribute_map = {
+        'asset_group_ids': 'assetGroupIds',
         'engine_id': 'engineId',
         'hosts': 'hosts',
         'name': 'name',
         'template_id': 'templateId'
     }
 
-    def __init__(self, engine_id=None, hosts=None, name=None, template_id=None):  # noqa: E501
+    def __init__(self, asset_group_ids=None, engine_id=None, hosts=None, name=None, template_id=None):  # noqa: E501
         """AdhocScan - a model defined in Swagger"""  # noqa: E501
 
+        self._asset_group_ids = None
         self._engine_id = None
         self._hosts = None
         self._name = None
         self._template_id = None
         self.discriminator = None
 
+        if asset_group_ids is not None:
+            self.asset_group_ids = asset_group_ids
         if engine_id is not None:
             self.engine_id = engine_id
         if hosts is not None:
@@ -61,6 +66,29 @@ class AdhocScan(object):
             self.name = name
         if template_id is not None:
             self.template_id = template_id
+
+    @property
+    def asset_group_ids(self):
+        """Gets the asset_group_ids of this AdhocScan.  # noqa: E501
+
+        The asset groups that should be included as a part of the scan. Only asset groups assigned to the site can be specified for a scan. This value should be an array of integers representing the unique identifiers of the asset groups.  # noqa: E501
+
+        :return: The asset_group_ids of this AdhocScan.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._asset_group_ids
+
+    @asset_group_ids.setter
+    def asset_group_ids(self, asset_group_ids):
+        """Sets the asset_group_ids of this AdhocScan.
+
+        The asset groups that should be included as a part of the scan. Only asset groups assigned to the site can be specified for a scan. This value should be an array of integers representing the unique identifiers of the asset groups.  # noqa: E501
+
+        :param asset_group_ids: The asset_group_ids of this AdhocScan.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._asset_group_ids = asset_group_ids
 
     @property
     def engine_id(self):
