@@ -134,7 +134,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -229,7 +229,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='ReferenceWithEngineIDLink',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -324,7 +324,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='CreatedReferenceEngineIDLink',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -423,7 +423,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -522,7 +522,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='ResourcesEnginePool',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -621,7 +621,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='EnginePool',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -720,7 +720,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='ScanEngine',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -819,7 +819,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='ReferencesWithEngineIDLink',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -918,7 +918,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='ReferencesWithSiteIDLink',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1009,7 +1009,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='ResourcesEnginePool',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1121,7 +1121,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='PageOfScan',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1233,7 +1233,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='PageOfSite',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1324,7 +1324,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='ResourcesScanEngine',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1423,7 +1423,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1530,7 +1530,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1633,7 +1633,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1736,7 +1736,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1839,7 +1839,7 @@ class ScanEngineApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

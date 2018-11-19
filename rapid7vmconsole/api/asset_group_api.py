@@ -134,7 +134,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -241,7 +241,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -348,7 +348,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -443,7 +443,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='CreatedReferenceAssetGroupIDLink',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -542,7 +542,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -641,7 +641,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='AssetGroup',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -740,7 +740,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='ReferencesWithAssetIDLink',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -839,7 +839,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='SearchCriteria',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -938,7 +938,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='ReferencesWithTagIDLink',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1037,7 +1037,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='ReferencesWithUserIDLink',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1149,7 +1149,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='PageOfAssetGroup',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1248,7 +1248,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1347,7 +1347,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1454,7 +1454,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1561,7 +1561,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1668,7 +1668,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1771,7 +1771,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1874,7 +1874,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -1977,7 +1977,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -2080,7 +2080,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -2183,7 +2183,7 @@ class AssetGroupApi(object):
             files=local_var_files,
             response_type='Links',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

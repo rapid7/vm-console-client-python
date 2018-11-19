@@ -73,7 +73,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Swagger-Codegen/0.0.1-6.5.19/python'
+        self.user_agent = 'Swagger-Codegen/1.0.0-6.5.41/python'
 
     def __del__(self):
         self.pool.close()
@@ -274,7 +274,7 @@ class ApiClient(object):
     def call_api(self, resource_path, method,
                  path_params=None, query_params=None, header_params=None,
                  body=None, post_params=None, files=None,
-                 response_type=None, auth_settings=None, async=None,
+                 response_type=None, auth_settings=None, async_=None,
                  _return_http_data_only=None, collection_formats=None,
                  _preload_content=True, _request_timeout=None):
         """Makes the HTTP request (synchronous) and returns deserialized data.
@@ -313,7 +313,7 @@ class ApiClient(object):
             If parameter async is False or missing,
             then the method will return the response directly.
         """
-        if not async:
+        if not async_:
             return self.__call_api(resource_path, method,
                                    path_params, query_params, header_params,
                                    body, post_params, files,

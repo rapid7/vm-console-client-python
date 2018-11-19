@@ -8,14 +8,15 @@
 # Usage:
 #  $ ./setup_workspace.sh param1
 # * param1: Language for which to generate library (python, ruby, golang)
+# * param2: IP or hostname of console where Swagger spec is fetched
 #
 # Output: Generation of API and models based on Rapid7 Nexpose and InsightVM Swagger file
 
 # Download InsightVM/Nexpose Console Version and update package in config.json
 VERSION_URL="http://download2.rapid7.com/download/InsightVM/Rapid7Setup-Linux64.bin.version"
 CONSOLE_VERSION=$(curl $VERSION_URL)
-LIB_VERSION="0.0.1-$CONSOLE_VERSION"
-sed -i -E 's/("packageVersion": "0.0.1-)([0-9]+.[0-9]+.[0-9]+)/\1'"$CONSOLE_VERSION"'/g' ./setup_workspace/config.json
+LIB_VERSION="1.0.0-$CONSOLE_VERSION"
+sed -i '' "s/\"packageVersion\": \".*\"/\"packageVersion\": \"$LIB_VERSION\"/g" ./setup_workspace/config.json
 echo "Library Version: $LIB_VERSION"
 
 # Environment variable for branch name
@@ -24,8 +25,9 @@ echo 'LIB_VERSION='$LIB_VERSION > /var/jenkins_home/propsfile
 # Download swagger file
 API_FILE_DIR="api-files/"
 SWAGGER_FILE=$API_FILE_DIR"console-swagger.json"
-SWAGGER_URL="https://help.rapid7.com/insightvm/en-us/api/api.json"
-wget $SWAGGER_URL -O $SWAGGER_FILE
+#SWAGGER_URL="https://help.rapid7.com/insightvm/en-us/api/api.json"
+SWAGGER_URL="https://$2:3780/api/3/json"
+wget --no-check-certificate $SWAGGER_URL -O $SWAGGER_FILE
 
 # Manage swagger codegen
 CODEGEN_JAR_NAME="swagger-codegen-cli"
@@ -52,6 +54,16 @@ else
   # No changes
   echo 'No changes were made to client'
 fi
+
+if [ "$1" = "python" ]; then
+  # Fix for compatibility with Python 3.7
+  LC_ALL=C find docs rapid7vmconsole samples setup_workspace test -type f -exec sed -i '' 's/async_=params.get/async_=params.get/g' {} +
+  LC_ALL=C find docs rapid7vmconsole samples setup_workspace test -type f -exec sed -i '' 's/async_=None/async_=None/g' {} +
+  LC_ALL=C find docs rapid7vmconsole samples setup_workspace test -type f -exec sed -i '' 's/if not async_/if not async__/g' {} +
+fi
+
+# Cleanup local console details
+LC_ALL=C find api-files docs rapid7vmconsole samples setup_workspace test -type f -exec sed -i '' "s/$2:3780/localhost:3780/g" {} +
 
 git add *
 git commit -a -m "Update generated library to version: $LIB_VERSION"
