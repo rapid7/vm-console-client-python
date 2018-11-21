@@ -1,13 +1,13 @@
 #!/bin/bash
 # setup_workspace.sh
 #
-# Purpose: Generation of API client for the Rapid7 Nexpose and InsightVM v3 API. Current supported languages: Python, Ruby, Golang
+# Purpose: Generation of API client for the Rapid7 Nexpose and InsightVM v3 API. Current supported languages: Python, Ruby, Go
 #
 # Requirements: Java install and on PATH
 #
 # Usage:
 #  $ ./setup_workspace.sh param1
-# * param1: Language for which to generate library (python, ruby, golang)
+# * param1: Language for which to generate library (python, ruby, go)
 # * param2: IP or hostname of console where Swagger spec is fetched
 #
 # Output: Generation of API and models based on Rapid7 Nexpose and InsightVM Swagger file
@@ -18,6 +18,7 @@ CONSOLE_VERSION=$(curl $VERSION_URL)
 LIB_VERSION="1.0.0-$CONSOLE_VERSION"
 sed -i '' "s/\"packageVersion\": \".*\"/\"packageVersion\": \"$LIB_VERSION\"/g" ./setup_workspace/config.json
 echo "Library Version: $LIB_VERSION"
+
 
 # Environment variable for branch name
 echo 'LIB_VERSION='$LIB_VERSION > /var/jenkins_home/propsfile
@@ -59,11 +60,35 @@ if [ "$1" = "python" ]; then
   # Fix for compatibility with Python 3.7
   LC_ALL=C find docs rapid7vmconsole samples setup_workspace test -type f -exec sed -i '' 's/async_=params.get/async_=params.get/g' {} +
   LC_ALL=C find docs rapid7vmconsole samples setup_workspace test -type f -exec sed -i '' 's/async_=None/async_=None/g' {} +
-  LC_ALL=C find docs rapid7vmconsole samples setup_workspace test -type f -exec sed -i '' 's/if not async_/if not async__/g' {} +
+  LC_ALL=C find docs rapid7vmconsole samples setup_workspace test -type f -exec sed -i '' 's/if not async_____/if not async______/g' {} +
+
+  # Cleanup API documentation strings
+  LC_ALL=C find . -type f -exec perl -0777 -i -pe 's/InsightVM API[\s]*# Overview.*/Python InsightVM API Client/' {} +
+
+  # Cleanup local console details
+  LC_ALL=C find . -name "*.py" -type f -exec sed -i '' "s/$2:3780/localhost:3780/g" {} +
 fi
 
-# Cleanup local console details
-LC_ALL=C find api-files docs rapid7vmconsole samples setup_workspace test -type f -exec sed -i '' "s/$2:3780/localhost:3780/g" {} +
+if [ "$1" = "ruby" ]; then
+  # Cleanup API documentation strings
+  LC_ALL=C find . -type f -exec perl -0777 -i -pe 's/#InsightVM API\n\n## Overview.*/Ruby InsightVM API Client/' {} +
+
+  # Cleanup local console details
+  LC_ALL=C find . -name "*.rb" -type f -exec sed -i '' "s/$2:3780/localhost:3780/g" {} +
+
+  # Exclude the setup_workspace directory from the gemspec
+  LC_ALL=C perl -0777 -i -pe 's/find \*/find docs lib spec/' rapid7_vm_console.gemspec
+fi
+
+
+if [ "$1" = "go" ]; then
+  # Cleanup API documentation strings
+  LC_ALL=C find . -type f -exec perl -0777 -i -pe 's/\* InsightVM API(\n\s\*){2} # Overview.*/\* Go InsightVM Client/' {} +
+
+  # Cleanup local console details
+  LC_ALL=C find . -name "*.go" -type f -exec sed -i '' "s/$2:3780/localhost:3780/g" {} +
+fi
+
 
 git add *
 git commit -a -m "Update generated library to version: $LIB_VERSION"
