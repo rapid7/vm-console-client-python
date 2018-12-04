@@ -64,5 +64,5 @@ target/
 .ipynb_checkpoints
 
 # Added manually
-setup_workspace/swagger-codegen-cli-2.3.0.jar
+setup_workspace/*.jar
 .idea

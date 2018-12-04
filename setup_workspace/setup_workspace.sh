@@ -32,8 +32,8 @@ wget --no-check-certificate $SWAGGER_URL -O $SWAGGER_FILE
 
 # Manage swagger codegen
 CODEGEN_JAR_NAME="swagger-codegen-cli"
-CODEGEN_JAR_VERSION="2.3.0"
-URL="http://central.maven.org/maven2/io/swagger/$CODEGEN_JAR_NAME/2.3.0/$CODEGEN_JAR_NAME-$CODEGEN_JAR_VERSION.jar"
+CODEGEN_JAR_VERSION="2.4.0"
+URL="http://central.maven.org/maven2/io/swagger/$CODEGEN_JAR_NAME/$CODEGEN_JAR_VERSION/$CODEGEN_JAR_NAME-$CODEGEN_JAR_VERSION.jar"
 JAR_PATH="setup_workspace/$CODEGEN_JAR_NAME-$CODEGEN_JAR_VERSION.jar"
 
 # Download and save codegen jar file
@@ -57,24 +57,13 @@ else
 fi
 
 if [ "$1" = "python" ]; then
-  # Fix for compatibility with Python 3.7
-  LC_ALL=C find docs rapid7vmconsole samples setup_workspace test -type f -exec sed -i '' 's/async_=params.get/async_=params.get/g' {} +
-  LC_ALL=C find docs rapid7vmconsole samples setup_workspace test -type f -exec sed -i '' 's/async_=None/async_=None/g' {} +
-  LC_ALL=C find docs rapid7vmconsole samples setup_workspace test -type f -exec sed -i '' 's/if not async_____/if not async______/g' {} +
-
   # Cleanup API documentation strings
   LC_ALL=C find . -type f -exec perl -0777 -i -pe 's/InsightVM API[\s]*# Overview.*/Python InsightVM API Client/' {} +
-
-  # Cleanup local console details
-  LC_ALL=C find . -name "*.py" -type f -exec sed -i '' "s/$2:3780/localhost:3780/g" {} +
 fi
 
 if [ "$1" = "ruby" ]; then
   # Cleanup API documentation strings
   LC_ALL=C find . -type f -exec perl -0777 -i -pe 's/#InsightVM API\n\n## Overview.*/Ruby InsightVM API Client/' {} +
-
-  # Cleanup local console details
-  LC_ALL=C find . -name "*.rb" -type f -exec sed -i '' "s/$2:3780/localhost:3780/g" {} +
 
   # Exclude the setup_workspace directory from the gemspec
   LC_ALL=C perl -0777 -i -pe 's/find \*/find docs lib spec/' rapid7_vm_console.gemspec
@@ -84,11 +73,11 @@ fi
 if [ "$1" = "go" ]; then
   # Cleanup API documentation strings
   LC_ALL=C find . -type f -exec perl -0777 -i -pe 's/\* InsightVM API(\n\s\*){2} # Overview.*/\* Go InsightVM Client/' {} +
-
-  # Cleanup local console details
-  LC_ALL=C find . -name "*.go" -type f -exec sed -i '' "s/$2:3780/localhost:3780/g" {} +
 fi
 
+# Cleanup local console details
+LC_ALL=C find . -type f -not -path "./.git/*" -exec sed -i '' "s/$2:3780/localhost:3780/g" {} +
 
+git checkout -b release/$CONSOLE_VERSION
 git add *
 git commit -a -m "Update generated library to version: $LIB_VERSION"

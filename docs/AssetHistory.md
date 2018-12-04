@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**date** | **str** | The date the asset information was collected or changed. | [optional] 
+**_date** | **str** | The date the asset information was collected or changed. | [optional] 
 **description** | **str** | Additional information describing the change. | [optional] 
 **scan_id** | **int** | If a scan-oriented change, the identifier of the corresponding scan the asset was scanned in. | [optional] 
 **type** | **str** | The type of change. May be one of:  | Type                                | Source of Data                                              |  | ----------------------------------- | ----------------------------------------------------------- |  | &#x60;ASSET-IMPORT&#x60;, &#x60;EXTERNAL-IMPORT&#x60;   | External source such as the API                             |  | &#x60;EXTERNAL-IMPORT-APPSPIDER&#x60;         | Rapid7 InsightAppSec (previously known as AppSpider)        |  | &#x60;SCAN&#x60;                              | Scan engine scan                                            |  | &#x60;ACTIVE-SYNC&#x60;                       | ActiveSync                                                  |  | &#x60;SCAN-LOG-IMPORT&#x60;                   | Manual import of a scan log                                 |  | &#x60;VULNERABILITY_EXCEPTION_APPLIED&#x60;   | Vulnerability exception applied                             |  | &#x60;VULNERABILITY_EXCEPTION_UNAPPLIED&#x60; | Vulnerability exception unapplied                           | | [optional] 
