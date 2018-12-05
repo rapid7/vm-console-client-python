@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **comment** | **str** | A comment from the reviewer detailing the review.  | [optional] 
-**date** | **str** | The date and time the review took place. | [optional] 
+**_date** | **str** | The date and time the review took place. | [optional] 
 **links** | [**list[Link]**](Link.md) |  | [optional] 
 **name** | **str** | The identifier of the user that reviewed the vulnerability exception. | [optional] 
 **user** | **int** | The login name of the user that reviewed the vulnerability exception. | [optional] 

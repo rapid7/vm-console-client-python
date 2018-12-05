@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **configurations** | [**list[Configuration]**](Configuration.md) | Configuration key-values pairs enumerated on the asset. | [optional] 
 **cpe** | **str** | The Common Platform Enumeration (CPE) of the operating system. This is the tertiary means of specifying the operating system fingerprint. Use &#x60;\&quot;osFingerprint\&quot;&#x60; or &#x60;\&quot;os\&quot;&#x60; as a more accurate means of defining the operating system. | [optional] 
 **databases** | [**list[Database]**](Database.md) | The databases enumerated on the asset. | [optional] 
-**date** | **str** | The date the data was collected on the asset. | 
+**_date** | **str** | The date the data was collected on the asset. | 
 **description** | **str** | The description of the source or collection of information on the asset. This description will appear in the history of the asset for future auditing purposes. | [optional] 
 **files** | [**list[File]**](File.md) | The files discovered with searching on the asset. | [optional] 
 **history** | [**list[AssetHistory]**](AssetHistory.md) | The history of changes to the asset over time. | [optional] 
