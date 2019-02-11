@@ -472,6 +472,7 @@ class ScanApi(object):
 
         :param async_req bool
         :param int id: The identifier of the site. (required)
+        :param bool override_blackout: ${override.blackout}
         :param AdhocScan scan: The details for the scan.
         :return: CreatedReferenceScanIDLink
                  If the method is called asynchronously,
@@ -495,13 +496,14 @@ class ScanApi(object):
 
         :param async_req bool
         :param int id: The identifier of the site. (required)
+        :param bool override_blackout: ${override.blackout}
         :param AdhocScan scan: The details for the scan.
         :return: CreatedReferenceScanIDLink
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'scan']  # noqa: E501
+        all_params = ['id', 'override_blackout', 'scan']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -528,6 +530,8 @@ class ScanApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
+        if 'override_blackout' in params:
+            query_params.append(('overrideBlackout', params['override_blackout']))  # noqa: E501
 
         header_params = {}
 
