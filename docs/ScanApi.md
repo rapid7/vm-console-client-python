@@ -220,7 +220,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **start_scan**
-> CreatedReferenceScanIDLink start_scan(id, scan=scan)
+> CreatedReferenceScanIDLink start_scan(id, override_blackout=override_blackout, scan=scan)
 
 Site Scans
 
@@ -237,11 +237,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.ScanApi()
 id = 56 # int | The identifier of the site.
+override_blackout = false # bool | ${override.blackout} (optional) (default to false)
 scan = rapid7vmconsole.AdhocScan() # AdhocScan | The details for the scan. (optional)
 
 try:
     # Site Scans
-    api_response = api_instance.start_scan(id, scan=scan)
+    api_response = api_instance.start_scan(id, override_blackout=override_blackout, scan=scan)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ScanApi->start_scan: %s\n" % e)
@@ -252,6 +253,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the site. | 
+ **override_blackout** | **bool**| ${override.blackout} | [optional] [default to false]
  **scan** | [**AdhocScan**](AdhocScan.md)| The details for the scan. | [optional] 
 
 ### Return type

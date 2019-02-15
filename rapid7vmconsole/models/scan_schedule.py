@@ -15,7 +15,7 @@ import re  # noqa: F401
 import six
 
 from rapid7vmconsole.models.link import Link  # noqa: F401,E501
-from rapid7vmconsole.models.report_repeat import ReportRepeat  # noqa: F401,E501
+from rapid7vmconsole.models.repeat import Repeat  # noqa: F401,E501
 from rapid7vmconsole.models.scheduled_scan_targets import ScheduledScanTargets  # noqa: F401,E501
 
 
@@ -40,7 +40,7 @@ class ScanSchedule(object):
         'links': 'list[Link]',
         'next_runtimes': 'list[str]',
         'on_scan_repeat': 'str',
-        'repeat': 'ReportRepeat',
+        'repeat': 'Repeat',
         'scan_engine_id': 'int',
         'scan_name': 'str',
         'scan_template_id': 'str',
@@ -268,10 +268,10 @@ class ScanSchedule(object):
     def repeat(self):
         """Gets the repeat of this ScanSchedule.  # noqa: E501
 
-        Settings for repeating a scheduled task.  # noqa: E501
+        Settings for repeating a scheduled scan.  # noqa: E501
 
         :return: The repeat of this ScanSchedule.  # noqa: E501
-        :rtype: ReportRepeat
+        :rtype: Repeat
         """
         return self._repeat
 
@@ -279,10 +279,10 @@ class ScanSchedule(object):
     def repeat(self, repeat):
         """Sets the repeat of this ScanSchedule.
 
-        Settings for repeating a scheduled task.  # noqa: E501
+        Settings for repeating a scheduled scan.  # noqa: E501
 
         :param repeat: The repeat of this ScanSchedule.  # noqa: E501
-        :type: ReportRepeat
+        :type: Repeat
         """
 
         self._repeat = repeat
