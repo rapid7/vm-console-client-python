@@ -14,6 +14,7 @@ config.ssl_ca_cert = None
 config.connection_pool_maxsize = None
 config.cert_file = None
 config.key_file = None
+config.safe_chars_for_path_param = ''
 
 # Logging
 logger = logging.getLogger()
