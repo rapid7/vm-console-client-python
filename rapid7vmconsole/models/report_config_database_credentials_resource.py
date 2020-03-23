@@ -54,7 +54,7 @@ class ReportConfigDatabaseCredentialsResource(object):
     def password(self):
         """Gets the password of this ReportConfigDatabaseCredentialsResource.  # noqa: E501
 
-        ${report.config.database.credential.password.description}  # noqa: E501
+        Database password. Only used when the format is `\"database-export\"`.  # noqa: E501
 
         :return: The password of this ReportConfigDatabaseCredentialsResource.  # noqa: E501
         :rtype: str
@@ -65,7 +65,7 @@ class ReportConfigDatabaseCredentialsResource(object):
     def password(self, password):
         """Sets the password of this ReportConfigDatabaseCredentialsResource.
 
-        ${report.config.database.credential.password.description}  # noqa: E501
+        Database password. Only used when the format is `\"database-export\"`.  # noqa: E501
 
         :param password: The password of this ReportConfigDatabaseCredentialsResource.  # noqa: E501
         :type: str
@@ -77,7 +77,7 @@ class ReportConfigDatabaseCredentialsResource(object):
     def username(self):
         """Gets the username of this ReportConfigDatabaseCredentialsResource.  # noqa: E501
 
-        ${report.config.database.credential.username.description}  # noqa: E501
+        Database user name. Only used when the format is `\"database-export\"`.  # noqa: E501
 
         :return: The username of this ReportConfigDatabaseCredentialsResource.  # noqa: E501
         :rtype: str
@@ -88,7 +88,7 @@ class ReportConfigDatabaseCredentialsResource(object):
     def username(self, username):
         """Sets the username of this ReportConfigDatabaseCredentialsResource.
 
-        ${report.config.database.credential.username.description}  # noqa: E501
+        Database user name. Only used when the format is `\"database-export\"`.  # noqa: E501
 
         :param username: The username of this ReportConfigDatabaseCredentialsResource.  # noqa: E501
         :type: str

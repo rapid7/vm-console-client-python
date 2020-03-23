@@ -472,7 +472,7 @@ class ScanApi(object):
 
         :param async_req bool
         :param int id: The identifier of the site. (required)
-        :param bool override_blackout: ${override.blackout}
+        :param bool override_blackout: Whether to request for the override of an scan blackout window.
         :param AdhocScan scan: The details for the scan.
         :return: CreatedReferenceScanIDLink
                  If the method is called asynchronously,
@@ -496,7 +496,7 @@ class ScanApi(object):
 
         :param async_req bool
         :param int id: The identifier of the site. (required)
-        :param bool override_blackout: ${override.blackout}
+        :param bool override_blackout: Whether to request for the override of an scan blackout window.
         :param AdhocScan scan: The details for the scan.
         :return: CreatedReferenceScanIDLink
                  If the method is called asynchronously,

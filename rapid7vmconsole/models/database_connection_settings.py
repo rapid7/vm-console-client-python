@@ -82,7 +82,7 @@ class DatabaseConnectionSettings(object):
     def maximum_pool_size(self):
         """Gets the maximum_pool_size of this DatabaseConnectionSettings.  # noqa: E501
 
-        ${settings.database.connection.max}  # noqa: E501
+        The maximum number of connections in the connection pool. -1 means unlimited.  # noqa: E501
 
         :return: The maximum_pool_size of this DatabaseConnectionSettings.  # noqa: E501
         :rtype: int
@@ -93,7 +93,7 @@ class DatabaseConnectionSettings(object):
     def maximum_pool_size(self, maximum_pool_size):
         """Sets the maximum_pool_size of this DatabaseConnectionSettings.
 
-        ${settings.database.connection.max}  # noqa: E501
+        The maximum number of connections in the connection pool. -1 means unlimited.  # noqa: E501
 
         :param maximum_pool_size: The maximum_pool_size of this DatabaseConnectionSettings.  # noqa: E501
         :type: int

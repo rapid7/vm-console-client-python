@@ -69,7 +69,7 @@ class RiskModifierSettings(object):
     def high(self):
         """Gets the high of this RiskModifierSettings.  # noqa: E501
 
-        ${settings.risk.modifier.high}  # noqa: E501
+        High critical adjustment modifier.  # noqa: E501
 
         :return: The high of this RiskModifierSettings.  # noqa: E501
         :rtype: float
@@ -80,7 +80,7 @@ class RiskModifierSettings(object):
     def high(self, high):
         """Sets the high of this RiskModifierSettings.
 
-        ${settings.risk.modifier.high}  # noqa: E501
+        High critical adjustment modifier.  # noqa: E501
 
         :param high: The high of this RiskModifierSettings.  # noqa: E501
         :type: float
@@ -92,7 +92,7 @@ class RiskModifierSettings(object):
     def low(self):
         """Gets the low of this RiskModifierSettings.  # noqa: E501
 
-        ${settings.risk.modifier.low}  # noqa: E501
+        Low critical adjustment modifier.  # noqa: E501
 
         :return: The low of this RiskModifierSettings.  # noqa: E501
         :rtype: float
@@ -103,7 +103,7 @@ class RiskModifierSettings(object):
     def low(self, low):
         """Sets the low of this RiskModifierSettings.
 
-        ${settings.risk.modifier.low}  # noqa: E501
+        Low critical adjustment modifier.  # noqa: E501
 
         :param low: The low of this RiskModifierSettings.  # noqa: E501
         :type: float
@@ -115,7 +115,7 @@ class RiskModifierSettings(object):
     def medium(self):
         """Gets the medium of this RiskModifierSettings.  # noqa: E501
 
-        ${settings.risk.modifier.medium}  # noqa: E501
+        Medium critical adjustment modifier.  # noqa: E501
 
         :return: The medium of this RiskModifierSettings.  # noqa: E501
         :rtype: float
@@ -126,7 +126,7 @@ class RiskModifierSettings(object):
     def medium(self, medium):
         """Sets the medium of this RiskModifierSettings.
 
-        ${settings.risk.modifier.medium}  # noqa: E501
+        Medium critical adjustment modifier.  # noqa: E501
 
         :param medium: The medium of this RiskModifierSettings.  # noqa: E501
         :type: float
@@ -138,7 +138,7 @@ class RiskModifierSettings(object):
     def very_high(self):
         """Gets the very_high of this RiskModifierSettings.  # noqa: E501
 
-        ${settings.risk.modifier.veryHigh}  # noqa: E501
+        Very high critical adjustment modifier.  # noqa: E501
 
         :return: The very_high of this RiskModifierSettings.  # noqa: E501
         :rtype: float
@@ -149,7 +149,7 @@ class RiskModifierSettings(object):
     def very_high(self, very_high):
         """Sets the very_high of this RiskModifierSettings.
 
-        ${settings.risk.modifier.veryHigh}  # noqa: E501
+        Very high critical adjustment modifier.  # noqa: E501
 
         :param very_high: The very_high of this RiskModifierSettings.  # noqa: E501
         :type: float
@@ -161,7 +161,7 @@ class RiskModifierSettings(object):
     def very_low(self):
         """Gets the very_low of this RiskModifierSettings.  # noqa: E501
 
-        ${settings.risk.modifier.veryLow}  # noqa: E501
+        Very low critical adjustment modifier.  # noqa: E501
 
         :return: The very_low of this RiskModifierSettings.  # noqa: E501
         :rtype: float
@@ -172,7 +172,7 @@ class RiskModifierSettings(object):
     def very_low(self, very_low):
         """Sets the very_low of this RiskModifierSettings.
 
-        ${settings.risk.modifier.veryLow}  # noqa: E501
+        Very low critical adjustment modifier.  # noqa: E501
 
         :param very_low: The very_low of this RiskModifierSettings.  # noqa: E501
         :type: float

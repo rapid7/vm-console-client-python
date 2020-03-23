@@ -228,7 +228,7 @@ class ReportApi(object):
     def delete_report_instance(self, id, instance, **kwargs):  # noqa: E501
         """Report History  # noqa: E501
 
-        Returns the details for a generation of the report.  # noqa: E501
+        Deletes an instance of a generated report.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_report_instance(id, instance, async_req=True)
@@ -251,7 +251,7 @@ class ReportApi(object):
     def delete_report_instance_with_http_info(self, id, instance, **kwargs):  # noqa: E501
         """Report History  # noqa: E501
 
-        Returns the details for a generation of the report.  # noqa: E501
+        Deletes an instance of a generated report.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_report_instance_with_http_info(id, instance, async_req=True)

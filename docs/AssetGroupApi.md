@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**add_asset_to_asset_group**](AssetGroupApi.md#add_asset_to_asset_group) | **PUT** /api/3/asset_groups/{id}/assets/{assetId} | Asset Group Asset
 [**create_asset_group**](AssetGroupApi.md#create_asset_group) | **POST** /api/3/asset_groups | Asset Groups
 [**delete_asset_group**](AssetGroupApi.md#delete_asset_group) | **DELETE** /api/3/asset_groups/{id} | Asset Group
+[**get_agents**](AssetGroupApi.md#get_agents) | **GET** /api/3/agents | Agents
 [**get_asset_group**](AssetGroupApi.md#get_asset_group) | **GET** /api/3/asset_groups/{id} | Asset Group
 [**get_asset_group_assets**](AssetGroupApi.md#get_asset_group_assets) | **GET** /api/3/asset_groups/{id}/assets | Asset Group Assets
 [**get_asset_group_search_criteria**](AssetGroupApi.md#get_asset_group_search_criteria) | **GET** /api/3/asset_groups/{id}/search_criteria | Asset Group Search Criteria
@@ -261,6 +262,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Links**](Links.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json;charset=UTF-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_agents**
+> PageOfAgent get_agents(page=page, size=size, sort=sort)
+
+Agents
+
+Returns the details for all agents.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = rapid7vmconsole.AssetGroupApi()
+page = 0 # int | The index of the page (zero-based) to retrieve. (optional) (default to 0)
+size = 10 # int | The number of records per page to retrieve. (optional) (default to 10)
+sort = ['sort_example'] # list[str] | The criteria to sort the records by, in the format: `property[,ASC|DESC]`. The default sort order is ascending. Multiple sort criteria can be specified using multiple sort query parameters. (optional)
+
+try:
+    # Agents
+    api_response = api_instance.get_agents(page=page, size=size, sort=sort)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AssetGroupApi->get_agents: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| The index of the page (zero-based) to retrieve. | [optional] [default to 0]
+ **size** | **int**| The number of records per page to retrieve. | [optional] [default to 10]
+ **sort** | [**list[str]**](str.md)| The criteria to sort the records by, in the format: &#x60;property[,ASC|DESC]&#x60;. The default sort order is ascending. Multiple sort criteria can be specified using multiple sort query parameters. | [optional] 
+
+### Return type
+
+[**PageOfAgent**](PageOfAgent.md)
 
 ### Authorization
 

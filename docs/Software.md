@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**configurations** | [**list[Configuration]**](Configuration.md) | ${software.attributes.description} | [optional] 
+**configurations** | [**list[Configuration]**](Configuration.md) | The attributes of the software. | [optional] 
 **cpe** | [**SoftwareCpe**](SoftwareCpe.md) | The Common Platform Enumeration (CPE) of the software. | [optional] 
 **description** | **str** | The description of the software. | [optional] 
 **family** | **str** | The family of the software. | [optional] 

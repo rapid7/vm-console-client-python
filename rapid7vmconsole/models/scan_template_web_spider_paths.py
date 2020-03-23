@@ -105,7 +105,7 @@ class ScanTemplateWebSpiderPaths(object):
     def honor_robot_directives(self):
         """Gets the honor_robot_directives of this ScanTemplateWebSpiderPaths.  # noqa: E501
 
-        ${scan.template.web.spider.paths.robot.directives.description}  # noqa: E501
+        Whether to honor robot directives.  # noqa: E501
 
         :return: The honor_robot_directives of this ScanTemplateWebSpiderPaths.  # noqa: E501
         :rtype: bool
@@ -116,7 +116,7 @@ class ScanTemplateWebSpiderPaths(object):
     def honor_robot_directives(self, honor_robot_directives):
         """Sets the honor_robot_directives of this ScanTemplateWebSpiderPaths.
 
-        ${scan.template.web.spider.paths.robot.directives.description}  # noqa: E501
+        Whether to honor robot directives.  # noqa: E501
 
         :param honor_robot_directives: The honor_robot_directives of this ScanTemplateWebSpiderPaths.  # noqa: E501
         :type: bool

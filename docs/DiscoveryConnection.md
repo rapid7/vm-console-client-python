@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **access_key_id** | **str** | The AWS credential access key identifier (only used for the AWS connection). | [optional] 
-**address** | **str** | ${discovery.connection.address} | [optional] 
+**address** | **str** | The address used to connect to the discovery connection source. | [optional] 
 **arn** | **str** | The AWS credential ARN (only used for the AWS connection). | [optional] 
 **aws_session_name** | **str** | The AWS credential session name (only used for the AWS connection). | [optional] 
 **connection_type** | **str** | The type of the discovery connection. | [optional] 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **ldap_server** | **str** | The LDAP server to connect to. | [optional] 
 **links** | [**list[Link]**](Link.md) | Hypermedia links to corresponding or related resources. | [optional] 
 **name** | **str** | The discovery connection name. | [optional] 
-**port** | **int** | The address used to connect to the discovery connection source. | [optional] 
+**port** | **int** | The port used to connect to the discovery connection source. | [optional] 
 **protocol** | **str** | The protocol used to connect to the discovery connection source. | [optional] 
 **region** | **str** | The AWS region (only used for the AWS connection). | [optional] 
 **scan_engine_is_inside_aws** | **bool** | Flag denoting whether the scan engine is in AWS, this is used for AWS discovery connections for scanning purposes (only used for the AWS connection). | [optional] 
