@@ -30,11 +30,11 @@ class SwaggerDiscoverySearchCriteriaFilter(object):
     """
     swagger_types = {
         'field': 'str',
-        'lower': 'str',
+        'lower': 'object',
         'operator': 'str',
-        'upper': 'str',
-        'value': 'str',
-        'values': 'list[str]'
+        'upper': 'object',
+        'value': 'object',
+        'values': 'list[object]'
     }
 
     attribute_map = {
@@ -100,7 +100,7 @@ class SwaggerDiscoverySearchCriteriaFilter(object):
         The lower value to match in a range criteria.  # noqa: E501
 
         :return: The lower of this SwaggerDiscoverySearchCriteriaFilter.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._lower
 
@@ -111,7 +111,7 @@ class SwaggerDiscoverySearchCriteriaFilter(object):
         The lower value to match in a range criteria.  # noqa: E501
 
         :param lower: The lower of this SwaggerDiscoverySearchCriteriaFilter.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._lower = lower
@@ -146,7 +146,7 @@ class SwaggerDiscoverySearchCriteriaFilter(object):
         The upper value to match in a range criteria.  # noqa: E501
 
         :return: The upper of this SwaggerDiscoverySearchCriteriaFilter.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._upper
 
@@ -157,7 +157,7 @@ class SwaggerDiscoverySearchCriteriaFilter(object):
         The upper value to match in a range criteria.  # noqa: E501
 
         :param upper: The upper of this SwaggerDiscoverySearchCriteriaFilter.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._upper = upper
@@ -169,7 +169,7 @@ class SwaggerDiscoverySearchCriteriaFilter(object):
         The single value to match using the operator.  # noqa: E501
 
         :return: The value of this SwaggerDiscoverySearchCriteriaFilter.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._value
 
@@ -180,7 +180,7 @@ class SwaggerDiscoverySearchCriteriaFilter(object):
         The single value to match using the operator.  # noqa: E501
 
         :param value: The value of this SwaggerDiscoverySearchCriteriaFilter.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._value = value
@@ -192,7 +192,7 @@ class SwaggerDiscoverySearchCriteriaFilter(object):
         An array of values to match using the operator.  # noqa: E501
 
         :return: The values of this SwaggerDiscoverySearchCriteriaFilter.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[object]
         """
         return self._values
 
@@ -203,7 +203,7 @@ class SwaggerDiscoverySearchCriteriaFilter(object):
         An array of values to match using the operator.  # noqa: E501
 
         :param values: The values of this SwaggerDiscoverySearchCriteriaFilter.  # noqa: E501
-        :type: list[str]
+        :type: list[object]
         """
 
         self._values = values

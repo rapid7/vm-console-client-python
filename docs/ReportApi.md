@@ -120,7 +120,7 @@ No authorization required
 
 Report History
 
-Returns the details for a generation of the report.
+Deletes an instance of a generated report.
 
 ### Example
 ```python

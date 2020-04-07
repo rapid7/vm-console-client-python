@@ -44,6 +44,7 @@ from rapid7vmconsole.models.additional_information import AdditionalInformation
 from rapid7vmconsole.models.address import Address
 from rapid7vmconsole.models.adhoc_scan import AdhocScan
 from rapid7vmconsole.models.advisory_link import AdvisoryLink
+from rapid7vmconsole.models.agent import Agent
 from rapid7vmconsole.models.alert import Alert
 from rapid7vmconsole.models.assessment_result import AssessmentResult
 from rapid7vmconsole.models.asset import Asset
@@ -134,6 +135,7 @@ from rapid7vmconsole.models.operating_system import OperatingSystem
 from rapid7vmconsole.models.operating_system_cpe import OperatingSystemCpe
 from rapid7vmconsole.models.pci import PCI
 from rapid7vmconsole.models.page_info import PageInfo
+from rapid7vmconsole.models.page_of_agent import PageOfAgent
 from rapid7vmconsole.models.page_of_asset import PageOfAsset
 from rapid7vmconsole.models.page_of_asset_group import PageOfAssetGroup
 from rapid7vmconsole.models.page_of_asset_policy import PageOfAssetPolicy

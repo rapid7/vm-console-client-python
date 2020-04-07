@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **risk_modifier** | **object** | The amount to adjust risk of an asset tagged with this tag.  | [optional] 
 **search_criteria** | [**SearchCriteria**](SearchCriteria.md) |  | [optional] 
 **source** | **str** | The source of the tag. | [optional] 
-**sources** | [**list[TagAssetSource]**](TagAssetSource.md) | The source(s) by which a tag is applied to an asset. | [optional] 
+**sources** | [**list[TagAssetSource]**](TagAssetSource.md) | The source(s) by which a tag is-applied to an asset. | [optional] 
 **type** | **str** | The type of the tag. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

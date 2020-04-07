@@ -15,7 +15,7 @@
 # Download InsightVM/Nexpose Console Version and update package in config.json
 VERSION_URL="http://download2.rapid7.com/download/InsightVM/Rapid7Setup-Linux64.bin.version"
 CONSOLE_VERSION=$(curl $VERSION_URL)
-LIB_VERSION="1.0.0-$CONSOLE_VERSION"
+LIB_VERSION="$CONSOLE_VERSION"
 sed -i '' "s/\"packageVersion\": \".*\"/\"packageVersion\": \"$LIB_VERSION\"/g" ./setup_workspace/config.json
 echo "Library Version: $LIB_VERSION"
 
@@ -32,8 +32,8 @@ wget --no-check-certificate $SWAGGER_URL -O $SWAGGER_FILE
 
 # Manage swagger codegen
 CODEGEN_JAR_NAME="swagger-codegen-cli"
-CODEGEN_JAR_VERSION="2.4.0"
-URL="http://central.maven.org/maven2/io/swagger/$CODEGEN_JAR_NAME/$CODEGEN_JAR_VERSION/$CODEGEN_JAR_NAME-$CODEGEN_JAR_VERSION.jar"
+CODEGEN_JAR_VERSION="2.4.12"
+URL="https://repo1.maven.org/maven2/io/swagger/$CODEGEN_JAR_NAME/$CODEGEN_JAR_VERSION/$CODEGEN_JAR_NAME-$CODEGEN_JAR_VERSION.jar"
 JAR_PATH="setup_workspace/$CODEGEN_JAR_NAME-$CODEGEN_JAR_VERSION.jar"
 
 # Download and save codegen jar file

@@ -30,36 +30,36 @@ class SonarCriterion(object):
     """
     swagger_types = {
         'days': 'int',
+        'domain': 'str',
         'lower': 'str',
-        'search_domain': 'str',
         'type': 'str',
         'upper': 'str'
     }
 
     attribute_map = {
         'days': 'days',
+        'domain': 'domain',
         'lower': 'lower',
-        'search_domain': 'searchDomain',
         'type': 'type',
         'upper': 'upper'
     }
 
-    def __init__(self, days=None, lower=None, search_domain=None, type=None, upper=None):  # noqa: E501
+    def __init__(self, days=None, domain=None, lower=None, type=None, upper=None):  # noqa: E501
         """SonarCriterion - a model defined in Swagger"""  # noqa: E501
 
         self._days = None
+        self._domain = None
         self._lower = None
-        self._search_domain = None
         self._type = None
         self._upper = None
         self.discriminator = None
 
         if days is not None:
             self.days = days
+        if domain is not None:
+            self.domain = domain
         if lower is not None:
             self.lower = lower
-        if search_domain is not None:
-            self.search_domain = search_domain
         if type is not None:
             self.type = type
         if upper is not None:
@@ -89,6 +89,29 @@ class SonarCriterion(object):
         self._days = days
 
     @property
+    def domain(self):
+        """Gets the domain of this SonarCriterion.  # noqa: E501
+
+        If the field is `domain-contains`, the domain to search against.  # noqa: E501
+
+        :return: The domain of this SonarCriterion.  # noqa: E501
+        :rtype: str
+        """
+        return self._domain
+
+    @domain.setter
+    def domain(self, domain):
+        """Sets the domain of this SonarCriterion.
+
+        If the field is `domain-contains`, the domain to search against.  # noqa: E501
+
+        :param domain: The domain of this SonarCriterion.  # noqa: E501
+        :type: str
+        """
+
+        self._domain = domain
+
+    @property
     def lower(self):
         """Gets the lower of this SonarCriterion.  # noqa: E501
 
@@ -110,29 +133,6 @@ class SonarCriterion(object):
         """
 
         self._lower = lower
-
-    @property
-    def search_domain(self):
-        """Gets the search_domain of this SonarCriterion.  # noqa: E501
-
-        If the field is `domain-contains`, the domain to search against.  # noqa: E501
-
-        :return: The search_domain of this SonarCriterion.  # noqa: E501
-        :rtype: str
-        """
-        return self._search_domain
-
-    @search_domain.setter
-    def search_domain(self, search_domain):
-        """Sets the search_domain of this SonarCriterion.
-
-        If the field is `domain-contains`, the domain to search against.  # noqa: E501
-
-        :param search_domain: The search_domain of this SonarCriterion.  # noqa: E501
-        :type: str
-        """
-
-        self._search_domain = search_domain
 
     @property
     def type(self):

@@ -69,7 +69,7 @@ class ReportConfigScopeResource(object):
     def asset_groups(self):
         """Gets the asset_groups of this ReportConfigScopeResource.  # noqa: E501
 
-        ${report.config.asset.groups.description}  # noqa: E501
+        Identifiers of the asset groups in the scope of the report.  # noqa: E501
 
         :return: The asset_groups of this ReportConfigScopeResource.  # noqa: E501
         :rtype: list[int]
@@ -80,7 +80,7 @@ class ReportConfigScopeResource(object):
     def asset_groups(self, asset_groups):
         """Sets the asset_groups of this ReportConfigScopeResource.
 
-        ${report.config.asset.groups.description}  # noqa: E501
+        Identifiers of the asset groups in the scope of the report.  # noqa: E501
 
         :param asset_groups: The asset_groups of this ReportConfigScopeResource.  # noqa: E501
         :type: list[int]
@@ -92,7 +92,7 @@ class ReportConfigScopeResource(object):
     def assets(self):
         """Gets the assets of this ReportConfigScopeResource.  # noqa: E501
 
-        ${report.config.assets.description}  # noqa: E501
+        Identifiers of the assets in the scope of the report.  # noqa: E501
 
         :return: The assets of this ReportConfigScopeResource.  # noqa: E501
         :rtype: list[int]
@@ -103,7 +103,7 @@ class ReportConfigScopeResource(object):
     def assets(self, assets):
         """Sets the assets of this ReportConfigScopeResource.
 
-        ${report.config.assets.description}  # noqa: E501
+        Identifiers of the assets in the scope of the report.  # noqa: E501
 
         :param assets: The assets of this ReportConfigScopeResource.  # noqa: E501
         :type: list[int]
@@ -115,7 +115,7 @@ class ReportConfigScopeResource(object):
     def scan(self):
         """Gets the scan of this ReportConfigScopeResource.  # noqa: E501
 
-        ${report.config.scans.description}  # noqa: E501
+        Identifiers of the scans in the scope of the report.  # noqa: E501
 
         :return: The scan of this ReportConfigScopeResource.  # noqa: E501
         :rtype: int
@@ -126,7 +126,7 @@ class ReportConfigScopeResource(object):
     def scan(self, scan):
         """Sets the scan of this ReportConfigScopeResource.
 
-        ${report.config.scans.description}  # noqa: E501
+        Identifiers of the scans in the scope of the report.  # noqa: E501
 
         :param scan: The scan of this ReportConfigScopeResource.  # noqa: E501
         :type: int
@@ -138,7 +138,7 @@ class ReportConfigScopeResource(object):
     def sites(self):
         """Gets the sites of this ReportConfigScopeResource.  # noqa: E501
 
-        ${report.config.sites.description}  # noqa: E501
+        Identifiers of the sites in the scope of the report.  # noqa: E501
 
         :return: The sites of this ReportConfigScopeResource.  # noqa: E501
         :rtype: list[int]
@@ -149,7 +149,7 @@ class ReportConfigScopeResource(object):
     def sites(self, sites):
         """Sets the sites of this ReportConfigScopeResource.
 
-        ${report.config.sites.description}  # noqa: E501
+        Identifiers of the sites in the scope of the report.  # noqa: E501
 
         :param sites: The sites of this ReportConfigScopeResource.  # noqa: E501
         :type: list[int]
@@ -161,7 +161,7 @@ class ReportConfigScopeResource(object):
     def tags(self):
         """Gets the tags of this ReportConfigScopeResource.  # noqa: E501
 
-        ${report.config.tags.description}  # noqa: E501
+        Identifiers of the tags in the scope of the report.  # noqa: E501
 
         :return: The tags of this ReportConfigScopeResource.  # noqa: E501
         :rtype: list[int]
@@ -172,7 +172,7 @@ class ReportConfigScopeResource(object):
     def tags(self, tags):
         """Sets the tags of this ReportConfigScopeResource.
 
-        ${report.config.tags.description}  # noqa: E501
+        Identifiers of the tags in the scope of the report.  # noqa: E501
 
         :param tags: The tags of this ReportConfigScopeResource.  # noqa: E501
         :type: list[int]

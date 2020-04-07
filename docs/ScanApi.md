@@ -237,7 +237,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = rapid7vmconsole.ScanApi()
 id = 56 # int | The identifier of the site.
-override_blackout = false # bool | ${override.blackout} (optional) (default to false)
+override_blackout = false # bool | Whether to request for the override of an scan blackout window. (optional) (default to false)
 scan = rapid7vmconsole.AdhocScan() # AdhocScan | The details for the scan. (optional)
 
 try:
@@ -253,7 +253,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the site. | 
- **override_blackout** | **bool**| ${override.blackout} | [optional] [default to false]
+ **override_blackout** | **bool**| Whether to request for the override of an scan blackout window. | [optional] [default to false]
  **scan** | [**AdhocScan**](AdhocScan.md)| The details for the scan. | [optional] 
 
 ### Return type

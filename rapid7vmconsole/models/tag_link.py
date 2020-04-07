@@ -77,7 +77,7 @@ class TagLink(object):
     def sources(self):
         """Gets the sources of this TagLink.  # noqa: E501
 
-        The source(s) by which a tag is applied to an asset.  # noqa: E501
+        The source(s) by which a tag is-applied to an asset.  # noqa: E501
 
         :return: The sources of this TagLink.  # noqa: E501
         :rtype: list[str]
@@ -88,7 +88,7 @@ class TagLink(object):
     def sources(self, sources):
         """Sets the sources of this TagLink.
 
-        The source(s) by which a tag is applied to an asset.  # noqa: E501
+        The source(s) by which a tag is-applied to an asset.  # noqa: E501
 
         :param sources: The sources of this TagLink.  # noqa: E501
         :type: list[str]
