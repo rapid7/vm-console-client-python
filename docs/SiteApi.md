@@ -4,6 +4,8 @@ All URIs are relative to *https://localhost:3780*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**add_excluded_targets**](SiteApi.md#add_excluded_targets) | **POST** /api/3/sites/{id}/excluded_targets | Site Excluded Targets
+[**add_included_targets**](SiteApi.md#add_included_targets) | **POST** /api/3/sites/{id}/included_targets | Site Included Targets
 [**add_site_tag**](SiteApi.md#add_site_tag) | **PUT** /api/3/sites/{id}/tags/{tagId} | Site Tag
 [**add_site_user**](SiteApi.md#add_site_user) | **POST** /api/3/sites/{id}/users | Site Users Access
 [**create_site**](SiteApi.md#create_site) | **POST** /api/3/sites | Sites
@@ -58,7 +60,9 @@ Method | HTTP request | Description
 [**remove_all_included_asset_groups**](SiteApi.md#remove_all_included_asset_groups) | **DELETE** /api/3/sites/{id}/included_asset_groups | Site Included Asset Groups
 [**remove_asset_from_site**](SiteApi.md#remove_asset_from_site) | **DELETE** /api/3/sites/{id}/assets/{assetId} | Site Asset
 [**remove_excluded_asset_group**](SiteApi.md#remove_excluded_asset_group) | **DELETE** /api/3/sites/{id}/excluded_asset_groups/{assetGroupId} | Site Excluded Asset Group
+[**remove_excluded_targets**](SiteApi.md#remove_excluded_targets) | **DELETE** /api/3/sites/{id}/excluded_targets | Site Excluded Targets
 [**remove_included_asset_group**](SiteApi.md#remove_included_asset_group) | **DELETE** /api/3/sites/{id}/included_asset_groups/{assetGroupId} | Site Included Asset Group
+[**remove_included_targets**](SiteApi.md#remove_included_targets) | **DELETE** /api/3/sites/{id}/included_targets | Site Included Targets
 [**remove_site_assets**](SiteApi.md#remove_site_assets) | **DELETE** /api/3/sites/{id}/assets | Site Assets
 [**remove_site_tag**](SiteApi.md#remove_site_tag) | **DELETE** /api/3/sites/{id}/tags/{tagId} | Site Tag
 [**remove_site_user**](SiteApi.md#remove_site_user) | **DELETE** /api/3/sites/{id}/users/{userId} | Site User Access
@@ -85,6 +89,106 @@ Method | HTTP request | Description
 [**update_site_snmp_alert**](SiteApi.md#update_site_snmp_alert) | **PUT** /api/3/sites/{id}/alerts/snmp/{alertId} | Site SNMP Alert
 [**update_site_syslog_alert**](SiteApi.md#update_site_syslog_alert) | **PUT** /api/3/sites/{id}/alerts/syslog/{alertId} | Site Syslog Alert
 
+
+# **add_excluded_targets**
+> ReferenceWithSiteIDLink add_excluded_targets(id, scan_targets_to_add=scan_targets_to_add)
+
+Site Excluded Targets
+
+Adds one or more addresses to the site's list of excluded scan targets.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = rapid7vmconsole.SiteApi()
+id = 56 # int | The identifier of the site.
+scan_targets_to_add = [rapid7vmconsole.list[str]()] # list[str] | List of addresses to add to the site's excluded scan targets. Each address is a string that can represent either a hostname, ipv4 address, ipv4 address range, ipv6 address, or CIDR notation. (optional)
+
+try:
+    # Site Excluded Targets
+    api_response = api_instance.add_excluded_targets(id, scan_targets_to_add=scan_targets_to_add)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SiteApi->add_excluded_targets: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| The identifier of the site. | 
+ **scan_targets_to_add** | **list[str]**| List of addresses to add to the site&#39;s excluded scan targets. Each address is a string that can represent either a hostname, ipv4 address, ipv4 address range, ipv6 address, or CIDR notation. | [optional] 
+
+### Return type
+
+[**ReferenceWithSiteIDLink**](ReferenceWithSiteIDLink.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json;charset=UTF-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_included_targets**
+> ReferenceWithSiteIDLink add_included_targets(id, scan_targets_to_add=scan_targets_to_add)
+
+Site Included Targets
+
+Adds one or more addresses to the site's list of included scan targets.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = rapid7vmconsole.SiteApi()
+id = 56 # int | The identifier of the site.
+scan_targets_to_add = [rapid7vmconsole.list[str]()] # list[str] | List of addresses to add to the site's included scan targets. Each address is a string that can represent either a hostname, ipv4 address, ipv4 address range, ipv6 address, or CIDR notation. (optional)
+
+try:
+    # Site Included Targets
+    api_response = api_instance.add_included_targets(id, scan_targets_to_add=scan_targets_to_add)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SiteApi->add_included_targets: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| The identifier of the site. | 
+ **scan_targets_to_add** | **list[str]**| List of addresses to add to the site&#39;s included scan targets. Each address is a string that can represent either a hostname, ipv4 address, ipv4 address range, ipv6 address, or CIDR notation. | [optional] 
+
+### Return type
+
+[**ReferenceWithSiteIDLink**](ReferenceWithSiteIDLink.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json;charset=UTF-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_site_tag**
 > Links add_site_tag(id, tag_id)
@@ -777,7 +881,7 @@ No authorization required
 
 Site
 
-site.delete.description
+Deletes the site with the specified identifier.
 
 ### Example
 ```python
@@ -2734,6 +2838,56 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **remove_excluded_targets**
+> Links remove_excluded_targets(id, scan_targets_to_remove=scan_targets_to_remove)
+
+Site Excluded Targets
+
+Removes one or more addresses from the site's list of excluded scan targets.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = rapid7vmconsole.SiteApi()
+id = 56 # int | The identifier of the site.
+scan_targets_to_remove = [rapid7vmconsole.list[str]()] # list[str] | List of address to remove from the sites excluded scan targets. Each address is a string that can represent either a hostname, ipv4 address, ipv4 address range, ipv6 address, or CIDR notation. (optional)
+
+try:
+    # Site Excluded Targets
+    api_response = api_instance.remove_excluded_targets(id, scan_targets_to_remove=scan_targets_to_remove)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SiteApi->remove_excluded_targets: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| The identifier of the site. | 
+ **scan_targets_to_remove** | **list[str]**| List of address to remove from the sites excluded scan targets. Each address is a string that can represent either a hostname, ipv4 address, ipv4 address range, ipv6 address, or CIDR notation. | [optional] 
+
+### Return type
+
+[**Links**](Links.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json;charset=UTF-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **remove_included_asset_group**
 > Links remove_included_asset_group(id, asset_group_id)
 
@@ -2768,6 +2922,56 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The identifier of the site. | 
  **asset_group_id** | **int**| The identifier of the asset group. | 
+
+### Return type
+
+[**Links**](Links.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json;charset=UTF-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **remove_included_targets**
+> Links remove_included_targets(id, scan_targets_to_remove=scan_targets_to_remove)
+
+Site Included Targets
+
+Removes one or more addresses from the site's list of included scan targets.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import rapid7vmconsole
+from rapid7vmconsole.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = rapid7vmconsole.SiteApi()
+id = 56 # int | The identifier of the site.
+scan_targets_to_remove = [rapid7vmconsole.list[str]()] # list[str] | List of address to remove from the sites included scan targets. Each address is a string that can represent either a hostname, ipv4 address, ipv4 address range, ipv6 address, or CIDR notation. (optional)
+
+try:
+    # Site Included Targets
+    api_response = api_instance.remove_included_targets(id, scan_targets_to_remove=scan_targets_to_remove)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SiteApi->remove_included_targets: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| The identifier of the site. | 
+ **scan_targets_to_remove** | **list[str]**| List of address to remove from the sites included scan targets. Each address is a string that can represent either a hostname, ipv4 address, ipv4 address range, ipv6 address, or CIDR notation. | [optional] 
 
 ### Return type
 
