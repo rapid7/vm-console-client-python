@@ -32,7 +32,7 @@ class AssetGroupApi(object):
         self.api_client = api_client
 
     def add_asset_group_tag(self, id, tag_id, **kwargs):  # noqa: E501
-        """Asset Group Tag  # noqa: E501
+        """Resources and operations for managing asset groups.  # noqa: E501
 
         Adds a tag to an asset group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -55,7 +55,7 @@ class AssetGroupApi(object):
             return data
 
     def add_asset_group_tag_with_http_info(self, id, tag_id, **kwargs):  # noqa: E501
-        """Asset Group Tag  # noqa: E501
+        """Resources and operations for managing asset groups.  # noqa: E501
 
         Adds a tag to an asset group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -1563,7 +1563,7 @@ class AssetGroupApi(object):
             collection_formats=collection_formats)
 
     def remove_asset_group_tag(self, id, tag_id, **kwargs):  # noqa: E501
-        """Asset Group Tag  # noqa: E501
+        """Resources and operations for managing asset groups.  # noqa: E501
 
         Removes a tag from an asset group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -1586,7 +1586,7 @@ class AssetGroupApi(object):
             return data
 
     def remove_asset_group_tag_with_http_info(self, id, tag_id, **kwargs):  # noqa: E501
-        """Asset Group Tag  # noqa: E501
+        """Resources and operations for managing asset groups.  # noqa: E501
 
         Removes a tag from an asset group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an

@@ -12,7 +12,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "rapid7_vm_console"
-VERSION = "6.6.10"
+VERSION = "6.6.22"
 # To install the library, run the following
 #
 # python setup.py install

@@ -4,7 +4,7 @@ All URIs are relative to *https://localhost:3780*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_asset_group_tag**](AssetGroupApi.md#add_asset_group_tag) | **PUT** /api/3/asset_groups/{id}/tags/{tagId} | Asset Group Tag
+[**add_asset_group_tag**](AssetGroupApi.md#add_asset_group_tag) | **PUT** /api/3/asset_groups/{id}/tags/{tagId} | Resources and operations for managing asset groups.
 [**add_asset_group_user**](AssetGroupApi.md#add_asset_group_user) | **PUT** /api/3/asset_groups/{id}/users/{userId} | Asset Group User
 [**add_asset_to_asset_group**](AssetGroupApi.md#add_asset_to_asset_group) | **PUT** /api/3/asset_groups/{id}/assets/{assetId} | Asset Group Asset
 [**create_asset_group**](AssetGroupApi.md#create_asset_group) | **POST** /api/3/asset_groups | Asset Groups
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 [**remove_all_asset_group_tags**](AssetGroupApi.md#remove_all_asset_group_tags) | **DELETE** /api/3/asset_groups/{id}/tags | Asset Group Tags
 [**remove_all_assets_from_asset_group**](AssetGroupApi.md#remove_all_assets_from_asset_group) | **DELETE** /api/3/asset_groups/{id}/assets | Asset Group Assets
 [**remove_asset_from_asset_group**](AssetGroupApi.md#remove_asset_from_asset_group) | **DELETE** /api/3/asset_groups/{id}/assets/{assetId} | Asset Group Asset
-[**remove_asset_group_tag**](AssetGroupApi.md#remove_asset_group_tag) | **DELETE** /api/3/asset_groups/{id}/tags/{tagId} | Asset Group Tag
+[**remove_asset_group_tag**](AssetGroupApi.md#remove_asset_group_tag) | **DELETE** /api/3/asset_groups/{id}/tags/{tagId} | Resources and operations for managing asset groups.
 [**remove_asset_group_user**](AssetGroupApi.md#remove_asset_group_user) | **DELETE** /api/3/asset_groups/{id}/users/{userId} | Asset Group User
 [**set_asset_group_search_criteria**](AssetGroupApi.md#set_asset_group_search_criteria) | **PUT** /api/3/asset_groups/{id}/search_criteria | Asset Group Search Criteria
 [**set_asset_group_tags**](AssetGroupApi.md#set_asset_group_tags) | **PUT** /api/3/asset_groups/{id}/tags | Asset Group Tags
@@ -31,7 +31,7 @@ Method | HTTP request | Description
 # **add_asset_group_tag**
 > Links add_asset_group_tag(id, tag_id)
 
-Asset Group Tag
+Resources and operations for managing asset groups.
 
 Adds a tag to an asset group.
 
@@ -49,7 +49,7 @@ id = 56 # int | The identifier of the asset group.
 tag_id = 56 # int | The identifier of the tag.
 
 try:
-    # Asset Group Tag
+    # Resources and operations for managing asset groups.
     api_response = api_instance.add_asset_group_tag(id, tag_id)
     pprint(api_response)
 except ApiException as e:
@@ -771,7 +771,7 @@ No authorization required
 # **remove_asset_group_tag**
 > Links remove_asset_group_tag(id, tag_id)
 
-Asset Group Tag
+Resources and operations for managing asset groups.
 
 Removes a tag from an asset group.
 
@@ -789,7 +789,7 @@ id = 56 # int | The identifier of the asset group.
 tag_id = 56 # int | The identifier of the tag.
 
 try:
-    # Asset Group Tag
+    # Resources and operations for managing asset groups.
     api_response = api_instance.remove_asset_group_tag(id, tag_id)
     pprint(api_response)
 except ApiException as e:
