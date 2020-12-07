@@ -1,3 +1,7 @@
+# Uncomment to run sample without library built or installed on system
+# import sys
+# sys.path.append('/local/path/to/project/vm-console-client-python')
+
 import rapid7vmconsole
 import base64
 import logging

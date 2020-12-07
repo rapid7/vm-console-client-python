@@ -12,21 +12,23 @@
 #
 # Output: Generation of API and models based on Rapid7 Nexpose and InsightVM Swagger file
 
+# NOTE: Pulling from endpoint no longer up to date; manually update version to match console prior to running
+LIB_VERSION=6.6.55
+
 # Download InsightVM/Nexpose Console Version and update package in config.json
-VERSION_URL="http://download2.rapid7.com/download/InsightVM/Rapid7Setup-Linux64.bin.version"
-CONSOLE_VERSION=$(curl $VERSION_URL)
-LIB_VERSION="$CONSOLE_VERSION"
+#VERSION_URL="http://download2.rapid7.com/download/InsightVM/Rapid7Setup-Linux64.bin.version"
+#CONSOLE_VERSION=$(curl $VERSION_URL)
+#LIB_VERSION="$CONSOLE_VERSION"
 sed -i '' "s/\"packageVersion\": \".*\"/\"packageVersion\": \"$LIB_VERSION\"/g" ./setup_workspace/config.json
 echo "Library Version: $LIB_VERSION"
 
 
 # Environment variable for branch name
-echo 'LIB_VERSION='$LIB_VERSION > /var/jenkins_home/propsfile
+#echo 'LIB_VERSION='$LIB_VERSION > /var/jenkins_home/propsfile
 
 # Download swagger file
 API_FILE_DIR="api-files/"
 SWAGGER_FILE=$API_FILE_DIR"console-swagger.json"
-#SWAGGER_URL="https://help.rapid7.com/insightvm/en-us/api/api.json"
 SWAGGER_URL="https://$2:3780/api/3/json"
 wget --no-check-certificate $SWAGGER_URL -O $SWAGGER_FILE
 
