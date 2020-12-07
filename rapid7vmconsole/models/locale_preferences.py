@@ -59,7 +59,7 @@ class LocalePreferences(object):
     def default(self):
         """Gets the default of this LocalePreferences.  # noqa: E501
 
-        The default language to use. The format is a <a target=\"_blank\" href=\"https://tools.ietf.org/html/bcp47\">IETF BCP 47</a> language tag.  # noqa: E501
+        The default language to use. The format is a <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://tools.ietf.org/html/bcp47\">IETF BCP 47</a> language tag.  # noqa: E501
 
         :return: The default of this LocalePreferences.  # noqa: E501
         :rtype: str
@@ -70,7 +70,7 @@ class LocalePreferences(object):
     def default(self, default):
         """Sets the default of this LocalePreferences.
 
-        The default language to use. The format is a <a target=\"_blank\" href=\"https://tools.ietf.org/html/bcp47\">IETF BCP 47</a> language tag.  # noqa: E501
+        The default language to use. The format is a <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://tools.ietf.org/html/bcp47\">IETF BCP 47</a> language tag.  # noqa: E501
 
         :param default: The default of this LocalePreferences.  # noqa: E501
         :type: str
@@ -103,7 +103,7 @@ class LocalePreferences(object):
     def reports(self):
         """Gets the reports of this LocalePreferences.  # noqa: E501
 
-        The language to use to generate reports. The format is a <a target=\"_blank\" href=\"https://tools.ietf.org/html/bcp47\">IETF BCP 47</a> language tag.  # noqa: E501
+        The language to use to generate reports. The format is a <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://tools.ietf.org/html/bcp47\">IETF BCP 47</a> language tag.  # noqa: E501
 
         :return: The reports of this LocalePreferences.  # noqa: E501
         :rtype: str
@@ -114,7 +114,7 @@ class LocalePreferences(object):
     def reports(self, reports):
         """Sets the reports of this LocalePreferences.
 
-        The language to use to generate reports. The format is a <a target=\"_blank\" href=\"https://tools.ietf.org/html/bcp47\">IETF BCP 47</a> language tag.  # noqa: E501
+        The language to use to generate reports. The format is a <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://tools.ietf.org/html/bcp47\">IETF BCP 47</a> language tag.  # noqa: E501
 
         :param reports: The reports of this LocalePreferences.  # noqa: E501
         :type: str

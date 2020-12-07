@@ -52,7 +52,8 @@ class UserAccount(object):
             self.full_name = full_name
         if id is not None:
             self.id = id
-        self.name = name
+        if name is not None:
+            self.name = name
 
     @property
     def full_name(self):
@@ -120,8 +121,6 @@ class UserAccount(object):
         :param name: The name of this UserAccount.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 

@@ -13,15 +13,15 @@
 # Output: Generation of API and models based on Rapid7 Nexpose and InsightVM Swagger file
 
 # Download InsightVM/Nexpose Console Version and update package in config.json
-VERSION_URL="http://download2.rapid7.com/download/InsightVM/Rapid7Setup-Linux64.bin.version"
-CONSOLE_VERSION=$(curl $VERSION_URL)
-LIB_VERSION="$CONSOLE_VERSION"
-sed -i '' "s/\"packageVersion\": \".*\"/\"packageVersion\": \"$LIB_VERSION\"/g" ./setup_workspace/config.json
-echo "Library Version: $LIB_VERSION"
+#VERSION_URL="http://download2.rapid7.com/download/InsightVM/Rapid7Setup-Linux64.bin.version"
+#CONSOLE_VERSION=$(curl $VERSION_URL)
+#LIB_VERSION="$CONSOLE_VERSION"
+#sed -i '' "s/\"packageVersion\": \".*\"/\"packageVersion\": \"$LIB_VERSION\"/g" ./setup_workspace/config.json
+#echo "Library Version: $LIB_VERSION"
 
 
 # Environment variable for branch name
-echo 'LIB_VERSION='$LIB_VERSION > /var/jenkins_home/propsfile
+#echo 'LIB_VERSION='$LIB_VERSION > /var/jenkins_home/propsfile
 
 # Download swagger file
 API_FILE_DIR="api-files/"
@@ -79,5 +79,5 @@ fi
 LC_ALL=C find . -type f -not -path "./.git/*" -exec sed -i '' "s/$2:3780/localhost:3780/g" {} +
 
 git checkout -b release/$CONSOLE_VERSION
-git add *
-git commit -a -m "Update generated library to version: $LIB_VERSION"
+#git add *
+#git commit -a -m "Update generated library to version: $LIB_VERSION"

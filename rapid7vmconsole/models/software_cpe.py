@@ -131,7 +131,7 @@ class SoftwareCpe(object):
     def language(self):
         """Gets the language of this SoftwareCpe.  # noqa: E501
 
-        Defines the language supported in the user interface of the product being described. The format is of the language tag adheres to <a target=\"_blank\" href=\"https://tools.ietf.org/html/rfc5646\">RFC5646</a>.  # noqa: E501
+        Defines the language supported in the user interface of the product being described. The format is of the language tag adheres to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://tools.ietf.org/html/rfc5646\">RFC5646</a>.  # noqa: E501
 
         :return: The language of this SoftwareCpe.  # noqa: E501
         :rtype: str
@@ -142,7 +142,7 @@ class SoftwareCpe(object):
     def language(self, language):
         """Sets the language of this SoftwareCpe.
 
-        Defines the language supported in the user interface of the product being described. The format is of the language tag adheres to <a target=\"_blank\" href=\"https://tools.ietf.org/html/rfc5646\">RFC5646</a>.  # noqa: E501
+        Defines the language supported in the user interface of the product being described. The format is of the language tag adheres to <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://tools.ietf.org/html/rfc5646\">RFC5646</a>.  # noqa: E501
 
         :param language: The language of this SoftwareCpe.  # noqa: E501
         :type: str
@@ -323,7 +323,7 @@ class SoftwareCpe(object):
     def v2_2(self):
         """Gets the v2_2 of this SoftwareCpe.  # noqa: E501
 
-        The full CPE string in the <a target=\"_blank\" href=\"https://cpe.mitre.org/files/cpe-specification_2.2.pdf\">CPE 2.2</a> format.  # noqa: E501
+        The full CPE string in the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://cpe.mitre.org/files/cpe-specification_2.2.pdf\">CPE 2.2</a> format.  # noqa: E501
 
         :return: The v2_2 of this SoftwareCpe.  # noqa: E501
         :rtype: str
@@ -334,7 +334,7 @@ class SoftwareCpe(object):
     def v2_2(self, v2_2):
         """Sets the v2_2 of this SoftwareCpe.
 
-        The full CPE string in the <a target=\"_blank\" href=\"https://cpe.mitre.org/files/cpe-specification_2.2.pdf\">CPE 2.2</a> format.  # noqa: E501
+        The full CPE string in the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://cpe.mitre.org/files/cpe-specification_2.2.pdf\">CPE 2.2</a> format.  # noqa: E501
 
         :param v2_2: The v2_2 of this SoftwareCpe.  # noqa: E501
         :type: str
@@ -346,7 +346,7 @@ class SoftwareCpe(object):
     def v2_3(self):
         """Gets the v2_3 of this SoftwareCpe.  # noqa: E501
 
-        The full CPE string in the <a target=\"_blank\" href=\"http://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir7695.pdf\">CPE 2.3</a> format.  # noqa: E501
+        The full CPE string in the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir7695.pdf\">CPE 2.3</a> format.  # noqa: E501
 
         :return: The v2_3 of this SoftwareCpe.  # noqa: E501
         :rtype: str
@@ -357,7 +357,7 @@ class SoftwareCpe(object):
     def v2_3(self, v2_3):
         """Sets the v2_3 of this SoftwareCpe.
 
-        The full CPE string in the <a target=\"_blank\" href=\"http://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir7695.pdf\">CPE 2.3</a> format.  # noqa: E501
+        The full CPE string in the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://nvlpubs.nist.gov/nistpubs/Legacy/IR/nistir7695.pdf\">CPE 2.3</a> format.  # noqa: E501
 
         :param v2_3: The v2_3 of this SoftwareCpe.  # noqa: E501
         :type: str

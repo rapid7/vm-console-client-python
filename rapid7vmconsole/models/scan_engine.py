@@ -39,7 +39,8 @@ class ScanEngine(object):
         'name': 'str',
         'port': 'int',
         'product_version': 'str',
-        'sites': 'list[int]'
+        'sites': 'list[int]',
+        'status': 'str'
     }
 
     attribute_map = {
@@ -53,10 +54,11 @@ class ScanEngine(object):
         'name': 'name',
         'port': 'port',
         'product_version': 'productVersion',
-        'sites': 'sites'
+        'sites': 'sites',
+        'status': 'status'
     }
 
-    def __init__(self, address=None, content_version=None, engine_pools=None, id=None, last_refreshed_date=None, last_updated_date=None, links=None, name=None, port=None, product_version=None, sites=None):  # noqa: E501
+    def __init__(self, address=None, content_version=None, engine_pools=None, id=None, last_refreshed_date=None, last_updated_date=None, links=None, name=None, port=None, product_version=None, sites=None, status=None):  # noqa: E501
         """ScanEngine - a model defined in Swagger"""  # noqa: E501
 
         self._address = None
@@ -70,6 +72,7 @@ class ScanEngine(object):
         self._port = None
         self._product_version = None
         self._sites = None
+        self._status = None
         self.discriminator = None
 
         self.address = address
@@ -90,6 +93,8 @@ class ScanEngine(object):
             self.product_version = product_version
         if sites is not None:
             self.sites = sites
+        if status is not None:
+            self.status = status
 
     @property
     def address(self):
@@ -351,6 +356,35 @@ class ScanEngine(object):
         """
 
         self._sites = sites
+
+    @property
+    def status(self):
+        """Gets the status of this ScanEngine.  # noqa: E501
+
+        The scan engine status. Can be one of the following values:  | Value                     | Description                                                                                |  | ------------------------- | ------------------------------------------------------------------------------------------ |  | `\"active\"`                | The scan engine is active.                                                                 |  | `\"incompatible-version\"`  | The product version of the remote scan engine is not compatible with the Security Console. |  | `\"not-responding\"`        | The scan engine is not responding to the Security Console.                                 |  | `\"pending-authorization\"` | The Security Console is not yet authorized to connect to the scan engine.                  |  | `\"unknown\"`               | The status of the scan engine is unknown.                                                  |    # noqa: E501
+
+        :return: The status of this ScanEngine.  # noqa: E501
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """Sets the status of this ScanEngine.
+
+        The scan engine status. Can be one of the following values:  | Value                     | Description                                                                                |  | ------------------------- | ------------------------------------------------------------------------------------------ |  | `\"active\"`                | The scan engine is active.                                                                 |  | `\"incompatible-version\"`  | The product version of the remote scan engine is not compatible with the Security Console. |  | `\"not-responding\"`        | The scan engine is not responding to the Security Console.                                 |  | `\"pending-authorization\"` | The Security Console is not yet authorized to connect to the scan engine.                  |  | `\"unknown\"`               | The status of the scan engine is unknown.                                                  |    # noqa: E501
+
+        :param status: The status of this ScanEngine.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["active", "incompatible-version", "not-responding", "pending-authorization", "unknown"]  # noqa: E501
+        if status not in allowed_values:
+            raise ValueError(
+                "Invalid value for `status` ({0}), must be one of {1}"  # noqa: E501
+                .format(status, allowed_values)
+            )
+
+        self._status = status
 
     def to_dict(self):
         """Returns the model properties as a dict"""

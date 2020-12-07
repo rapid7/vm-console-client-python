@@ -54,7 +54,7 @@ class Link(object):
     def href(self):
         """Gets the href of this Link.  # noqa: E501
 
-        A hypertext reference, which is either a URI (see <a target=\"_blank\" href=\"https://tools.ietf.org/html/rfc3986\">RFC 3986</a>) or URI template (see <a target=\"_blank\" href=\"https://tools.ietf.org/html/rfc6570\">RFC 6570</a>).   # noqa: E501
+        A hypertext reference, which is either a URI (see <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://tools.ietf.org/html/rfc3986\">RFC 3986</a>) or URI template (see <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://tools.ietf.org/html/rfc6570\">RFC 6570</a>).   # noqa: E501
 
         :return: The href of this Link.  # noqa: E501
         :rtype: str
@@ -65,7 +65,7 @@ class Link(object):
     def href(self, href):
         """Sets the href of this Link.
 
-        A hypertext reference, which is either a URI (see <a target=\"_blank\" href=\"https://tools.ietf.org/html/rfc3986\">RFC 3986</a>) or URI template (see <a target=\"_blank\" href=\"https://tools.ietf.org/html/rfc6570\">RFC 6570</a>).   # noqa: E501
+        A hypertext reference, which is either a URI (see <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://tools.ietf.org/html/rfc3986\">RFC 3986</a>) or URI template (see <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://tools.ietf.org/html/rfc6570\">RFC 6570</a>).   # noqa: E501
 
         :param href: The href of this Link.  # noqa: E501
         :type: str
@@ -77,7 +77,7 @@ class Link(object):
     def rel(self):
         """Gets the rel of this Link.  # noqa: E501
 
-        The link relation type. This value is one from the <a target=\"_blank\" href=\"https://tools.ietf.org/html/rfc5988#section-6.2\">Link Relation Type Registry</a> or is the type of resource being linked to.  # noqa: E501
+        The link relation type. This value is one from the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://tools.ietf.org/html/rfc5988#section-6.2\">Link Relation Type Registry</a> or is the type of resource being linked to.  # noqa: E501
 
         :return: The rel of this Link.  # noqa: E501
         :rtype: str
@@ -88,7 +88,7 @@ class Link(object):
     def rel(self, rel):
         """Sets the rel of this Link.
 
-        The link relation type. This value is one from the <a target=\"_blank\" href=\"https://tools.ietf.org/html/rfc5988#section-6.2\">Link Relation Type Registry</a> or is the type of resource being linked to.  # noqa: E501
+        The link relation type. This value is one from the <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://tools.ietf.org/html/rfc5988#section-6.2\">Link Relation Type Registry</a> or is the type of resource being linked to.  # noqa: E501
 
         :param rel: The rel of this Link.  # noqa: E501
         :type: str
