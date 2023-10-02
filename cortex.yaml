@@ -1,0 +1,17 @@
+---
+info:
+  title: Vm Console Client Python
+  description: the UNOFFICIAL (but useful) Python library for the Rapid7 InsightVM/Nexpose
+    RESTful API
+  x-cortex-git:
+    github:
+      alias: r7org
+      repository: rapid7/vm-console-client-python
+  x-cortex-tag: vm-console-client-python
+  x-cortex-type: service
+  x-cortex-groups: []
+  x-cortex-domain-parents:
+  - tag: vm-console
+openapi: 3.0.1
+servers:
+- url: "/"
