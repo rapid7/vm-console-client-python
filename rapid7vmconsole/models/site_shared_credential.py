@@ -177,7 +177,7 @@ class SiteSharedCredential(object):
         :param service: The service of this SiteSharedCredential.  # noqa: E501
         :type: str
         """
-        allowed_values = ["as400", "cifs", "cifshash", "cvs", "db2", "ftp", "http", "ms-sql", "mysql", "notes", "oracle", "pop", "postgresql", "remote-exec", "snmp", "snmpv3", "ssh", "ssh-key", "sybase", "telnet", "kerberos", "hana"]  # noqa: E501
+        allowed_values = ["as400", "cifs", "cifshash", "cvs", "db2", "ftp", "http", "ms-sql", "mysql", "notes", "oracle", "pop", "postgresql", "remote-exec", "snmp", "snmpv3", "ssh", "ssh-key", "sybase", "telnet", "kerberos", "hana", "scan-assistant"]  # noqa: E501
         if service not in allowed_values:
             raise ValueError(
                 "Invalid value for `service` ({0}), must be one of {1}"  # noqa: E501
